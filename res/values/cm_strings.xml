@@ -1214,4 +1214,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Priority subscription settings -->
     <string name="priority_sub_title">Priority subscription</string>
+
+    <!-- Device Settings Menu -->
+    <string name="device_settings">Device Settings</string>
 </resources>
