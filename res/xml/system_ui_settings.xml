@@ -19,6 +19,27 @@
     android:title="@string/system_interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/display_category">
+
+    <PreferenceScreen
+        android:id="@+id/peek_settings"
+        android:title="@string/peek_settings" >
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetPackage="com.reindeercrafts.notificationpeek"
+        android:targetClass="com.reindeercrafts.notificationpeek.settings.Settings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:id="@+id/multi_window_settings"
+        android:title="@string/multi_window_settings" >
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetPackage="com.zst.app.multiwindowsidebar"
+        android:targetClass="com.zst.app.multiwindowsidebar.MainActivity" />
+    </PreferenceScreen>
+
     <PreferenceScreen
         android:id="@+id/device_settings"
         android:title="@string/device_settings" >
@@ -27,6 +48,9 @@
         android:targetPackage="com.cyanogenmod.settings.device"
         android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </PreferenceScreen>
+
+    <PreferenceCategory
+        android:title="@string/status_bar_category">
 
     <PreferenceScreen
         android:key="status_bar"

@@ -20,6 +20,14 @@
 	<PreferenceScreen android:key="purekat_logo"
 			  android:layout="@layout/logo_row" />
 
+        <!-- PureKat About -->
+        <PreferenceScreen android:key="about_purekat"
+                android:title="@string/about_purekat_title">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.purekat.about"
+                    android:targetClass="com.purekat.about.activities.AboutActivity" />
+        </PreferenceScreen>
+
         <!-- System update settings - launches activity -->
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title" 

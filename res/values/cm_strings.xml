@@ -1215,6 +1215,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Priority subscription settings -->
     <string name="priority_sub_title">Priority subscription</string>
 
-    <!-- Device Settings Menu -->
+    <!-- Interface Settings Menu -->
     <string name="device_settings">Device Settings</string>
+    <string name="peek_settings">Peek</string>
+    <string name="status_bar_category">Status Bar</string>
+    <string name="display_category">Display</string>
+    <string name="multi_window_settings">Multi-Window</string>
+
+    <!-- About PureKat -->
+    <string name="about_purekat_title">PureKat Team</string>
 </resources>
