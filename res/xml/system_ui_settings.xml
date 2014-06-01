@@ -48,6 +48,8 @@
         android:targetPackage="com.cyanogenmod.settings.device"
         android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </PreferenceScreen>
+    
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/status_bar_category">
@@ -67,6 +69,8 @@
         android:fragment="com.android.settings.cyanogenmod.NotificationDrawer"
         android:title="@string/notification_drawer_title" />
 
+    </PreferenceCategory>
+    
     <!-- Device Specific Touchscreen gestures. Avoid duplicating CMHW functionality, please -->
     <Preference
         android:key="touch_screen_gesture_settings">
