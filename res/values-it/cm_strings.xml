@@ -262,6 +262,7 @@
   <string name="title_dynamic_alarm">Sveglia</string>
   <string name="title_dynamic_bugreport">Segnalazione bug</string>
   <string name="title_dynamic_dock_battery">Batteria dock</string>
+  <string name="title_dynamic_equalizer">Equalizzatore</string>
   <string name="title_dynamic_ime">Metodo inserimento</string>
   <string name="title_dynamic_usbtether">Tether USB</string>
   <string name="title_dynamic_wifi">Screencast</string>
@@ -355,6 +356,8 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="root_access_apps">Solo applicazioni</string>
   <string name="root_access_adb">Solo ADB</string>
   <string name="root_access_all">Applicazioni e ADB</string>
+  <string name="update_recovery_title">Aggiorna recovery CM</string>
+  <string name="update_recovery_summary">Aggiorna la recovery durante l\'installazione di aggiornamenti di sistema</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Periodo di quiete</string>
   <string name="quiet_hours_summary">Configura gli orari in cui il dispositivo dovrebbe essere silenzioso</string>
@@ -404,7 +407,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="styles_settings_title">Stili</string>
   <string name="icons_settings_title">Icone</string>
   <string name="fonts_settings_title">Caratteri</string>
-  <string name="wallpaper_settings_title">Sfondi</string>
+  <string name="wallpaper_settings_title_cm">Sfondi</string>
   <string name="lockscreen_wallpaper_settings_title">Sfondi schermata sblocco</string>
   <string name="bootanim_settings_title">Animazioni di avvio</string>
   <string name="soundpack_settings_title">Pacchetti suoni</string>
@@ -490,12 +493,12 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="vibrator_intensity_title">Intensità vibrazione</string>
   <string name="vibrator_warning">Valori superiori a %1$d non sono raccomandati</string>
   <string name="color_calibration_title">Calibrazione colore</string>
-  <string name="color_calibration_summary">Calibra colori su schermo</string>
+  <string name="color_calibration_summary">Calibra i colori su schermo</string>
   <string name="color_red_title">Rosso</string>
   <string name="color_green_title">Verde</string>
   <string name="color_blue_title">Blu</string>
   <string name="gamma_tuning_title_head">Calibrazione gamma</string>
-  <string name="gamma_tuning_summary_head">Modifica valori gamma</string>
+  <string name="gamma_tuning_summary_head">Modifica i valori gamma</string>
   <string name="gamma_tuning_control_set_header">Gruppo <xliff:g id="index">%d</xliff:g></string>
   <string name="gamma_tuning_contrast">Contrasto</string>
   <string name="gamma_tuning_brightness">Luminosità</string>

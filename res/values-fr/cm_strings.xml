@@ -262,6 +262,7 @@
   <string name="title_dynamic_alarm">Réveil</string>
   <string name="title_dynamic_bugreport">Rapport de bug</string>
   <string name="title_dynamic_dock_battery">Batterie du dock</string>
+  <string name="title_dynamic_equalizer">Égaliseur</string>
   <string name="title_dynamic_ime">Changement IME</string>
   <string name="title_dynamic_usbtether">Modem USB</string>
   <string name="title_dynamic_wifi">Affichage sans fil</string>
@@ -344,6 +345,8 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="root_access_apps">Application uniquement</string>
   <string name="root_access_adb">ADB uniquement</string>
   <string name="root_access_all">Application et ADB</string>
+  <string name="update_recovery_title">Mettre à jour le recovery CM</string>
+  <string name="update_recovery_summary">Mettre à jour le recovery lors de l\'installation des mises à jour système</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Heures silencieuses</string>
   <string name="quiet_hours_summary">Configurer les heures où le téléphone doit être silencieux</string>
@@ -393,7 +396,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="styles_settings_title">Styles</string>
   <string name="icons_settings_title">Icônes</string>
   <string name="fonts_settings_title">Polices</string>
-  <string name="wallpaper_settings_title">Fonds d\'écran</string>
+  <string name="wallpaper_settings_title_cm">Fonds d\'écran</string>
   <string name="lockscreen_wallpaper_settings_title">Fonds d\'écran de verrouillage</string>
   <string name="bootanim_settings_title">Animations de démarrage</string>
   <string name="soundpack_settings_title">Packs de sons</string>
@@ -587,7 +590,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="lockscreen_enable_modlock_title">Écran de verrouillage personnalisée</string>
   <string name="navigation_bar_category">Barre de navigation</string>
   <string name="navigation_bar_title">Boutons et disposition</string>
-  <string name="navigation_bar_left_title">Mode main gauche</string>
+  <string name="navigation_bar_left_title">Mode gaucher</string>
   <string name="navigation_bar_left_summary">Placer la barre de navigation du côté gauche de l\'écran en mode paysage</string>
   <string name="navigation_bar_help_text">1 - Pour commencer l\'édition, appuyer sur le cadenas\n\n2 - Appuyer sur un des boutons pour assigner ou changer une fonctionnalité\n\n3 - Exercer une pression longue pour modifier l\'ordre\n\n4 - Pour enregistrer, appuyer à nouveau sur le cadenas\n\n5 - Pour remettre à zéro, appuyer sur le bouton \"Réinitialiser\"\n\n</string>
   <string name="navigation_bar_tips">• Les actions ne peuvent être assignées qu\'une seule fois\n\n• Le bouton d\'accueil ne peut être réassigné\n\n• Les boutons sur le bord ne peuvent être déplacés</string>
@@ -868,4 +871,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="sms_title">Envoi de SMS</string>
   <string name="priority_sub_title">Priorité d\'abonnement</string>
   <string name="bluetooth_accept_all_files">Accepter tous les types de fichiers</string>
+  <string name="autoperf_title">Activer les profiles par application</string>
+  <string name="autoperf_summary">Choisir automatiquement le profil de performance le plus approprié pour les différentes applications</string>
+  <string name="graphics_title">Graphismes et rendu</string>
 </resources>
