@@ -67,8 +67,8 @@ import android.widget.TextView;
 import com.android.internal.util.ArrayUtils;
 import com.android.settings.ActivityPicker;
 import com.android.settings.accessibility.AccessibilitySettings;
+import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accessibility.ToggleAccessibilityServicePreferenceFragment;
-import com.android.settings.accessibility.ToggleCaptioningPreferenceFragment;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
@@ -353,7 +353,7 @@ public class Settings extends PreferenceActivity
         PrivacySettings.class.getName(),
         DeviceAdminSettings.class.getName(),
         AccessibilitySettings.class.getName(),
-        ToggleCaptioningPreferenceFragment.class.getName(),
+        CaptionPropertiesFragment.class.getName(),
         TextToSpeechSettings.class.getName(),
         Memory.class.getName(),
         DevelopmentSettings.class.getName(),
@@ -678,6 +678,10 @@ public class Settings extends PreferenceActivity
                     target.remove(header);
             } else if (id == R.id.voice_wakeup_settings) {
                 if(!Utils.isPackageInstalled(this, VOICE_WAKEUP_PACKAGE_NAME)) {
+                    target.remove(header);
+                }
+            } else if (id == R.id.more_device_settings) {
+                if (!MoreDeviceSettings.hasItems()) {
                     target.remove(header);
                 }
             }
