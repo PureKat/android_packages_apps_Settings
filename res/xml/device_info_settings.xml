@@ -17,12 +17,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-	<PreferenceScreen android:key="purekat_logo"
-			  android:layout="@layout/logo_row" />
-
         <!-- PureKat About -->
-        <PreferenceScreen android:key="about_purekat"
-                android:title="@string/about_purekat_title">
+	<PreferenceScreen android:key="purekat_logo"
+			  android:layout="@layout/logo_row">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.purekat.about"
                     android:targetClass="com.purekat.about.activities.AboutActivity" />

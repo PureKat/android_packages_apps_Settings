@@ -116,7 +116,12 @@
     <header
         android:id="@+id/device_control_settings"
         android:icon="@drawable/ic_settings_devicecontrol"
-        android:title="@string/device_control_settings" />
+        android:title="@string/device_control_settings">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.namelessrom.devicecontrol"
+            android:targetClass="org.namelessrom.devicecontrol.MainActivity" />
+    </header>
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
