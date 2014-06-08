@@ -1234,6 +1234,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="peek_settings">Active Display</string>
     <string name="status_bar_category">Status Bar</string>
     <string name="display_category">Display</string>
+    <string name="device_control_settings">Device Control</string>
 
     <!-- About PureKat -->
     <string name="about_purekat_title">About Us</string>
