@@ -27,17 +27,8 @@
         android:title="@string/peek_settings" >
         <intent
         android:action="android.intent.action.MAIN"
-        android:targetPackage="com.reindeercrafts.notificationpeek"
-        android:targetClass="com.reindeercrafts.notificationpeek.settings.Settings" />
-    </PreferenceScreen>
-
-    <PreferenceScreen
-        android:id="@+id/multi_window_settings"
-        android:title="@string/multi_window_settings" >
-        <intent
-        android:action="android.intent.action.MAIN"
-        android:targetPackage="com.zst.app.multiwindowsidebar"
-        android:targetClass="com.zst.app.multiwindowsidebar.MainActivity" />
+        android:targetPackage="com.achep.acdisplay"
+        android:targetClass="com.achep.acdisplay.activities.MainActivity" />
     </PreferenceScreen>
 
     <PreferenceScreen

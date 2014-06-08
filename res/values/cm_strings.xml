@@ -1231,13 +1231,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Interface Settings Menu -->
     <string name="device_settings">Device Settings</string>
-    <string name="peek_settings">Peek</string>
+    <string name="peek_settings">Active Display</string>
     <string name="status_bar_category">Status Bar</string>
     <string name="display_category">Display</string>
-    <string name="multi_window_settings">Multi-Window</string>
 
     <!-- About PureKat -->
-    <string name="about_purekat_title">PureKat Team</string>
+    <string name="about_purekat_title">About Us</string>
 
     <!-- Bluetooth accept all Filestypes -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
