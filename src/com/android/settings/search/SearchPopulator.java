@@ -55,9 +55,10 @@ public class SearchPopulator extends IntentService {
     private static final String TAG = SearchPopulator.class.getSimpleName();
 
     public static final String EXTRA_NOTIFIER = "notifier";
+    public static final String EXTRA_PREF_KEY = "pref_key";
 
-    protected static final String LAST_PACKAGE_HASH = "last_package_hash";
-    private ResultReceiver mNotifier;
+    private static final String LAST_PACKAGE_HASH = "last_package_hash";
+    private static final String LAST_LOCALE = "last_locale";
 
     public SearchPopulator() {
         super(TAG);
@@ -65,18 +66,22 @@ public class SearchPopulator extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        mNotifier = intent.getParcelableExtra(EXTRA_NOTIFIER);
-
+        ResultReceiver notifier = intent.getParcelableExtra(EXTRA_NOTIFIER);
         SharedPreferences sharedPreferences = getSharedPreferences(
                 getPackageName(), Context.MODE_PRIVATE);
         int lastHash = sharedPreferences.getInt(LAST_PACKAGE_HASH, -1);
         int currentHash = getPackageHashCode(getBasePackageName());
+        String lastLocale = sharedPreferences.getString(LAST_LOCALE, null);
+        String currentLocale = getResources().getConfiguration().locale.toString();
 
-        if (lastHash != currentHash) {
+        if (lastHash != currentHash || !TextUtils.equals(lastLocale, currentLocale)) {
             populateDatabase();
-            sharedPreferences.edit().putInt(LAST_PACKAGE_HASH, currentHash).commit();
-            mNotifier.send(0, null);
+            sharedPreferences.edit()
+                    .putInt(LAST_PACKAGE_HASH, currentHash)
+                    .putString(LAST_LOCALE, currentLocale)
+                    .commit();
         }
+        notifier.send(0, null);
     }
 
     private void populateDatabase() {
@@ -282,6 +287,8 @@ public class SearchPopulator extends IntentService {
                     }
                 }
 
+                String key = sa.getString(com.android.internal.R.styleable.Preference_key);
+
                 boolean excludeFromSearch = se.getBoolean(
                         com.android.settings.R.styleable.SearchableInfo_excludeFromSearch, false);
                 if (excludeFromSearch) {
@@ -296,14 +303,13 @@ public class SearchPopulator extends IntentService {
                     populateFromXml(subXmlId, null, level + 1, header.iconRes,
                             fragment, title.resourceId);
                     dbHelper.insertEntry(preferenceTitle, level, fragment,
-                            header.iconRes, getString(titleRes));
+                            header.iconRes, titleRes, key);
                 } else if (header != null) {
                     header.title = preferenceTitle;
-                    header.titleRes = 0;
-                    dbHelper.insertHeader(header, getString(titleRes));
+                    dbHelper.insertHeader(header, titleRes, key);
                 } else {
                     dbHelper.insertEntry(preferenceTitle, level, prefFragment,
-                            iconRes, getString(titleRes));
+                            iconRes, titleRes, key);
                 }
 
                 sa.recycle();
@@ -327,24 +333,22 @@ public class SearchPopulator extends IntentService {
             int iconIndex = c.getColumnIndex(DatabaseContract.Settings.ACTION_ICON);
             int parentIndex = c.getColumnIndex(DatabaseContract.Settings.ACTION_PARENT_TITLE);
             int headerIndex = c.getColumnIndex(DatabaseContract.Settings.ACTION_HEADER);
-
+            int keyIndex = c.getColumnIndex(DatabaseContract.Settings.ACTION_KEY);
             while (c.moveToNext()) {
                 byte[] data = c.getBlob(headerIndex);
-                SearchInfo info = new SearchInfo();
+                Header header = null;
                 if (data != null) {
                     Parcel p = Parcel.obtain();
                     p.setDataPosition(0);
                     p.unmarshall(data, 0, data.length);
                     p.setDataPosition(0);
-                    Header h = new Header();
-                    h.readFromParcel(p);
-                    info.header = h;
+                    header = new Header();
+                    header.readFromParcel(p);
                 }
-                info.level = c.getInt(levelIndex);
-                info.fragment = c.getString(fragmentIndex);
-                info.title = c.getString(titleIndex);
-                info.iconRes = c.getInt(iconIndex);
-                info.parentTitle = c.getString(parentIndex);
+
+                SearchInfo info = new SearchInfo(header,
+                        c.getInt(levelIndex), c.getString(fragmentIndex), c.getString(titleIndex),
+                        c.getInt(iconIndex), c.getInt(parentIndex), c.getString(keyIndex));
                 infos.add(info);
             }
             c.close();
