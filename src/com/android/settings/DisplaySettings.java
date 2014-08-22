@@ -151,7 +151,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 (CheckBoxPreference) findPreference(KEY_EXPANDED_DESKTOP_NO_NAVBAR);
 
         int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
-                Settings.System.EXPANDED_DESKTOP_STYLE, 2);
+                Settings.System.EXPANDED_DESKTOP_STYLE, 0);
 
         try {
             // Only show the navigation bar category on devices that has a navigation bar
@@ -216,7 +216,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!isTapToWakeSupported()) {
             advancedPrefs.removePreference(mTapToWake);
             mTapToWake = null;
-        } else {
+        }
+
+        boolean proximityCheckOnWait = res.getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
             advancedPrefs.removePreference(findPreference(KEY_PROXIMITY_WAKE));
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
         }

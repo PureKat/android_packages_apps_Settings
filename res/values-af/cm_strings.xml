@@ -646,7 +646,6 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="hardware_keys_action_search">Soek assistent</string>
   <string name="hardware_keys_action_voice_search">Stemsoektog</string>
   <string name="hardware_keys_action_in_app_search">In-program soek</string>
-  <string name="hardware_keys_action_launch_camera">Begin kamera</string>
   <string name="power_end_call_title">Beëindig oproep</string>
   <string name="power_end_call_summary">Druk van krag knoppie sal die huidige oproep beëindig</string>
   <string name="button_wake_title">Maak wakker</string>
