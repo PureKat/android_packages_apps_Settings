@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">未知情景</string>
   <string name="profile_add_nfc_text">此 NFC 标签是与一个未知的情景相连的。把此 NFC 标签连接到一个现有的情景将会允许您以后选择这个情景。</string>
   <string name="profile_select">选择情景</string>
+  <string name="profile_remove_dialog_message">删除配置文件 %1$s 吗？</string>
+  <string name="profile_populate_profile_from_state">使用当前设备设置的配置文件吗？</string>
+  <string name="profile_menu_fill_from_state">导入当前设备设置</string>
   <string name="profile_name_title">名称</string>
   <string name="profile_profile_name_prompt">为新的情景模式输入一个名称</string>
   <string name="menu_new_profile">新情景模式</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">禁用</string>
   <string name="connection_state_enabled">启用</string>
   <string name="volume_override_summary">设置为 %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">不要重写</string>
+  <string name="profile_volume_override_checkbox_label">重写音量</string>
   <string name="profile_profiles_manage">情景</string>
   <string name="profile_profile_manage">管理情景</string>
   <string name="profile_appgroups_manage">应用组</string>
@@ -96,7 +101,7 @@
   <string name="ringer_mode">铃声模式</string>
   <string name="lights_mode">灯光模式</string>
   <string name="vibrate_mode">振动模式</string>
-  <string name="soundtone_title">提醒音</string>
+  <string name="soundtone_title">通知铃声</string>
   <string name="profile_appgroups_title">应用组</string>
   <string name="profile_applist_title">应用</string>
   <string name="profile_new_appgroup">新的应用组</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">静音模式将会影响通知</string>
   <string name="volume_keys_control_ring_stream">音量按钮控制铃声音量</string>
   <string name="ring_mode_title">响铃模式</string>
-  <string name="ring_mode_normal">正常</string>
+  <string name="ring_mode_normal">铃声</string>
   <string name="ring_mode_vibrate">振动</string>
   <string name="ring_mode_mute">静音</string>
+  <string name="ring_mode_unchanged">没有更改</string>
   <string name="volume_overlay_title">音量面板样式</string>
   <string name="volume_overlay_single">单一</string>
   <string name="volume_overlay_expandable">可展开</string>
@@ -140,7 +146,7 @@
   <string name="notification_convert_sound_to_vibration_summary">振动模式下，无论应用如何设置，所有的通知都会振动</string>
   <string name="notification_vibrate_during_calls_title">通话时振动</string>
   <string name="notification_vibrate_during_calls_summary">通话时来电会轻微振动</string>
-  <string name="volume_adjust_sounds_enable_title">音量键调节声音</string>
+  <string name="volume_adjust_sounds_enable_title">音量调节提示音</string>
   <string name="volume_adjust_sounds_enable_summary">用音量按钮调节音量时播放声音</string>
   <string name="icon_picker_title">选择图标来源</string>
   <string name="icon_picker_system_icons_title">系统图标</string>
@@ -164,7 +170,7 @@
   <string name="sunlight_enhancement_summary">在明亮的阳光下提高显示亮度和可读性</string>
   <string name="color_enhancement_title">色彩增强</string>
   <string name="color_enhancement_summary">动态增强屏幕色彩</string>
-  <string name="wake_when_plugged_or_unplugged_title">插入/拔出电源点亮屏幕</string>
+  <string name="wake_when_plugged_or_unplugged_title">连接或移除电源时唤醒</string>
   <string name="wake_when_plugged_or_unplugged_summary">连接或断开电源时点亮屏幕</string>
   <string name="screen_animation_off_title">锁屏效果</string>
   <string name="screen_animation_style_title">关屏动画样式</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">最大化小部件</string>
   <string name="lockscreen_maximize_widgets_summary">屏幕开启时最大化锁屏小部件</string>
   <string name="lockscreen_enable_camera_title">相机小部件</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast 小部件</string>
   <string name="safe_headset_volume_title">安全耳机音量</string>
   <string name="safe_headset_volume_restore_title">插入耳机时降低音量</string>
   <string name="cyanogenmod_waiver_title">弃权声明书</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">音量</string>
   <string name="title_tile_expanded_desktop">扩展桌面</string>
   <string name="title_tile_network_adb">网络 ADB 调试</string>
+  <string name="title_tile_themes">主题</string>
   <string name="title_dynamic_tiles">动态按钮</string>
   <string name="dynamic_tiles_note_title">注意</string>
   <string name="dynamic_tiles_note_summary">动态按钮只有在系统事件触发的时候才会显示</string>
@@ -279,10 +285,10 @@
   <string name="title_quick_pulldown">快速下拉</string>
   <string name="summary_quick_pulldown">从状态栏的%1$s边缘拉下时直接开启快速设置面板</string>
   <string name="quick_pulldown_summary_left">左</string>
-  <string name="quick_pulldown_summary_right">右</string>
+  <string name="quick_pulldown_summary_right">右侧</string>
   <string name="quick_pulldown_off">关闭</string>
   <string name="quick_pulldown_left">左</string>
-  <string name="quick_pulldown_right">右</string>
+  <string name="quick_pulldown_right">右侧</string>
   <string name="title_collapse_panel">自动关闭面板</string>
   <string name="summary_collapse_panel">做出操作后关闭快速设置面板</string>
   <string name="pref_network_mode_title">网络模式</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">声音</string>
   <string name="cm_sound_mode_soundVibrate">声音 &amp; 振动</string>
   <string name="pref_location_mode_title">位置模式</string>
+  <string name="pref_location_mode_summary">取消所有模式的默认值</string>
+  <string name="cm_location_mode_off">关闭定位服务</string>
   <string name="cm_location_mode_battery_saving">节省电量</string>
   <string name="cm_location_mode_device_only">仅限设备</string>
   <string name="cm_location_mode_high_accuracy">高精确度</string>
@@ -356,8 +364,10 @@
   <string name="root_access_apps">仅限于应用</string>
   <string name="root_access_adb">仅限于 ADB</string>
   <string name="root_access_all">应用与 ADB</string>
-  <string name="update_recovery_title">更新 CM 恢复模式</string>
-  <string name="update_recovery_summary">安装系统更新时更新恢复模式</string>
+  <string name="update_recovery_title">更新 Cyanogen 恢复模式</string>
+  <string name="update_recovery_summary">使用系统更新来更新恢复模式</string>
+  <string name="update_recovery_on_warning">注意：启用此功能后，您已安装的恢复模式会被正在运行的系统所包含的恢复模式所替换。\n\n您的恢复模式会随着系统一起更新，以确保对未来版本的兼容性。\n\n您确定启用此功能？</string>
+  <string name="update_recovery_off_warning">警告：此功能被禁用后，你安装的恢复模式将不会随着系统一起更新。\n\n未来的系统更新可能不支持用过旧的或自制的恢复模式安装。\n\n您确定要禁用此功能？</string>
   <string name="ok">确定</string>
   <string name="quiet_hours_title">安静时段</string>
   <string name="quiet_hours_summary">配置设备应该安静的时段</string>
@@ -437,7 +447,6 @@
   <string name="changelog_error">无法读取更改记录</string>
   <string name="contributor_cloud_title">贡献者</string>
   <string name="cmupdate_settings_title">CyanogenMod 更新</string>
-  <string name="cmupdate_settings_summary">检查、查看或安装可用的更新</string>
   <string name="development_tools_title">启动开发工具</string>
   <string name="allow_mock_sms">允许模拟短信</string>
   <string name="privacy_settings_cyanogenmod_title">隐私</string>
@@ -501,21 +510,21 @@
   <string name="adb_over_network_summary">通过网络接口 (Wi\u2011Fi，USB 网络) 启用 TCP/IP 调试。该设置重启后失效</string>
   <string name="adb_over_network_warning">警告：网络 ADB 调试启用后，您的设备将会在已连接的网络 (包括 GSM 数据网络) 上被视为是开放的，并有可能被侵入！\n\n请仅在您所信任的网络上使用此功能。\n\n您确实要启用该功能吗？</string>
   <string name="device_hostname">设备网络名</string>
-  <string name="notification_drawer_title">下拉通知栏</string>
+  <string name="notification_drawer_title">通知抽屉</string>
   <string name="notification_drawer_collapse_on_dismiss_title">自动关闭行为</string>
   <string name="collapse_on_dismiss_never">禁用</string>
   <string name="collapse_on_dismiss_if_empty">当没有任何通知时</string>
   <string name="collapse_on_dismiss_if_no_clearable">当没有可移除通知时</string>
-  <string name="collapse_on_dismiss_never_summary">移除通知后不关闭下拉通知栏</string>
-  <string name="collapse_on_dismiss_if_empty_summary">移除所有通知后关闭下拉通知栏</string>
-  <string name="collapse_on_dismiss_if_no_clearable_summary">移除最后一个可移除的通知后关闭下拉通知栏</string>
+  <string name="collapse_on_dismiss_never_summary">移除通知后不关闭通知抽屉</string>
+  <string name="collapse_on_dismiss_if_empty_summary">移除所有通知后关闭通知抽屉</string>
+  <string name="collapse_on_dismiss_if_no_clearable_summary">移除最后一个可移除的通知后关闭通知抽屉</string>
   <string name="double_tap_to_wake_title">双击唤醒</string>
   <string name="double_tap_to_sleep_title">双击以睡眠</string>
   <string name="double_tap_to_sleep_summary">双击状态栏或锁屏滑块使设备睡眠</string>
   <string name="proximity_wake_title">防止意外唤醒</string>
   <string name="proximity_wake_summary">唤醒屏幕前检查距离传感器</string>
-  <string name="category_quick_access">下拉快捷开关</string>
-  <string name="title_quick_access">在下拉通知栏内显示</string>
+  <string name="category_quick_access">快速访问开关</string>
+  <string name="title_quick_access">在通知抽屉内显示</string>
   <string name="title_quick_access_size">功能条大小</string>
   <string name="title_quick_access_linked">连接布局</string>
   <string name="summary_quick_access_linked">使用与快速设置面板中相同的按钮和布局</string>
@@ -528,7 +537,7 @@
   <string name="lockscreen_custom_widgets_title">自定义小部件</string>
   <string name="lock_clock_title">时钟小部件</string>
   <string name="lock_clock_summary">自定义默认的锁屏与主屏幕小部件</string>
-  <string name="power_notifications_category_title">插入/拔出电源提示音</string>
+  <string name="power_notifications_category_title">充电提示音</string>
   <string name="power_notifications_enable_title">启用</string>
   <string name="power_notifications_enable_summary">连接或断开电源时发出声音</string>
   <string name="power_notifications_vibrate_title">振动</string>
@@ -587,6 +596,7 @@
   <string name="lockscreen_buttons_toggle_sound">切换歌曲</string>
   <string name="lockscreen_buttons_sleep">睡眠</string>
   <string name="lockscreen_enable_modlock_title">自定义锁屏</string>
+  <string name="lockscreen_buttons_disabled_summary">在使用屏幕导航栏的情况下锁屏按钮不可用</string>
   <string name="navigation_bar_category">导航栏</string>
   <string name="navigation_bar_title">按键与布局</string>
   <string name="navigation_bar_left_title">左利手模式</string>
@@ -659,10 +669,10 @@
   <string name="camera_wake_summary">按相机键唤醒设备</string>
   <string name="camera_sleep_on_release_title">屏幕窥探</string>
   <string name="camera_sleep_on_release_summary">仅当按钮被按下的时候，半按将会保持屏幕点亮</string>
-  <string name="camera_music_controls_title">相机键音乐控制</string>
+  <string name="camera_music_controls_title">播放控制</string>
   <string name="camera_music_controls_summary">屏幕关闭时，长按相机键将播放/暂停当前的音乐</string>
   <string name="volume_wake_summary">按音量键唤醒设备</string>
-  <string name="volbtn_music_controls_title">音量键音乐控制</string>
+  <string name="volbtn_music_controls_title">播放控制</string>
   <string name="volbtn_music_controls_summary">屏幕关闭时，长按音量键将改变音乐曲目</string>
   <string name="volbtn_cursor_control_title">键盘光标控制</string>
   <string name="volbtn_cursor_control_off">禁用</string>
@@ -697,7 +707,7 @@
   <string name="status_bar_signal_style_icon">图标</string>
   <string name="status_bar_signal_style_text">文字</string>
   <string name="status_bar_toggle_brightness">亮度控制</string>
-  <string name="status_bar_toggle_brightness_summary">由滑过状态栏调整亮度</string>
+  <string name="status_bar_toggle_brightness_summary">通过在状态栏上滑动调整亮度</string>
   <string name="status_bar_toggle_info">自动亮度启用时不可用</string>
   <string name="status_bar_notif_count_title">显示通知数量</string>
   <string name="status_bar_notif_count_summary">显示未读通知的数量</string>
@@ -870,7 +880,6 @@
   <string name="voice_wakeup_retrain_title">重新训练您的声音</string>
   <string name="voice_wakeup_activity_title">要启动的活动</string>
   <string name="voice_wakeup_default_activity">Google 即时</string>
-  <string name="sub_no_sim">无 SIM 卡</string>
   <string name="multi_sim_settings_title">SIM 卡</string>
   <string name="multi_sim_settings_group_summary">默认 SIM 卡</string>
   <string name="voice_title">语音通话</string>
@@ -938,6 +947,11 @@
   <string name="sd_media_format_button_text">擦除 SD 卡</string>
   <string name="sd_media_format_final_desc">确定要擦除 SD 卡，删除其中存储的全部文件吗？您无法撤消该操作！</string>
   <string name="sd_media_format_gesture_explanation">您需要绘制解锁图案以确认要擦除 SD 卡。</string>
+  <string name="internal_sd_format">擦除内部存媒体存储</string>
+  <string name="internal_sd_format_summary">擦除所有内部媒体存储上的数据，比如音乐和照片</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\n要清除音乐、图片和其他用户数据。<b>内置媒体存储</b>需要被擦除。</string>
+  <string name="erase_internal_storage">擦除内部存媒体存储</string>
+  <string name="erase_internal_storage_description">擦除内置媒体存储的所有数据，例如音乐或照片</string>
   <string name="bluetooth_enter_pin_msg_hs">要与<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>配对，请输入该设备所需的 PIN (16 位或更多)：</string>
   <string name="bluetooth_profile_sap">SIM 卡访问</string>
   <string name="bluetooth_profile_dun">拨号网络访问</string>
@@ -996,8 +1010,17 @@
   <string name="profile_setup_setup_triggers_title_config">修改触发器：<xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">步骤 2：设置操作</string>
   <string name="profile_setup_actions_title_config">重新配置操作</string>
-  <string name="no_bluetooth_triggers">无可用的蓝牙触发器</string>
-  <string name="no_wifi_triggers">没有可用的 Wi\u2011Fi 触发器</string>
+  <string name="no_bluetooth_triggers">没有已配对的蓝牙设备。\n配置触发器前轻按以配对蓝牙设备。</string>
+  <string name="no_wifi_triggers">没有已配置的 Wi\u2011Fi 接入点。\n配置触发器前轻按以连接 Wi\u2011Fi。</string>
   <string name="profile_setup_setup_triggers_description">请选择将激活此配置文件的触发器</string>
   <string name="profile_setup_actions_description">现在配置当配置文件激活时，将发生的操作</string>
+  <string name="profile_triggers_header">将激活此配置文件的触发器</string>
+  <string name="no_triggers_configured">没有配置触发器。轻按以添加更多。</string>
+  <string name="no_triggers_configured_nfc">轻按以设置一个新的 NFC 触发器。</string>
+  <string name="sound_ringtone_multisim_options">改变默认铃声</string>
+  <string name="lock_to_cyanogen_title">设备保护</string>
+  <string name="lock_to_cyanogen_summary">即使设备被恢复出厂设置，也要求输入 Cyanogen OS 帐户密码</string>
+  <string name="lock_to_cyanogen_create_account_msg">即使设备被恢复出厂设置，也可以被 Cyanogen OS 帐户密码所保护。您将需要创建一个 Cyanogen OS 帐户。</string>
+  <string name="lock_to_cyanogen_disable_msg">如果您的手机被盗，禁用此功能将会使得未经授权的用户重置您的手机为出厂默认值。您的个人数据可能无法被保护。您确定要禁用此功能？</string>
+  <string name="lock_to_cyanogen_master_clear_warning">设备保护已启用。请在重设您的设备前先将其禁用。</string>
 </resources>

@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Неизвестный профиль</string>
   <string name="profile_add_nfc_text">Эта NFC-метка присвоена неизвестному профилю. Привязка NFC-метки к существующему профилю позволит использовать метку для его выбора.</string>
   <string name="profile_select">Выберите профиль</string>
+  <string name="profile_remove_dialog_message">Удалить профиль «%1$s»?</string>
+  <string name="profile_populate_profile_from_state">Создать профиль из текущих настроек устройства?</string>
+  <string name="profile_menu_fill_from_state">Использ. текущие настройки</string>
   <string name="profile_name_title">Название профиля</string>
   <string name="profile_profile_name_prompt">Введите название для профиля</string>
   <string name="menu_new_profile">Новый профиль</string>
@@ -67,7 +70,7 @@
   <string name="duplicate_profile_name">Профиль с таким названием уже существует</string>
   <string name="duplicate_appgroup_name">Группа приложений с таким названием уже существует</string>
   <string name="profile_reset_title">Сброс</string>
-  <string name="profile_reset_message">Вы действительно хотите удалить все профили, группы приложений и восстановить настройки по умолчанию?</string>
+  <string name="profile_reset_message">Все пользовательские профили будут удалены, а настройки сброшены к значениям по умолчанию.</string>
   <string name="profile_delete_confirm">Вы действительно хотите удалить этот профиль?</string>
   <string name="profile_app_delete_confirm">Вы уверены, что хотите удалить это приложение?</string>
   <string name="profile_cannot_delete">Удаление текущего профиля невозможно</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Выключить</string>
   <string name="connection_state_enabled">Включить</string>
   <string name="volume_override_summary">Установить в %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Оставить без изменения</string>
+  <string name="profile_volume_override_checkbox_label">Изменять громкость</string>
   <string name="profile_profiles_manage">Профили</string>
   <string name="profile_profile_manage">Управление профилями</string>
   <string name="profile_appgroups_manage">Группы приложений</string>
@@ -130,6 +135,7 @@
   <string name="ring_mode_normal">Обычный</string>
   <string name="ring_mode_vibrate">Вибрация</string>
   <string name="ring_mode_mute">Беззвучный</string>
+  <string name="ring_mode_unchanged">Оставить без изменения</string>
   <string name="volume_overlay_title">Панель громкости</string>
   <string name="volume_overlay_single">Одиночная</string>
   <string name="volume_overlay_expandable">Расширяемая</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Развёрнутые виджеты</string>
   <string name="lockscreen_maximize_widgets_summary">Показывать виджеты экрана блокировки развёрнутыми, а кольцо разблокировки экрана — в свёрнутом виде</string>
   <string name="lockscreen_enable_camera_title">Виджет камеры</string>
-  <string name="lockscreen_enable_application_widget_title">Виджет Appcast</string>
   <string name="safe_headset_volume_title">Предупреждать при высокой громкости наушников</string>
   <string name="safe_headset_volume_restore_title">Снижать громкость наушников при их подключении</string>
   <string name="cyanogenmod_waiver_title">Отказ от ответственности</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Громкость</string>
   <string name="title_tile_expanded_desktop">Расширенный экран</string>
   <string name="title_tile_network_adb">Отладка по сети</string>
+  <string name="title_tile_themes">Темы</string>
   <string name="title_dynamic_tiles">Динамические плитки</string>
   <string name="dynamic_tiles_note_title">Примечание</string>
   <string name="dynamic_tiles_note_summary">Динамические плитки видны, только если они вызваны системным событием</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Звук</string>
   <string name="cm_sound_mode_soundVibrate">Звук и вибросигнал</string>
   <string name="pref_location_mode_title">Определение местоположения</string>
+  <string name="pref_location_mode_summary">Снимите все флажки, чтобы использовать стандартное переключение режимов</string>
+  <string name="cm_location_mode_off">Местоположение выкл.</string>
   <string name="cm_location_mode_battery_saving">По координатам сети</string>
   <string name="cm_location_mode_device_only">По спутникам GPS</string>
   <string name="cm_location_mode_high_accuracy">По всем источникам</string>
@@ -359,6 +367,8 @@
   <string name="root_access_all">Для приложений и ADB</string>
   <string name="update_recovery_title">Обновлять режим восстановления</string>
   <string name="update_recovery_summary">Перезаписывать раздел Recovery при установке обновлений</string>
+  <string name="update_recovery_on_warning">Когда эта функция включена, установленная прошивка режима восстановления будет перезаписана той, которая соответствует текущей версии ОС.\n\nРежим восстановления будет обновляться вместе с обновлениями системы, обеспечивая совместимость с будущими версиями.\n\nВключить использование этой функции?</string>
+  <string name="update_recovery_off_warning">Когда эта функция отключена, прошивка режима восстановления всегда будет оставаться неизменной.\n\nНекоторые обновления ОС могут не устанавливаться при использовании устаревших или пользовательских версий раздела Recovery.\n\nОтключить использование этой функции?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Тихие часы</string>
   <string name="quiet_hours_summary">Настройка интервала времени, в течение которого устройство не должно издавать звуков</string>
@@ -438,7 +448,6 @@
   <string name="changelog_error">Ошибка загрузки списка изменений</string>
   <string name="contributor_cloud_title">Имена разработчиков</string>
   <string name="cmupdate_settings_title">Обновления системы</string>
-  <string name="cmupdate_settings_summary">Проверка и установка доступных обновлений</string>
   <string name="development_tools_title">Запуск утилиты разработчика</string>
   <string name="allow_mock_sms">Фиктивные SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Конфиденциальность</string>
@@ -476,7 +485,7 @@
   <string name="blacklist_summary_type_messages_only">сообщения</string>
   <string name="blacklist_summary_type_calls_and_messages">вызовы и сообщения</string>
   <string name="blacklist_regex_title">Регулярные выражения</string>
-  <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой части</string>
+  <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой их части.</string>
   <string name="blacklist_policy_block_calls">Блокировать входящие вызовы</string>
   <string name="blacklist_policy_block_messages">Блокировать входящие сообщения</string>
   <string name="blacklist_bad_number_add">Некорректный номер, добавление невозможно</string>
@@ -499,7 +508,7 @@
   <string name="adb_notify">Уведомление об отладке</string>
   <string name="adb_notify_summary">Показывать уведомление при включённом режиме отладки</string>
   <string name="adb_over_network">Отладка по сети</string>
-  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi-Fi и USB-сети). Эта установка сбрасывается при перезагрузке</string>
+  <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi-Fi и USB-сети). Отладка отключается при перезагрузке устройства.</string>
   <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключённых сетей!\n\nИспользуйте эту функцию только тогда, когда вы подключены к доверенным сетям.\n\nВы действительно хотите включить эту функцию?</string>
   <string name="device_hostname">Сетевое имя устройства</string>
   <string name="notification_drawer_title">Панель уведомлений</string>
@@ -588,6 +597,7 @@
   <string name="lockscreen_buttons_toggle_sound">Перекл. режим звонка</string>
   <string name="lockscreen_buttons_sleep">Выключить экран</string>
   <string name="lockscreen_enable_modlock_title">Пользовательский экран блокировки</string>
+  <string name="lockscreen_buttons_disabled_summary">Кнопки экрана блокировки недоступны при включённой панели навигации</string>
   <string name="navigation_bar_category">Панель навигации</string>
   <string name="navigation_bar_title">Кнопки и их расположение</string>
   <string name="navigation_bar_left_title">Режим левши</string>
@@ -713,7 +723,7 @@
   <string name="logger_title">Отчёты об ошибках</string>
   <string name="logger_summary">Управление настройками журнала системных ошибок</string>
   <string name="custom_runtime_warning_title">Внимание</string>
-  <string name="custom_runtime_warning_message">ART не поддерживается CyanogenMod. Эта опция является экспериментальной и может повлечь нестабильную работу, ошибки, потерю данных или даже препятствовать загрузке устройства. Посетите страницу «&lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Введение в ART&lt;/a&gt;» (на английском языке) для получения подробных сведений.&lt;br/&gt;&lt;br/&gt;Мы просим не присылать баг-репорты, если вы выбрали ART в качестве среды выполнения системы.&lt;br/&gt;&lt;br/&gt;Вы действительно хотите перезагрузить устройство и переключить среду выполнения с «<xliff:g id="old" example="libdvm.so">%1$s</xliff:g>» на «<xliff:g id="new" example="libart.so">%2$s</xliff:g>»?</string>
+  <string name="custom_runtime_warning_message">ART официально не поддерживается CyanogenMod. Эта опция является экспериментальной и может повлечь нестабильную работу, ошибки, потерю данных или даже препятствовать загрузке устройства. Посетите страницу «&lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Введение в ART&lt;/a&gt;» (на английском языке) для получения подробных сведений.&lt;br/&gt;&lt;br/&gt;Мы просим не присылать баг-репорты, если вы выбрали ART в качестве среды выполнения системы.&lt;br/&gt;&lt;br/&gt;Вы действительно хотите перезагрузить устройство и переключить среду выполнения с «<xliff:g id="old" example="libdvm.so">%1$s</xliff:g>» на «<xliff:g id="new" example="libart.so">%2$s</xliff:g>»?</string>
   <string name="gps_download_data_wifi_only">Загружать вспомогательные данные GPS только через Wi-Fi</string>
   <string name="battery_info_status_charging_dock_ac">(док-станция, от сети)</string>
   <string name="battery_info_status_charging_dock_usb">(док-станция, по USB)</string>
@@ -871,7 +881,6 @@
   <string name="voice_wakeup_retrain_title">Перезаписать образец голоса</string>
   <string name="voice_wakeup_activity_title">Действие для запуска</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Нет SIM-карты</string>
   <string name="multi_sim_settings_title">SIM-карты</string>
   <string name="multi_sim_settings_group_summary">Настройка SIM-карт по умолчанию</string>
   <string name="voice_title">Голосовые вызовы</string>
@@ -941,6 +950,11 @@
   <string name="sd_media_format_button_text">Очистить SD-карту</string>
   <string name="sd_media_format_final_desc">Очистить SD-карту, удалив на ней все файлы без возможности восстановления? Это действие нельзя будет отменить!</string>
   <string name="sd_media_format_gesture_explanation">Чтобы подтвердить очистку SD-карты, начертите графический ключ.</string>
+  <string name="internal_sd_format">Очистить внутреннюю память</string>
+  <string name="internal_sd_format_summary">Удаление из внутренней памяти всех данных, включая музыку и фотографии</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nДля удаления музыки, фотографий и других пользовательских данных необходимо <b>очистить внутреннюю память</b>.</string>
+  <string name="erase_internal_storage">Очистить внутреннюю память</string>
+  <string name="erase_internal_storage_description">Удаление из внутренней памяти всех данных, включая музыку и фотографии</string>
   <string name="bluetooth_enter_pin_msg_hs">Для сопряжения с <xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> введите PIN-код (16 цифр или больше):</string>
   <string name="bluetooth_profile_sap">Доступ к SIM-карте</string>
   <string name="bluetooth_profile_dun">Доступ к модему</string>
@@ -999,8 +1013,17 @@
   <string name="profile_setup_setup_triggers_title_config">Условия переключения: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Шаг 2: настройте требуемые действия</string>
   <string name="profile_setup_actions_title_config">Изменение действий</string>
-  <string name="no_bluetooth_triggers">Нет Bluetooth-устройств, которые можно использовать для переключения</string>
-  <string name="no_wifi_triggers">Нет сетей Wi-Fi, которые можно использовать для переключения</string>
+  <string name="no_bluetooth_triggers">Нет сопряжённых устройств Bluetooth.\nНажмите, чтобы добавить устройство и создать условие переключения на его основе.</string>
+  <string name="no_wifi_triggers">Нет сохранённых сетей Wi\u2011Fi.\nНажмите, чтобы добавить сеть Wi\u2011Fi и создать условие переключения на её основе.</string>
   <string name="profile_setup_setup_triggers_description">Укажите условия, при которых будет включаться данный профиль</string>
   <string name="profile_setup_actions_description">Теперь можно настроить, что должно происходить при активации профиля</string>
+  <string name="profile_triggers_header">Условия активации этого профиля</string>
+  <string name="no_triggers_configured">Условия переключения не настроены. Нажмите, чтобы добавить условие.</string>
+  <string name="no_triggers_configured_nfc">Нажмите для добавления NFC-метки к этому профилю.</string>
+  <string name="sound_ringtone_multisim_options">Рингтон по умолчанию</string>
+  <string name="lock_to_cyanogen_title">Защита устройства</string>
+  <string name="lock_to_cyanogen_summary">Требовать пароль аккаунта ОС Cyanogen даже после удаления всех данных</string>
+  <string name="lock_to_cyanogen_create_account_msg">Устройство использует пароль аккаунта ОС Cyanogen для защиты устройства от сброса настроек. Потребуется создать новый аккаунт ОС Cyanogen.</string>
+  <string name="lock_to_cyanogen_disable_msg">Отключение этой функции позволит другим людям выполнить удаление всех данных на устройстве в случае его кражи. Ваши личные данные могут стать недостаточно защищёнными. Вы действительно хотите отключить эту функцию?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Защита устройства включена. Необходимо отключить её, чтобы выполнить сброс настроек на устройстве.</string>
 </resources>

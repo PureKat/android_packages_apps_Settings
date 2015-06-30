@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Ukjent Profil</string>
   <string name="profile_add_nfc_text">Denne NFC tagen refererer til en ukjent profil. Ved å knytte denne NFC tagen til en eksisterende profil vil det tillate å velge profilen i fremtiden.</string>
   <string name="profile_select">Velg profil</string>
+  <string name="profile_remove_dialog_message">Fjerne profilen %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigurere profilen ved hjelp av gjeldende innstillinger?</string>
+  <string name="profile_menu_fill_from_state">Importer gjeldende innstillinger</string>
   <string name="profile_name_title">Navn</string>
   <string name="profile_profile_name_prompt">Angi et navn for den nye profilen</string>
   <string name="menu_new_profile">Ny profil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Deaktiver</string>
   <string name="connection_state_enabled">Aktiver</string>
   <string name="volume_override_summary">Sett til %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Ikke overstyr</string>
+  <string name="profile_volume_override_checkbox_label">Overstyr volum</string>
   <string name="profile_profiles_manage">Profiler</string>
   <string name="profile_profile_manage">Behandle profil</string>
   <string name="profile_appgroups_manage">App grupper</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Stille modus påvirker varsler</string>
   <string name="volume_keys_control_ring_stream">Volumknappene styrer ringetone volum</string>
   <string name="ring_mode_title">Ringemodus</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Ring</string>
   <string name="ring_mode_vibrate">Vibrer</string>
   <string name="ring_mode_mute">Dempet</string>
+  <string name="ring_mode_unchanged">Uendret</string>
   <string name="volume_overlay_title">Stil for volum-Kontrollpanel</string>
   <string name="volume_overlay_single">Enkel</string>
   <string name="volume_overlay_expandable">Utvidbar</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maksimere widgets</string>
   <string name="lockscreen_maximize_widgets_summary">Utvide widgets når skjermen er aktivert</string>
   <string name="lockscreen_enable_camera_title">Kamera widget</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast widget</string>
   <string name="safe_headset_volume_title">Trygt headsetvolum</string>
   <string name="safe_headset_volume_restore_title">Reduser volumet på headsettet ved tilkobling</string>
   <string name="cyanogenmod_waiver_title">Avkall</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volum</string>
   <string name="title_tile_expanded_desktop">Utvidet Skrivebord</string>
   <string name="title_tile_network_adb">ADB over nettverk</string>
+  <string name="title_tile_themes">Temaer</string>
   <string name="title_dynamic_tiles">Dynamiske fliser</string>
   <string name="dynamic_tiles_note_title">NB:</string>
   <string name="dynamic_tiles_note_summary">Dynamisk paneler vises bare hvis utløst av en systemhendelse</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Lyd</string>
   <string name="cm_sound_mode_soundVibrate">Lyd &amp; Vibrer</string>
   <string name="pref_location_mode_title">Lokasjonsmodus</string>
+  <string name="pref_location_mode_summary">Fjern alle moduser for standard virkemåte</string>
+  <string name="cm_location_mode_off">Lokasjon av</string>
   <string name="cm_location_mode_battery_saving">Batterisparing</string>
   <string name="cm_location_mode_device_only">Kun enhet</string>
   <string name="cm_location_mode_high_accuracy">Høy nøyaktighet</string>
@@ -348,8 +356,10 @@
   <string name="root_access_apps">Kun apper</string>
   <string name="root_access_adb">Kun ADB</string>
   <string name="root_access_all">Apps og ADB</string>
-  <string name="update_recovery_title">Oppdater CM recovery</string>
-  <string name="update_recovery_summary">Oppdater recovery når du installerer systemoppdateringer</string>
+  <string name="update_recovery_title">Oppdater Cyanogen recovery</string>
+  <string name="update_recovery_summary">Oppdater recovery med systemoppdateringer</string>
+  <string name="update_recovery_on_warning">Merknad: Når denne funksjonen er oppdatert, vil din installerte recovery bli overskrivd av en som er inkludert i siste versjon av det kjørende OS.\n\nDin recvovery vil bli oppdatert sammen med systemoppdateringer, for å hjelpe deg med å beholde kompabiliteten med fremtidige versjoner.\n\nVil du aktivere denne funksjonen?</string>
+  <string name="update_recovery_off_warning">Advarsel: Når denne funksjonen er deaktivert, vil ikke din nåværende recovery bli oppdatert med systemoppdateringer.\n\nFremtidige systemoppdateringer vil kanskje ikke installeres på en gammel eller egendefinert recovery.\n\nVil du deaktivere denne funksjonen?</string>
   <string name="ok">Ok</string>
   <string name="quiet_hours_title">Stille nattetimer</string>
   <string name="quiet_hours_summary">Konfigurere timene enheten bør være stille</string>
@@ -429,7 +439,6 @@
   <string name="changelog_error">Kunne ikke hente endringsloggen</string>
   <string name="contributor_cloud_title">Bidragsytere</string>
   <string name="cmupdate_settings_title">CyanogenMod oppdateringer</string>
-  <string name="cmupdate_settings_summary">Se etter, vise eller installerer tilgjengelige oppdateringer</string>
   <string name="development_tools_title">Start verktøy</string>
   <string name="allow_mock_sms">Tillat simulert SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Personvern</string>
@@ -579,6 +588,7 @@
   <string name="lockscreen_buttons_toggle_sound">Velg lyd</string>
   <string name="lockscreen_buttons_sleep">Gå i dvale</string>
   <string name="lockscreen_enable_modlock_title">Egendefinert låseskjerm</string>
+  <string name="lockscreen_buttons_disabled_summary">Låseskjermknapper er ikke tilgjenglige når du bruker on-screen navigasjonsbar</string>
   <string name="navigation_bar_category">Navigasjonsfelt</string>
   <string name="navigation_bar_title">Knapper og oppsett</string>
   <string name="navigation_bar_left_title">Venstrehendt modus</string>
@@ -862,7 +872,6 @@
   <string name="voice_wakeup_retrain_title">Tren stemme igjen</string>
   <string name="voice_wakeup_activity_title">Aktivitet som skal starte</string>
   <string name="voice_wakeup_default_activity">Google nå</string>
-  <string name="sub_no_sim">Ingen SIM</string>
   <string name="multi_sim_settings_title">SIM-kort</string>
   <string name="multi_sim_settings_group_summary">Velg standard SIM</string>
   <string name="voice_title">Samtaler</string>
@@ -931,6 +940,11 @@
   <string name="sd_media_format_button_text">Slett SD-kort</string>
   <string name="sd_media_format_final_desc">Slette SD-kortet, slette alle filer lagret der? Du kan ikke angre denne handlingen!</string>
   <string name="sd_media_format_gesture_explanation">Du må trekke låse mønster for å bekrefte at du vil slette SD-kortet.</string>
+  <string name="internal_sd_format">Slett intern medialagring</string>
+  <string name="internal_sd_format_summary">Sletter alle data på det interne media lageret, som musikk og bilder</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nFor å slette musikk, bilder og andre data, må <b>det interne medialageret</b> slettes.</string>
+  <string name="erase_internal_storage">Slett internt medialager</string>
+  <string name="erase_internal_storage_description">Sletter alle data på det interne medialageret, slik som musikk og bilder</string>
   <string name="bluetooth_enter_pin_msg_hs">Å sammenkoble med:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Skriv inn enhetens PIN (16 sifre eller mer):</string>
   <string name="bluetooth_profile_sap">SIM-tilgang</string>
   <string name="bluetooth_profile_dun">Oppringt pålogging</string>
@@ -989,8 +1003,17 @@
   <string name="profile_setup_setup_triggers_title_config">Endre utløsere: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Trinn 2: handlinger</string>
   <string name="profile_setup_actions_title_config">Konfigurere handlinger</string>
-  <string name="no_bluetooth_triggers">Ingen Bluetooth utløsere tilgjengelig</string>
-  <string name="no_wifi_triggers">Ingen WiFi\u2011 utløsere tilgjengelig</string>
+  <string name="no_bluetooth_triggers">Ingen Bluetooth-enheter sammenkoblet. \nTrykk for å parre Bluetooth-enhet før du konfigurerer utløsere.</string>
+  <string name="no_wifi_triggers">Ingen Wi\u2011Fi tilgangspunkter konfigurert. \nTrykk for å koble til Wi\u2011Fi før du konfigurerer utløsere.</string>
   <string name="profile_setup_setup_triggers_description">Velg utløsere som aktiverer denne profilen</string>
   <string name="profile_setup_actions_description">Nå konfigurer hva som skjer når profilen er aktivert</string>
+  <string name="profile_triggers_header">Utløsere som vil aktivere denne profilen</string>
+  <string name="no_triggers_configured">Ingen utløsere konfigurert. Trykk for å legge til flere.</string>
+  <string name="no_triggers_configured_nfc">Trykk for å setup en ny NFC utløser.</string>
+  <string name="sound_ringtone_multisim_options">Endre standard ringetoner</string>
+  <string name="lock_to_cyanogen_title">Enhetsbeskyttelse</string>
+  <string name="lock_to_cyanogen_summary">Krev passordet til Cyanogen OS konto etter fabrikkgjennoppretting</string>
+  <string name="lock_to_cyanogen_create_account_msg">Enheten din bruker Cyanogen OS kontopassordet for å beskytte enheten din, selv etter en fabrikkgjennoppretting. Du vil bli nødt til å lage en Cyanogen OS konto.</string>
+  <string name="lock_to_cyanogen_disable_msg">Deaktivering av denne funksjonen vil tillate uautoriserte brukere å resette telefonen din til fabrikkinnstillinger hvis den blir stjålet. Dine personlige data kan kanskje ikke bli beskyttet. Er du sikker på at du vil deaktivere denne funksjonen?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Enhetsbeskyttelse er aktivert. Vennligst deaktiver for å resette enheten din.</string>
 </resources>

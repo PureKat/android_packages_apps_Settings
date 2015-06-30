@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Nezināms profils</string>
   <string name="profile_add_nfc_text">Šis NFC tags norāda uz nezināmu profilu. Šī  NFC taga pievienošana kādam esošam profilam, ļaus to izvēlēties nākotnē.</string>
   <string name="profile_select">Izvēlieties profilu</string>
+  <string name="profile_remove_dialog_message">Dzēst profilu %1$s?</string>
+  <string name="profile_populate_profile_from_state">Iestatīt profilu no pašreizējiem iekārtas iestatījumiem?</string>
+  <string name="profile_menu_fill_from_state">Importēt pašreizējos iekārtas iestatījumus</string>
   <string name="profile_name_title">Nosaukums</string>
   <string name="profile_profile_name_prompt">Ievadiet jaunā profila nosaukumu</string>
   <string name="menu_new_profile">Jauns profils</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Izslēgt</string>
   <string name="connection_state_enabled">Ieslēgt</string>
   <string name="volume_override_summary">Iestatīt uz %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Neaizstāt</string>
+  <string name="profile_volume_override_checkbox_label">Aizstājamais skaļums</string>
   <string name="profile_profiles_manage">Profili</string>
   <string name="profile_profile_manage">Pārvaldītu profilu</string>
   <string name="profile_appgroups_manage">Lietotņu grupas</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Klusais režīms ietekmē ziņošanu</string>
   <string name="volume_keys_control_ring_stream">Skaļuma pogas kontrolē zvana signāla skaļumu</string>
   <string name="ring_mode_title">Zvana režīms</string>
-  <string name="ring_mode_normal">Normāls</string>
+  <string name="ring_mode_normal">Gredzens</string>
   <string name="ring_mode_vibrate">Vibrēt</string>
   <string name="ring_mode_mute">Klusums</string>
+  <string name="ring_mode_unchanged">Nemainīts</string>
   <string name="volume_overlay_title">Skaļuma paneļa stils</string>
   <string name="volume_overlay_single">Viens</string>
   <string name="volume_overlay_expandable">Paplašināms</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maksimizēt logrīkus</string>
   <string name="lockscreen_maximize_widgets_summary">Ieslēdzot ekrānu, paplašināt logrīkus</string>
   <string name="lockscreen_enable_camera_title">Kameras logrīks</string>
-  <string name="lockscreen_enable_application_widget_title">Lietotnes raides logrīks</string>
   <string name="safe_headset_volume_title">Drošs austiņu skaļums</string>
   <string name="safe_headset_volume_restore_title">Savienojoties, samazinātu austiņu skaļumu</string>
   <string name="cyanogenmod_waiver_title">Atteikšanās</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Skaļums</string>
   <string name="title_tile_expanded_desktop">Paplašināta darbvirsma</string>
   <string name="title_tile_network_adb">ADB tīkls</string>
+  <string name="title_tile_themes">Tēmas</string>
   <string name="title_dynamic_tiles">Dinamiskas flīzes</string>
   <string name="dynamic_tiles_note_title">Piezīme</string>
   <string name="dynamic_tiles_note_summary">Dinamiskās flīzes parādīsies, palaižoties pēc sistēmas notikuma</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Skaņa</string>
   <string name="cm_sound_mode_soundVibrate">Skaņa un vibrācija</string>
   <string name="pref_location_mode_title">Vietu režīmi</string>
+  <string name="pref_location_mode_summary">Noklusētajai uzvedībai neatķeksējiet nevienu režīmu</string>
+  <string name="cm_location_mode_off">Atrašanās vieta izslēgta</string>
   <string name="cm_location_mode_battery_saving">Akumulatora taupīšana</string>
   <string name="cm_location_mode_device_only">Tikai iekārta</string>
   <string name="cm_location_mode_high_accuracy">Ļoti precīza</string>
@@ -357,8 +365,10 @@ Papildu opcijas ir pieejamas, ilgi pieskaroties rindai. Izvēloties \'Mainīt\',
   <string name="root_access_apps">Tikai lietotnēm</string>
   <string name="root_access_adb">Tikai ADB</string>
   <string name="root_access_all">Lietotnēm un ADB</string>
-  <string name="update_recovery_title">Atjaunot CM atkopšanu</string>
-  <string name="update_recovery_summary">Uzstādot sistēmas atjaunojumus, atjaunot atkopšanu </string>
+  <string name="update_recovery_title">Atjaunot Cyanogen atkopšanu</string>
+  <string name="update_recovery_summary">Atjaunot atkopšanu ar sistēmas atjaunojumiem</string>
+  <string name="update_recovery_on_warning">PIEZĪME: Kad šī iespēja ir ieslēgta, jūsu uzstādītā atkopšana tiks aizstāta ar to, kāda ir iekļauta tekošajā operētājsistēmas versijā.\n\nJūsu atkopšana tiks aizstāta ar kopā ar sistēmas atjaunojumiem, ļaujot pārbaudīt savietojamību ar nākamajām sistēmas versijām.\n\nVai vēlaties ieslēgt šo iespēju?</string>
+  <string name="update_recovery_off_warning">BRĪDINĀJUMS: Ja šī iespēja ir atslēgta, jūsu uzstādītā atkopšana netiks atjaunota kopā ar operētājsistēmas atjaunojumiem.\n\nUn nākamie operētājsistēmas atjaunojumi var neizdoties ar novecojušu sistēmas atkopšanas versiju.\n\nVai tiešām vēlaties atslēgt šo iespēju?</string>
   <string name="ok">Labi</string>
   <string name="quiet_hours_title">Klusās stundas</string>
   <string name="quiet_hours_summary">Iestatīt stundas, kurās iekārtai jābūt klusai</string>
@@ -438,7 +448,6 @@ Papildu opcijas ir pieejamas, ilgi pieskaroties rindai. Izvēloties \'Mainīt\',
   <string name="changelog_error">Neizdevās ielādēt izmaiņu žurnālu</string>
   <string name="contributor_cloud_title">Atbalstītāji</string>
   <string name="cmupdate_settings_title">CyanogenMod atjaunojumi</string>
-  <string name="cmupdate_settings_summary">Pārbaudīt, apskatīt vai uzstādīt pieejamos atjaunojumus</string>
   <string name="development_tools_title">Palaist rīkus</string>
   <string name="allow_mock_sms">Atļaut viltus īsziņas</string>
   <string name="privacy_settings_cyanogenmod_title">Privātums</string>
@@ -871,7 +880,6 @@ Papildu opcijas ir pieejamas, ilgi pieskaroties rindai. Izvēloties \'Mainīt\',
   <string name="voice_wakeup_retrain_title">Pārapmācīt jūsu balsi</string>
   <string name="voice_wakeup_activity_title">Darbības palaižot</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Bez SIM</string>
   <string name="multi_sim_settings_title">SIM kartes</string>
   <string name="multi_sim_settings_group_summary">Noklusētā SIM izvēle</string>
   <string name="voice_title">Balss zvani</string>
@@ -999,8 +1007,12 @@ Papildu opcijas ir pieejamas, ilgi pieskaroties rindai. Izvēloties \'Mainīt\',
   <string name="profile_setup_setup_triggers_title_config">Mainiet trigerus: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">2. solis: Iestatiet darbības</string>
   <string name="profile_setup_actions_title_config">Pārstatīt darbības</string>
-  <string name="no_bluetooth_triggers">Nav pieejami Bluetooth trigeri</string>
-  <string name="no_wifi_triggers">Wi-Fi trigeri nav pieejami</string>
+  <string name="no_bluetooth_triggers">Nav nevienas sapārotas Bluetooth iekārtas. \nPiesitiet, lai sapārotu Bluetooth iekārtu pirms trigeru iestatīšanas.</string>
+  <string name="no_wifi_triggers">Nav iestatīts neviens Wi\u2011Fi pieejas punkts.\nPiesitiet, lai, pirms trigeru iestatīšanas, pieslēgtos Wi\u2011Fi.</string>
   <string name="profile_setup_setup_triggers_description">Lūdzu, izvēlieties trigeri, kas aktivēs šo profilu</string>
   <string name="profile_setup_actions_description">Tagad iestatiet, kas notiks, kad profils būs aktivēts</string>
+  <string name="profile_triggers_header">Trigeri, kas aktivēs šo profilu</string>
+  <string name="no_triggers_configured">Trigeri nav iestatīti. Piesitiet, lai pievienotu.</string>
+  <string name="no_triggers_configured_nfc">Piesitiet, lai iestatītu jaunu NFC trigeri.</string>
+  <string name="sound_ringtone_multisim_options">Mainīt noklusētās zvana skaņas</string>
 </resources>

@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Neznámy profil</string>
   <string name="profile_add_nfc_text">Tento NFC tag odkazuje na neznámy profil. Pripojenie tohto NFC tagu k existujúcemu profilu umožní neskorší výber profilu.</string>
   <string name="profile_select">Vyberte profil</string>
+  <string name="profile_remove_dialog_message">Odstrániť profil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Nastaviť profil použitím aktuálnych nastavení zariadenia?</string>
+  <string name="profile_menu_fill_from_state">Importovať aktuálne nastavenia zariadenia</string>
   <string name="profile_name_title">Názov</string>
   <string name="profile_profile_name_prompt">Zadajte názov nového profilu</string>
   <string name="menu_new_profile">Nový profil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Zakázať</string>
   <string name="connection_state_enabled">Povoliť</string>
   <string name="volume_override_summary">Nastaviť na %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Neprepisovať</string>
+  <string name="profile_volume_override_checkbox_label">Prepísať hlasitosť</string>
   <string name="profile_profiles_manage">Profily</string>
   <string name="profile_profile_manage">Spravovať profil</string>
   <string name="profile_appgroups_manage">Skupiny aplikácií</string>
@@ -127,13 +132,14 @@
   <string name="link_volume_mutes">Tichý režim ovplyvňuje upozornenia</string>
   <string name="volume_keys_control_ring_stream">Tlačidlami hlasitosti ovládať hlasitosť zvonenia</string>
   <string name="ring_mode_title">Režim vyzváňania</string>
-  <string name="ring_mode_normal">Normálne</string>
+  <string name="ring_mode_normal">Zvonenie</string>
   <string name="ring_mode_vibrate">Vibrovať</string>
   <string name="ring_mode_mute">Stlmený</string>
+  <string name="ring_mode_unchanged">Nezmenené</string>
   <string name="volume_overlay_title">Štýl panela hlasitosti</string>
   <string name="volume_overlay_single">Jednoduchý</string>
   <string name="volume_overlay_expandable">Rozšírený</string>
-  <string name="volume_overlay_expanded">Rozšírené</string>
+  <string name="volume_overlay_expanded">Rozšírený</string>
   <string name="volume_overlay_none">Žiadny</string>
   <string name="automation_effects_title">Automatizácia &amp; efekty</string>
   <string name="notification_convert_sound_to_vibration_title">Vibrovať pri upozornení</string>
@@ -165,7 +171,7 @@
   <string name="color_enhancement_title">Vylepšenie farieb</string>
   <string name="color_enhancement_summary">Dynamicky zlepšiť farbu displeja</string>
   <string name="wake_when_plugged_or_unplugged_title">Prebudiť po pripojení</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Zapnúť obrazovku pri pripojení, alebo odpojení k zdroju nabíjania</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Zapnúť obrazovku pri pripojení alebo odpojení zdroja nabíjania</string>
   <string name="screen_animation_off_title">Animácia vypnutia obrazovky</string>
   <string name="screen_animation_style_title">Štýl vypínacej animácie obrazovky</string>
   <string name="screen_animation_style_disabled">Zakázané</string>
@@ -199,9 +205,9 @@
   <string name="lockpattern_settings_enable_error_path_title">Zobraziť nesprávny vzor</string>
   <string name="lockpattern_settings_enable_dots_title">Zobraziť body vzoru</string>
   <string name="screen_security_category">Zabezpečenie obrazovky</string>
-  <string name="screen_security_summary">Zobraziť alebo zmeniť nastavenia zabezpečenia uzamykacej obrazovky</string>
-  <string name="unlock_scramble_pin_layout_title">Scramble rozloženie</string>
-  <string name="unlock_scramble_pin_layout_summary">Scramble PIN rozloženie pri odomykaní zariadenia</string>
+  <string name="screen_security_summary">Zobraziť alebo zmeniť nastavenia zabezpečenia obrazovky uzamknutia</string>
+  <string name="unlock_scramble_pin_layout_title">Dynamické rozloženie</string>
+  <string name="unlock_scramble_pin_layout_summary">Prehádzať rozloženie pre zadanie kódu PIN pri odomykaní zariadenia</string>
   <string name="unlock_menu_unlock_title">Odomknúť tlačidlom Ponuka</string>
   <string name="unlock_menu_unlock_summary">Stlačením tlačidla Ponuka sa odomkne zariadenie</string>
   <string name="unlock_home_unlock_title">Odomknúť tlačidlom Domov</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maximalizovať miniaplikácie</string>
   <string name="lockscreen_maximize_widgets_summary">Rozbaliť miniaplikácie pri zapnutí obrazovky</string>
   <string name="lockscreen_enable_camera_title">Miniaplikácia fotoaparátu</string>
-  <string name="lockscreen_enable_application_widget_title">Miniaplikácia Appcast</string>
   <string name="safe_headset_volume_title">Bezpečná hlasitosť</string>
   <string name="safe_headset_volume_restore_title">Znížiť hlasitosť slúchadiel po ich pripojení</string>
   <string name="cyanogenmod_waiver_title">Upozornenie</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Hlasitosť</string>
   <string name="title_tile_expanded_desktop">Rozšírená plocha</string>
   <string name="title_tile_network_adb">ADB cez sieť</string>
+  <string name="title_tile_themes">Témy</string>
   <string name="title_dynamic_tiles">Dynamické dlaždice</string>
   <string name="dynamic_tiles_note_title">Poznámka</string>
   <string name="dynamic_tiles_note_summary">Dynamické dlaždice sa zobrazia len pri ich spustení systémovou udalosťou</string>
@@ -294,13 +300,15 @@
   <string name="cm_sound_mode_sound">Zvuk</string>
   <string name="cm_sound_mode_soundVibrate">Zvuk a vibrácia</string>
   <string name="pref_location_mode_title">Režimy polohy</string>
+  <string name="pref_location_mode_summary">Zrušte označenie všetkých režimov pre predvolené správanie</string>
+  <string name="cm_location_mode_off">Poloha vyp.</string>
   <string name="cm_location_mode_battery_saving">Šetrenie batérie</string>
   <string name="cm_location_mode_device_only">Iba zariadenie</string>
   <string name="cm_location_mode_high_accuracy">Vysoká presnosť</string>
   <string name="tiles_reset_title">Obnoviť</string>
   <string name="tiles_reset_message">Obnoviť predvolené nastavenia a rozloženie dlaždíc?</string>
   <string name="auto_brightness_setup_title">Automatický jas</string>
-  <string name="auto_brightness_twilight_adjustment">Upraviť podľa západu/východu Slnka</string>
+  <string name="auto_brightness_twilight_adjustment">Upraviť podľa západu/východu slnka</string>
   <string name="light_sensor_current_value">Aktuálna hodnota svetelného senzora: <xliff:g id="light_level">%d</xliff:g> lux</string>
   <string name="auto_brightness_dialog_title">Automatické úrovne jasu</string>
   <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
@@ -340,7 +348,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="display_rotation_title">Otáčanie</string>
   <string name="display_rotation_disabled">Zakázané</string>
   <string name="display_rotation_unit">stupňov</string>
-  <string name="display_lockscreen_rotation_title">Otáčať uzamykaciu obrazovku</string>
+  <string name="display_lockscreen_rotation_title">Otáčať obrazovku uzamknutia</string>
   <string name="display_rotation_category_title">Režimy otáčania</string>
   <string name="display_rotation_0_title">0 stupňov</string>
   <string name="display_rotation_90_title">90 stupňov</string>
@@ -356,8 +364,10 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="root_access_apps">Iba aplikácie</string>
   <string name="root_access_adb">Iba ADB</string>
   <string name="root_access_all">Aplikácie a ADB</string>
-  <string name="update_recovery_title">Aktualizovať CM recovery</string>
-  <string name="update_recovery_summary">Aktualizovať recovery pri inštalácii aktualizácií systému</string>
+  <string name="update_recovery_title">Aktualizovať Cyanogen recovery</string>
+  <string name="update_recovery_summary">Aktualizovať recovery s aktualizáciami systému</string>
+  <string name="update_recovery_on_warning">UPOZORNENIE: Ak je táto funkcia povolená, vaša nainštalovaná recovery bude nahradená verziou, ktorá je súčasťou aktuálneho operačného systému.\n\nVaša recovery sa bude aktualizovať spolu so systémom, čím sa zaistuje kompatibilita s budúcim verziami.\n\nChcete povoliť túto funkciu?</string>
+  <string name="update_recovery_off_warning">VAROVANIE: Ak je táto funkcia zakázaná, vaša nainštalovaná recovery nebude nahradená s aktualizáciami operačného systému.\n\nBudúce aktualizácie operačného systému sa nemusia nainštalovať kvôli zastaraným alebo vlastným verziám recovery.\n\nChcete zakázať túto funkciu?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Čas ticha</string>
   <string name="quiet_hours_summary">Nastaviť hodiny, počas ktorých má byť zariadenie v tichom režime</string>
@@ -437,7 +447,6 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="changelog_error">Nemožno načítať zoznam zmien</string>
   <string name="contributor_cloud_title">Prispievatelia</string>
   <string name="cmupdate_settings_title">Aktualizácie CyanogenMod</string>
-  <string name="cmupdate_settings_summary">Skontrolovať, zobraziť alebo nainštalovať dostupné aktualizácie</string>
   <string name="development_tools_title">Nástroje spúšťania</string>
   <string name="allow_mock_sms">Povoliť falošné SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Súkromie</string>
@@ -502,7 +511,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="adb_over_network_warning">VAROVANIE: Ak je povolené ADB cez sieť, zariadenie je otvorené pre pokusy o prieniky na všetkých pripojených sieťach, vrátane GSM dátových sieťach!\n\nPoužite túto funkciu iba ak ste pripojení k dôveryhodnej sieti.\n\nChcete povoliť túto funkciu?</string>
   <string name="device_hostname">Názov zariadenia</string>
   <string name="notification_drawer_title">Ponuka oznámení</string>
-  <string name="notification_drawer_collapse_on_dismiss_title">Automatické uzatváranie</string>
+  <string name="notification_drawer_collapse_on_dismiss_title">Správanie automatického zatvárania</string>
   <string name="collapse_on_dismiss_never">Zakázané</string>
   <string name="collapse_on_dismiss_if_empty">Ak nič nezostáva</string>
   <string name="collapse_on_dismiss_if_no_clearable">Ak nič odstrániteľné nezostáva</string>
@@ -527,10 +536,10 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="sms_security_check_limit_none">Žiadny</string>
   <string name="lockscreen_custom_widgets_title">Vlastné miniaplikácie</string>
   <string name="lock_clock_title">Miniaplikácia hodín</string>
-  <string name="lock_clock_summary">Prispôsobiť predvolenú miniaplikáciu na domovskej a uzamykacej obrazovke</string>
+  <string name="lock_clock_summary">Prispôsobiť predvolenú miniaplikáciu na domovskej obrazovke a obrazovke uzamknutia</string>
   <string name="power_notifications_category_title">Zvuky nabíjania</string>
   <string name="power_notifications_enable_title">Povoliť</string>
-  <string name="power_notifications_enable_summary">Prehrať zvuk pri pripojení, alebo odpojení nabíjania</string>
+  <string name="power_notifications_enable_summary">Prehrať zvuk pri pripojení alebo odpojení zdroja nabíjania</string>
   <string name="power_notifications_vibrate_title">Vibrovať</string>
   <string name="power_notifications_ringtone_title">Zvuk upozornenia</string>
   <string name="power_notifications_ringtone_silent">Tichý</string>
@@ -541,7 +550,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="lockscreen_target_info">Potiahnite posuvník na požadovanú pozíciu pre priradenie odkazu</string>
   <string name="lockscreen_target_title">Odkazy posuvníka</string>
   <string name="lockscreen_target_summary">Zobraziť alebo zmeniť vlastné odkazy na obrazovke uzamknutia</string>
-  <string name="lockscreen_target_reset">Odkazy uzamykacej obrazovky boli obnovené na predvolené</string>
+  <string name="lockscreen_target_reset">Odkazy obrazovky uzamknutia boli obnovené na predvolené</string>
   <string name="lockscreen_target_reset_title">Obnoviť</string>
   <string name="lockscreen_target_reset_message">Vymazať všetky používateľské odkazy obrazovky uzamknutia a obnoviť predvolené?</string>
   <string name="lockscreen_target_empty">Prázdne</string>
@@ -587,6 +596,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="lockscreen_buttons_toggle_sound">Prepnúť zvuk</string>
   <string name="lockscreen_buttons_sleep">Prejsť do spánku</string>
   <string name="lockscreen_enable_modlock_title">Vlastný zámok obrazovky</string>
+  <string name="lockscreen_buttons_disabled_summary">Tlačidlá na obrazovke uzamknutia nie sú dostupné pri použití navigačného panela na obrazovke</string>
   <string name="navigation_bar_category">Navigačný panel</string>
   <string name="navigation_bar_title">Tlačidlá a rozloženie</string>
   <string name="navigation_bar_left_title">Režim pre ľavákov</string>
@@ -598,7 +608,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="navigation_bar_save_message">Nastavenia navigačného panela boli uložené</string>
   <string name="navigation_bar_reset_toast">Nastavenia navigačného panela boli obnovené na predvolené</string>
   <string name="navigation_bar_menu_editable">Upraviteľné</string>
-  <string name="navigation_bar_menu_locked">Zakmnuté</string>
+  <string name="navigation_bar_menu_locked">Zamknuté</string>
   <string name="navigation_bar_arrow_keys_title">Šípky pri písaní</string>
   <string name="navigation_bar_arrow_keys_summary">Zobraziť ľavé a pravé kurzorové tlačidlá pri písaní</string>
   <string name="navigation_bar_recents_title">Akcia dlhého stlačenia na tlačidle Nedávne</string>
@@ -870,7 +880,6 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="voice_wakeup_retrain_title">Preškoliť váš hlas</string>
   <string name="voice_wakeup_activity_title">Spustiť aktivitu</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Žiadna SIM</string>
   <string name="multi_sim_settings_title">Karty SIM</string>
   <string name="multi_sim_settings_group_summary">Výber predvolenej SIM</string>
   <string name="voice_title">Hlasové hovory</string>
@@ -911,7 +920,7 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="usb_sd_insert_summary">Vložte USB úložisko pre pripojenie</string>
   <string name="usb_sd_mount">Pripojiť USB úložisko</string>
   <string name="usb_sd_format">Vymazať USB úložisko</string>
-  <string name="usb_sd_format_summary">Vymazať všetky dáta na USB úložisko, ako napríklad hudbu alebo fotografie</string>
+  <string name="usb_sd_format_summary">Vymazať všetky dáta na USB úložisku, ako napríklad hudbu alebo fotografie</string>
   <string name="usb_dlg_confirm_unmount_title">Odpojiť USB úložisko?</string>
   <string name="usb_dlg_confirm_unmount_text">Ak odpojíte USB úložisko, niektoré používané aplikácie môžu byť zastavené a nebudú k dispozícii, kým USB úložisko znova nepripojíte.</string>
   <string name="usb_dlg_error_unmount_text">USB úložisko sa nepodarilo odpojiť. Skúste to znova neskôr.</string>
@@ -940,6 +949,11 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="sd_media_format_button_text">Vymazať kartu SD</string>
   <string name="sd_media_format_final_desc">Vymazať kartu SD a vymazať tak všetky súbory na nej uložené? Túto akciu nebude možné vrátiť späť!</string>
   <string name="sd_media_format_gesture_explanation">Vymazanie karty SD musíte potvrdiť nakreslením odomykacieho vzoru.</string>
+  <string name="internal_sd_format">Vymazať vnútorné úložisko médií</string>
+  <string name="internal_sd_format_summary">Vymazať všetky údaje na vnútornom úložisku médií, ako je hudba a fotografie</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPre vymazanie hudby, obrázkov a iných používateľských dát musíte vymazať <b>vnútorné úložisko médií.</b>.</string>
+  <string name="erase_internal_storage">Vymazať vnútorné úložisko médií</string>
+  <string name="erase_internal_storage_description">Vymazať všetky údaje na vnútornom úložisku médií, ako je hudba a fotografie</string>
   <string name="bluetooth_enter_pin_msg_hs">Pre spárovanie s: <xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Zadajte kód PIN požadovaný zariadením (16 alebo viac číslic):</string>
   <string name="bluetooth_profile_sap">Prístup k SIM</string>
   <string name="bluetooth_profile_dun">Prístup k telefonickej sieti</string>
@@ -998,8 +1012,17 @@ Každý riadok v zozname jasu zodpovedá jednému <i>riadiacemu bodu</i> krivky 
   <string name="profile_setup_setup_triggers_title_config">Upraviť spúšťače: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Krok 2: Nastavenie akcií</string>
   <string name="profile_setup_actions_title_config">Nastaviť akcie</string>
-  <string name="no_bluetooth_triggers">Nedostupné Bluetooth spúšťače</string>
-  <string name="no_wifi_triggers">Nedostupné Wi\u2011Fi spúšťače</string>
+  <string name="no_bluetooth_triggers">Žiadne spárované Bluetooth zariadenia.\nKliknite pre spárovanie Bluetooth zariadenia pred nastavením prepínačov.</string>
+  <string name="no_wifi_triggers">Žiadne nastavené prístupové body Wi\u2011Fi. \nKliknite pre pripojenie k Wi\u2011Fi pred nastavením prepínačov.</string>
   <string name="profile_setup_setup_triggers_description">Prosím, vyberte spúšťače, ktoré aktivujú tento profil</string>
   <string name="profile_setup_actions_description">Teraz nastavte, čo sa stane, keď je profil aktívny</string>
+  <string name="profile_triggers_header">Prepínače, ktoré aktivujú tento profil</string>
+  <string name="no_triggers_configured">Žiadne nastavené prepínače. Kliknite pre pridanie ďalších.</string>
+  <string name="no_triggers_configured_nfc">Kliknite pre nastavenie nového NFC prepínača.</string>
+  <string name="sound_ringtone_multisim_options">Zmeniť predvolené zvonenia</string>
+  <string name="lock_to_cyanogen_title">Ochrana zariadenia</string>
+  <string name="lock_to_cyanogen_summary">Vyžadovať heslo účtu Cyanogen OS aj po obnove továrenských nastavení</string>
+  <string name="lock_to_cyanogen_create_account_msg">Vaše zariadenie používa heslo účtu Cyanogen OS na ochranu vášho zariadenia dokonca aj v prípade obnovy továrenských nastavení. Musíte si vytvoriť účet Cyanogen OS.</string>
+  <string name="lock_to_cyanogen_disable_msg">Zakázanie tejto funkcie umožňuje neoprávneným používateľom obnoviť váš telefón do továrenských nastavení v prípade jeho krádeže. Vaše osobné údaje nemusia byť chránené. Chcete zakázať túto funkciu?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Ochrana zariadenia je povolená. Prosím, zakážte ju pred pokračovaním v obnove vášho zariadenia.</string>
 </resources>

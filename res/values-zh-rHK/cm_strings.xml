@@ -123,7 +123,6 @@
   <string name="link_volume_mutes">靜音模式會影響通知</string>
   <string name="volume_keys_control_ring_stream">音量按鈕控制鈴聲音量</string>
   <string name="ring_mode_title">鈴響模式</string>
-  <string name="ring_mode_normal">正常</string>
   <string name="ring_mode_vibrate">震動</string>
   <string name="ring_mode_mute">靜音</string>
   <string name="volume_overlay_title">音量面板風格</string>
@@ -311,8 +310,6 @@
   <string name="root_access_apps">僅限應用程式</string>
   <string name="root_access_adb">僅限 ADB</string>
   <string name="root_access_all">應用程式和 ADB</string>
-  <string name="update_recovery_title">升級 CM 修復 (Recovery) 模式</string>
-  <string name="update_recovery_summary">安裝系統更新時升級修復 (Recovery) 模式</string>
   <string name="ok">確定</string>
   <string name="quiet_hours_title">安靜時段</string>
   <string name="quiet_hours_summary">設定裝置應該安靜的時段</string>
@@ -390,7 +387,6 @@
   <string name="changelog_error">無法載入更新日誌</string>
   <string name="contributor_cloud_title">貢獻者</string>
   <string name="cmupdate_settings_title">CyanogenMod 更新</string>
-  <string name="cmupdate_settings_summary">檢查、 查看或安裝可用的更新</string>
   <string name="development_tools_title">啟動工具</string>
   <string name="allow_mock_sms">允許模擬短訊</string>
   <string name="privacy_settings_cyanogenmod_title">私隱</string>
@@ -794,7 +790,6 @@
   <string name="voice_wakeup_retrain_title">重新訓練您的語音</string>
   <string name="voice_wakeup_activity_title">活動啟動</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">沒有 SIM 咭</string>
   <string name="multi_sim_settings_group_summary">預設 SIM 咭選擇</string>
   <string name="voice_title">語音通話</string>
   <string name="data_title">數據連綫</string>
@@ -805,6 +800,7 @@
   <string name="graphics_title">圖像和繪製</string>
   <string name="menu_hidden_apps_delete">重設</string>
   <string name="menu_hidden_apps_reset_lock">重設圖案解銷</string>
+  <string name="protected_apps">受保護的應用程式</string>
   <string name="block_notifications_title">過濾器通知</string>
   <string name="block_notifications_summary">管理被忽略的通知和過濾器</string>
   <string name="no_filters_title">沒有過濾器設定。若要過濾通知，長按它並選擇「忽略這樣的訊息」。</string>

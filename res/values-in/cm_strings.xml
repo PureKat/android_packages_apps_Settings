@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Profil tidak diketahui</string>
   <string name="profile_add_nfc_text">Tag NFC ini mengacu pada profil yang tidak diketahui. Melampirkan tag NFC ini ke profil yang ada akan memungkinkan untuk memilih profil di masa depan.</string>
   <string name="profile_select">Pilih profil</string>
+  <string name="profile_remove_dialog_message">Hapus profil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigurasi profil menggunakan pengaturan perangkat saat ini?</string>
+  <string name="profile_menu_fill_from_state">Impor pengaturan perangkat saat ini</string>
   <string name="profile_name_title">Nama</string>
   <string name="profile_profile_name_prompt">Masukkan nama untuk profil baru</string>
   <string name="menu_new_profile">Profil baru</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Nonaktifkan</string>
   <string name="connection_state_enabled">Aktifkan</string>
   <string name="volume_override_summary">Set ke %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Jangan timpa</string>
+  <string name="profile_volume_override_checkbox_label">Timpa volume</string>
   <string name="profile_profiles_manage">Profil</string>
   <string name="profile_profile_manage">Kelola profil</string>
   <string name="profile_appgroups_manage">Kelompok aplikasi</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Mode diam mempengaruhi pemberitahuan</string>
   <string name="volume_keys_control_ring_stream">Tombol volume mengatur volume nada dering</string>
   <string name="ring_mode_title">Mode dering</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Dering</string>
   <string name="ring_mode_vibrate">Getar</string>
   <string name="ring_mode_mute">Diam</string>
+  <string name="ring_mode_unchanged">Tidak diubah</string>
   <string name="volume_overlay_title">Gaya panel volume</string>
   <string name="volume_overlay_single">Tunggal</string>
   <string name="volume_overlay_expandable">Dapat diperluas</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Lebarkan widgets</string>
   <string name="lockscreen_maximize_widgets_summary">Perluas widget ketka layar diaktifkan</string>
   <string name="lockscreen_enable_camera_title">Widget kamera</string>
-  <string name="lockscreen_enable_application_widget_title">Widget Appcast</string>
   <string name="safe_headset_volume_title">Volume aman headset</string>
   <string name="safe_headset_volume_restore_title">Mengurangi volume suara headset pada koneksi</string>
   <string name="cyanogenmod_waiver_title">Pengabaian</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Perluasan desktop</string>
   <string name="title_tile_network_adb">ADB melalui jaringan</string>
+  <string name="title_tile_themes">Tema</string>
   <string name="title_dynamic_tiles">Tiles dinamis</string>
   <string name="dynamic_tiles_note_title">Catatan</string>
   <string name="dynamic_tiles_note_summary">Tiles dinamis hanya akan muncul jika dipicu oleh aktivitas sistem</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Suara</string>
   <string name="cm_sound_mode_soundVibrate">Suara &amp; Getar</string>
   <string name="pref_location_mode_title">Mode lokasi</string>
+  <string name="pref_location_mode_summary">Hapus centang semua mode untuk perilaku default</string>
+  <string name="cm_location_mode_off">Lokasi nonaktif</string>
   <string name="cm_location_mode_battery_saving">Hemat baterai</string>
   <string name="cm_location_mode_device_only">Khusus perangkat</string>
   <string name="cm_location_mode_high_accuracy">Akurasi tinggi</string>
@@ -355,8 +363,10 @@ Pilihan tambahan tersedia dengan menekan-lama sebuah garis. Dengan memilih \'Uba
   <string name="root_access_apps">Aplikasi saja</string>
   <string name="root_access_adb">ADB saja</string>
   <string name="root_access_all">Aplikasi dan ADB</string>
-  <string name="update_recovery_title">Perbarui recovery CM</string>
-  <string name="update_recovery_summary">Perbarui recovery ketika menginstal pembaruan sistem</string>
+  <string name="update_recovery_title">Perbarui recovery Cyanogen</string>
+  <string name="update_recovery_summary">Perbarui recovery dengan pembaruan sistem</string>
+  <string name="update_recovery_on_warning">PERHATIAN: Bila fitur ini diaktifkan, recovery Anda yang terpasang akan digantikan oleh salah satu yang disertakan dengan versi terbaru dari OS yang berjalan.\n\nRecovery Anda akan diperbarui bersama dengan upgrade sistem Anda, untuk membantu Anda untuk memastikan kompatibilitas dengan versi mendatang.\n\nApakah Anda ingin mengaktifkan fitur ini?</string>
+  <string name="update_recovery_off_warning">PERINGATAN: Bila fitur ini dinonaktifkan, recovery Anda yang terpasang tidak akan diperbarui dengan upgrade OS.\n\nUpdate mendatang OS mungkin tidak dapat di instal dengan versi recovery yang lama atau versi recovery kustom.\n\nApakah Anda benar-benar ingin menonaktifkan fitur ini?</string>
   <string name="ok">Oke</string>
   <string name="quiet_hours_title">Jam tenang</string>
   <string name="quiet_hours_summary">Mengkonfigurasi jam saat perangkat harus tenang</string>
@@ -436,7 +446,6 @@ Pilihan tambahan tersedia dengan menekan-lama sebuah garis. Dengan memilih \'Uba
   <string name="changelog_error">Tidak dapat memuat daftar perubahan</string>
   <string name="contributor_cloud_title">Kontributor</string>
   <string name="cmupdate_settings_title">Pembaruan CyanogenMod</string>
-  <string name="cmupdate_settings_summary">Memeriksa, lihat atau menginstal pembaruan yang tersedia</string>
   <string name="development_tools_title">Launch Tools</string>
   <string name="allow_mock_sms">Izinkan SMS tiruan</string>
   <string name="privacy_settings_cyanogenmod_title">Privasi</string>
@@ -869,7 +878,6 @@ Pilihan tambahan tersedia dengan menekan-lama sebuah garis. Dengan memilih \'Uba
   <string name="voice_wakeup_retrain_title">Melatih suara Anda</string>
   <string name="voice_wakeup_activity_title">Kegiatan untuk memulai</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Tidak ada SIM</string>
   <string name="multi_sim_settings_title">Kartu SIM</string>
   <string name="multi_sim_settings_group_summary">Seleksi SIM default</string>
   <string name="voice_title">Panggilan suara</string>
@@ -995,8 +1003,12 @@ Pilihan tambahan tersedia dengan menekan-lama sebuah garis. Dengan memilih \'Uba
   <string name="profile_setup_setup_triggers_title_config">Modifikasi pemicu: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Langkah 2: Pengaturan tindakan</string>
   <string name="profile_setup_actions_title_config">Konfigurasikan ulang tindakan</string>
-  <string name="no_bluetooth_triggers">Pemicu Bluetooth tidak tersedia</string>
-  <string name="no_wifi_triggers">Tidak ada pemicu Wi\u2011Fi tersedia</string>
+  <string name="no_bluetooth_triggers">Tidak ada perangkat Bluetooth yang dipasangkan.\nTap untuk memasang perangkat Bluetooth sebelum mengkonfigurasi pemicu.</string>
+  <string name="no_wifi_triggers">Tidak ada akses poin Wi\u2011Fi yang dikonfigurasi.\nTap untuk menghubungkan Wi\u2011Fi sebelum mengkonfigurasi pemicu.</string>
   <string name="profile_setup_setup_triggers_description">Silakan pilih pemicu yang akan mengaktifkan profil ini</string>
   <string name="profile_setup_actions_description">Sekarang konfigurasi apa yang terjadi saat profil tersebut diaktifkan</string>
+  <string name="profile_triggers_header">Pemicu yang akan mengaktifkan profil ini</string>
+  <string name="no_triggers_configured">Tidak ada pemicu yang dikonfigurasi. Tap untuk menambahkan lebih banyak.</string>
+  <string name="no_triggers_configured_nfc">Tap untuk memicu setup NFC baru.</string>
+  <string name="sound_ringtone_multisim_options">Ubah nada dering standar</string>
 </resources>

@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Ukendt profil</string>
   <string name="profile_add_nfc_text">Dette NFC-tag refererer til en ukendt profil. Fastgørelse af denne NFC-tag til en eksisterende profil, vil give mulighed for at vælge profilen i fremtiden.</string>
   <string name="profile_select">Vælg profil</string>
+  <string name="profile_remove_dialog_message">Fjern profil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigurér profilen vha. aktuelle enhedsindstillinger?</string>
+  <string name="profile_menu_fill_from_state">Importér aktuelle enhedsindstillinger</string>
   <string name="profile_name_title">Navn</string>
   <string name="profile_profile_name_prompt">Angiv et navn for den nye profil</string>
   <string name="menu_new_profile">Ny profil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Deaktivér</string>
   <string name="connection_state_enabled">Aktivér</string>
   <string name="volume_override_summary">Indstillet til %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Underkend ikke</string>
+  <string name="profile_volume_override_checkbox_label">Underkend volume</string>
   <string name="profile_profiles_manage">Profiler</string>
   <string name="profile_profile_manage">Administrer profil</string>
   <string name="profile_appgroups_manage">App-grupper</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Forbind lydløs ringe- og meddelelseslydstyrke</string>
   <string name="volume_keys_control_ring_stream">Lydstyrkeknapper styrer ringetonens lydstyrke</string>
   <string name="ring_mode_title">Lydtilstande</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Ring</string>
   <string name="ring_mode_vibrate">Vibrér</string>
   <string name="ring_mode_mute">Lydløs</string>
+  <string name="ring_mode_unchanged">Uændret</string>
   <string name="volume_overlay_title">Lydstyrkepanel</string>
   <string name="volume_overlay_single">Enkel</string>
   <string name="volume_overlay_expandable">Udvidelig</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maksimér widgets</string>
   <string name="lockscreen_maximize_widgets_summary">Vis widgets maksimeret og låsen minimeret, når skærmen er tændt</string>
   <string name="lockscreen_enable_camera_title">Kamera-widget</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast-widget</string>
   <string name="safe_headset_volume_title">Sikker lydstyrke for håndfri</string>
   <string name="safe_headset_volume_restore_title">Reducér lydstyrken for headsettet ved tilslutning</string>
   <string name="cyanogenmod_waiver_title">Ophævelse</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Lydstyrke</string>
   <string name="title_tile_expanded_desktop">Udvidet skrivebord</string>
   <string name="title_tile_network_adb">ADB via netværk</string>
+  <string name="title_tile_themes">Temaer</string>
   <string name="title_dynamic_tiles">Dynamiske felter</string>
   <string name="dynamic_tiles_note_title">NB:</string>
   <string name="dynamic_tiles_note_summary">Dynamiske fliser vises kun, hvis udløst af en systemhændelse</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Lyd</string>
   <string name="cm_sound_mode_soundVibrate">Lyd + Vibrer</string>
   <string name="pref_location_mode_title">Placeringstilstande</string>
+  <string name="pref_location_mode_summary">Afmarkér alle tilstande for standard opførsel</string>
+  <string name="cm_location_mode_off">Placering fra</string>
   <string name="cm_location_mode_battery_saving">Batteribesparende</string>
   <string name="cm_location_mode_device_only">Kun enhed</string>
   <string name="cm_location_mode_high_accuracy">Høj nøjagtighed</string>
@@ -356,8 +364,10 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="root_access_apps">Kun apps</string>
   <string name="root_access_adb">Kun ADB</string>
   <string name="root_access_all">Apps og ADB</string>
-  <string name="update_recovery_title">Opdatér CM-recovery</string>
-  <string name="update_recovery_summary">Opdatér recovery ved installation af systemopdateringer</string>
+  <string name="update_recovery_title">Opdatér Cyanogen recovery</string>
+  <string name="update_recovery_summary">Opdatér recovery med systemopdateringer</string>
+  <string name="update_recovery_on_warning">BEMÆRK: Når denne funktion er aktiveret, vil din installerede \'recovery\' blive erstattet af en der er inkluderet i den aktuelle version af styresystemet.\n\nDin \'recovery\' opdateres sammen med opdateringer til styresystemet, hvilket sikrer kompatibilitet med fremtidige versioner.\n\nVil du aktivere denne funktion?</string>
+  <string name="update_recovery_off_warning">ARVARSEL: Med denne funktion slået fra, vil din \'recovery\' ikke blive opdateret sammen med styresystemet.\n\nFremtidige opdateringer til styresystemet kan måske ikke installeres med en forældet \'recovery\'\n\nVil du virkelig slå denne funktion fra?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Stille timer</string>
   <string name="quiet_hours_summary">Konfigurér timerne, hvor enheden skal være stille</string>
@@ -437,7 +447,6 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="changelog_error">Kunne ikke indlæse ændringsloggen</string>
   <string name="contributor_cloud_title">Bidragydere</string>
   <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
-  <string name="cmupdate_settings_summary">Tjek for, se eller installér tilgængelige opdateringer</string>
   <string name="development_tools_title">Start Værktøjer</string>
   <string name="allow_mock_sms">Tillad simuleret SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Privatliv</string>
@@ -587,6 +596,7 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="lockscreen_buttons_toggle_sound">Ringetilstand</string>
   <string name="lockscreen_buttons_sleep">Gå i dvale</string>
   <string name="lockscreen_enable_modlock_title">Brugerdefineret skærmlås</string>
+  <string name="lockscreen_buttons_disabled_summary">Låseskærmens knapper er ikke tilgængelige, når navigationslinjen på skærmen anvendes</string>
   <string name="navigation_bar_category">Navigationslinje</string>
   <string name="navigation_bar_title">Navigationsbjælke</string>
   <string name="navigation_bar_left_title">Venstrehåndstilstand</string>
@@ -870,7 +880,6 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="voice_wakeup_retrain_title">Træn din stemme igen</string>
   <string name="voice_wakeup_activity_title">Aktivitet, som skal startes</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Intet SIM-kort</string>
   <string name="multi_sim_settings_title">SIM-kort</string>
   <string name="multi_sim_settings_group_summary">Standardvalg af SIM-kort</string>
   <string name="voice_title">Taleopkald</string>
@@ -939,6 +948,11 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="sd_media_format_button_text">Slet SD-kort</string>
   <string name="sd_media_format_final_desc">Slet SD-kortet og alle filer, der er gemt? Du kan ikke fortryde denne handling!</string>
   <string name="sd_media_format_gesture_explanation">Du skal tegne dit oplåsningsmønster for at bekræfte, du vil slette SD-kortet.</string>
+  <string name="internal_sd_format">Slet internt medie-lager</string>
+  <string name="internal_sd_format_summary">Sletter alle data på det interne medie-lager som f.eks. musik og billeder</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nFor at slette musik, billeder og andre brugerdata, skal <b>det interne medie-lager</b> slettes.</string>
+  <string name="erase_internal_storage">Slet internt medie-lager</string>
+  <string name="erase_internal_storage_description">Slet alle data på det interne medie-lager, som f.eks. musik og billeder</string>
   <string name="bluetooth_enter_pin_msg_hs">For at parre med:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Angiv enhedens påkrævet PIN-kode (16 cifre eller mere):</string>
   <string name="bluetooth_profile_sap">SIM-adgang</string>
   <string name="bluetooth_profile_dun">Dial-up-netværksadgang</string>
@@ -997,8 +1011,17 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="profile_setup_setup_triggers_title_config">Ændre udløsere: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Trin 2: Opsætning af handlinger</string>
   <string name="profile_setup_actions_title_config">Omkonfigurere handlinger</string>
-  <string name="no_bluetooth_triggers">Ingen Bluetooth udløsere tilgængelige</string>
-  <string name="no_wifi_triggers">Ingen Wi\u2011Fi-udløsere tilgængelige</string>
+  <string name="no_bluetooth_triggers">Ingen Bluetooth-enheder parret.\nTryk for at parre en Bluetooth-enhed, før du konfigurerer udløsere.</string>
+  <string name="no_wifi_triggers">Ingen Wi\u2011Fi-adgangspunkter konfigureret.\nTryk for at forbinde til Wi\u2011Fi, før du konfigurerer udløsere.</string>
   <string name="profile_setup_setup_triggers_description">Vælg venligst udløsere som vil aktivere denne profil</string>
   <string name="profile_setup_actions_description">Nu skal du konfigurere hvad der sker når profilen er aktiveret</string>
+  <string name="profile_triggers_header">Udløsere, som vil aktivere denne profil</string>
+  <string name="no_triggers_configured">Ingen udløsere er konfigureret. Tryk her for at tilføje flere.</string>
+  <string name="no_triggers_configured_nfc">Tryk for at konfigurere en ny NFC-udløser.</string>
+  <string name="sound_ringtone_multisim_options">Skift standardringetone</string>
+  <string name="lock_to_cyanogen_title">Enhedsbeskyttelse</string>
+  <string name="lock_to_cyanogen_summary">Kræver adgangskoden til din Cyanogen konto, selv efter en nulstilling til fabriksindstillinger</string>
+  <string name="lock_to_cyanogen_create_account_msg">Din enhed bruger adgangskoden fra din Cyanogen konto til at beskytte din enhed, hvis den nulstilles til fabriksindstillingerne. Du skal oprette en Cyanogen konto.</string>
+  <string name="lock_to_cyanogen_disable_msg">Hvis du slår denne funktion fra, kan andre brugere nulstille telefonen til fabriksindstillingerne, hvis den bliver stjålet. Dine personlige data beskyttes ikke. Vil du deaktivere denne funktion?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Enhedsbeskyttelse er aktiveret. Venligst deaktivér for at fortsætte med nulstilling af din enhed.</string>
 </resources>

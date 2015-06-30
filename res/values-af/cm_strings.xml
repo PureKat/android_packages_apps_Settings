@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Onbekende profiel</string>
   <string name="profile_add_nfc_text">Hierdie NFC merker verwys na \'n onbekende profiel. Heg hierdie NFC merker aan \'n bestaande profiel om die nuwe profiel in die toekoms te kies.</string>
   <string name="profile_select">Kies profiel</string>
+  <string name="profile_remove_dialog_message">Verwyder profiel %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigureer profiel instellings van huidige toestel?</string>
+  <string name="profile_menu_fill_from_state">Voer instellings in van huidige toestel instellings</string>
   <string name="profile_name_title">Naam</string>
   <string name="profile_profile_name_prompt">Tik \'n naam vir die nuwe profiel</string>
   <string name="menu_new_profile">Nuwe profiel</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Gedeaktiveer</string>
   <string name="connection_state_enabled">Geaktiveer</string>
   <string name="volume_override_summary">Stel na %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Moenie omseil</string>
+  <string name="profile_volume_override_checkbox_label">Ignoreer volume</string>
   <string name="profile_profiles_manage">Profiele</string>
   <string name="profile_profile_manage">Bestuur profiel</string>
   <string name="profile_appgroups_manage">Program groepe</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Demping affekteer ook kennisgewings</string>
   <string name="volume_keys_control_ring_stream">Die volume knoppies beheer luitoon volume</string>
   <string name="ring_mode_title">Luimetode</string>
-  <string name="ring_mode_normal">Normaal</string>
+  <string name="ring_mode_normal">Luitoon</string>
   <string name="ring_mode_vibrate">Vibreer</string>
   <string name="ring_mode_mute">Gedemp</string>
+  <string name="ring_mode_unchanged">Onveranderd</string>
   <string name="volume_overlay_title">Volume-paneel styl</string>
   <string name="volume_overlay_single">Enkel</string>
   <string name="volume_overlay_expandable">Uitbreidbaar</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maksimeer legstukke</string>
   <string name="lockscreen_maximize_widgets_summary">Wys legstukke gemaksimaliseer en die slot geminimaliseer wanneer die skerm aangeskakel word</string>
   <string name="lockscreen_enable_camera_title">Kamera</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast legstuk</string>
   <string name="safe_headset_volume_title">Veilige oorfone volume</string>
   <string name="safe_headset_volume_restore_title">Verminder oorfone volume op verbinding</string>
   <string name="cyanogenmod_waiver_title">Kwytskelding</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Uitgebreide lessenaar</string>
   <string name="title_tile_network_adb">ADB oor netwerk</string>
+  <string name="title_tile_themes">Temas</string>
   <string name="title_dynamic_tiles">Dinamiese teëls</string>
   <string name="dynamic_tiles_note_title">Nota:</string>
   <string name="dynamic_tiles_note_summary">Dinamiese teëls sal alleenlik verskyn deur \'n stelsel gebeurtenis</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Klanke</string>
   <string name="cm_sound_mode_soundVibrate">Klank en vibrasie</string>
   <string name="pref_location_mode_title">Ligging modes</string>
+  <string name="pref_location_mode_summary">Ontmerk alle modes vir standaard gedrag</string>
+  <string name="cm_location_mode_off">Ligging af</string>
   <string name="cm_location_mode_battery_saving">Battery besparend</string>
   <string name="cm_location_mode_device_only">Toestel alleenlik</string>
   <string name="cm_location_mode_high_accuracy">Hoë akkuraatheid</string>
@@ -359,8 +367,10 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="root_access_apps">Slegs programme</string>
   <string name="root_access_adb">Slegs ADB</string>
   <string name="root_access_all">Programme en ADB</string>
-  <string name="update_recovery_title">Dateer CM \'recovery\' op</string>
-  <string name="update_recovery_summary">Dateer \'recovery\' op by die installering van stelsel opgraderings</string>
+  <string name="update_recovery_title">Opdateer Cyanogen \'recovery\'</string>
+  <string name="update_recovery_summary">Opdateer \'recovery\' met stelsel opdaterings</string>
+  <string name="update_recovery_on_warning">KENNISGEWING: Wanneer hierdie funksie geaktiveer is, sal jou geïnstalleerde \'recovery\' vervang word deur een ingesluit met die huidige weergawe van die OS\n\nJou \'recovery\' sal opgedateer word saam met die opgraderings aan jou stelsel, dit help om versoenbaarheid te verseker van toekomstige weergawes.\n\nWil jy hierdie funksie aktiveer?</string>
+  <string name="update_recovery_off_warning">WAARSKUWING: Wanneer hierdie funksie afgeskakel is, sal jou geïnstalleerde \'recovery\' nie opgedateer word met OS opgraderings nie.\n\nToekomstige OS opdaterings kan dalk nie geïnstalleer word met verouderde of persoonlike \'recovery\' weergawes nie.\n\nWil jy regtig hierdie funksie af skakel?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Stille-ure</string>
   <string name="quiet_hours_summary">Konfigureer die ure wat die toestel moet stil wees</string>
@@ -440,7 +450,6 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="changelog_error">Kan nie Veranderinge-log laai nie</string>
   <string name="contributor_cloud_title">Bydraers</string>
   <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
-  <string name="cmupdate_settings_summary">Soek vir of installeer beskikbare opgraderings</string>
   <string name="development_tools_title">Gereedskap</string>
   <string name="allow_mock_sms">Laat skyn SMS toe</string>
   <string name="privacy_settings_cyanogenmod_title">Privaatheid</string>
@@ -590,6 +599,7 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="lockscreen_buttons_toggle_sound">Wissel klank</string>
   <string name="lockscreen_buttons_sleep">Gaan slaap</string>
   <string name="lockscreen_enable_modlock_title">Persoonlike skermslot</string>
+  <string name="lockscreen_buttons_disabled_summary">Slot skerm knoppies nie beskikbaar, met die gebruik van die op-skerm Navigasie balk</string>
   <string name="navigation_bar_category">Navigasiebalk</string>
   <string name="navigation_bar_title">Knoppies en uitleg</string>
   <string name="navigation_bar_left_title">Linkshandige wyse</string>
@@ -873,10 +883,10 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="voice_wakeup_retrain_title">Herprogrammeer jou stem</string>
   <string name="voice_wakeup_activity_title">Aktiwiteit om te begin</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Geen Sim</string>
   <string name="multi_sim_settings_title">SIM-kaarte</string>
   <string name="multi_sim_settings_group_summary">Standaard SIM keuse</string>
   <string name="voice_title">Stem oproepe</string>
+  <string name="data_title">Data verbinding</string>
   <string name="sms_title">Stuur SMS</string>
   <string name="priority_sub_title">Prioriteit inskrywing</string>
   <string name="bluetooth_accept_all_files">Aanvaar alle lêer tipes</string>
@@ -941,6 +951,11 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="sd_media_format_button_text">Vee SD kaart uit</string>
   <string name="sd_media_format_final_desc">Uitvee van SD kaart, verwyder al die lêers wat daar gestoor word? Jy kan nie hierdie aksie ontdoen nie!</string>
   <string name="sd_media_format_gesture_explanation">Vir bevestiging het jy nodig om jou ontsluit patroon weer in te sleutel om die SD kaart uit te vee.</string>
+  <string name="internal_sd_format">Verwyder interne media spasie</string>
+  <string name="internal_sd_format_summary">Verwyder alle data op die interne media spasie, soos musiek en foto\'s</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nOm musiek, foto\'s en ander gebruiker data uit te vee, moet die <b>interne media spasie</b> skoon gemaak word.</string>
+  <string name="erase_internal_storage">Verwyder interne media spasie</string>
+  <string name="erase_internal_storage_description">Verwyder al die data op die interne media spasie, soos musiek en foto\'s</string>
   <string name="bluetooth_enter_pin_msg_hs">Om saam te bind met:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Voer die toestel se vereiste PIN in (16 syfers of meer):</string>
   <string name="bluetooth_profile_sap">SIM toegang</string>
   <string name="bluetooth_profile_dun">In-bel netwerk toegang</string>
@@ -966,6 +981,7 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="set_sms_error">Fout met verstelling van SMS inskrywing. Inskrywing nie aktief.</string>
   <string name="set_voice_error">Fout met verstelling van stem inskrywing. Inskrywing nie aktief.</string>
   <string name="set_priority_sub_error">Fout met verstelling van prioriteit inskrywing. Inskrywing nie aktief.</string>
+  <string name="prompt">Vrae altyd</string>
   <string name="maximum_head_level">Hoof: %1$s W/kg</string>
   <string name="maximum_body_level">Lyf: %1$s W/kg</string>
   <string name="tune_away_title">TuneAway</string>
@@ -998,8 +1014,17 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="profile_setup_setup_triggers_title_config">Verander snellers: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Stap 2: Stel aksies</string>
   <string name="profile_setup_actions_title_config">Herkonfigureer aksies</string>
-  <string name="no_bluetooth_triggers">Geen Bluetooth snellers beskikbaar nie</string>
-  <string name="no_wifi_triggers">Geen Wi\u2011Fi snellers beskikbaar</string>
+  <string name="no_bluetooth_triggers">Geen Bluetooth toestelle gepaar.\nRaak om met Bluetooth te paar voordat jy jou snellers opstel.</string>
+  <string name="no_wifi_triggers">Geen  Wi\u2011Fi toestelle opgestel.\nRaak om jou Wi\u2011Fi op te stel voordat jy jou snellers opstel.</string>
   <string name="profile_setup_setup_triggers_description">Kies snellers wat die profiel sal aktiveer</string>
   <string name="profile_setup_actions_description">Nou stel wat gebeur wanneer die profiel geaktiveer word</string>
+  <string name="profile_triggers_header">Snellers wat jou profiel sal aktiveer</string>
+  <string name="no_triggers_configured">Geen snellers op gestel. Raak om nog by te voeg.</string>
+  <string name="no_triggers_configured_nfc">Raak om NFC sneller op te stel.</string>
+  <string name="sound_ringtone_multisim_options">Verander verstek luitone</string>
+  <string name="lock_to_cyanogen_title">Toestel beskerming</string>
+  <string name="lock_to_cyanogen_summary">Benodig u Cyanogen OS wagwoord selfs nadat \'n fabriekterugstelling gebeur het</string>
+  <string name="lock_to_cyanogen_create_account_msg">U toestel gebruik die Cyanogen OS wagwoord om jou toestel te beskerm, selfs in die geval van \'n fabriekterugstelling. Jy sal nodig hê om \'n Cyanogen OS rekening te skep.</string>
+  <string name="lock_to_cyanogen_disable_msg">Afskakeling van hierdie funksie sal toelaat dat ongemagtigde gebruikers jou selfoon te sal herstel na die fabriek instellings as dit gesteel word. Jou persoonlike data kan nie beskerm word nie. Wil jy hierdie funksie afskakel?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Toestel beskerming is aangeskakel. Skakel asb af om jou stelsel te herstel na fabriek instellings.</string>
 </resources>

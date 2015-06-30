@@ -18,11 +18,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="wifi_setting_countrycode_title">Codice regione Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_summary">Specifica il codice regione per il Wi\u2011Fi</string>
-  <string name="wifi_setting_countrycode_error">Problema nell\'impostazione del codice regione.</string>
+  <string name="wifi_setting_countrycode_error">Impossibile impostare codice regione.</string>
   <string name="wifi_setting_priority_title">Priorità Wi\u2011Fi</string>
   <string name="wifi_setting_priority_summary">Specifica la priorità delle reti Wi\u2011Fi</string>
   <string name="wifi_ssid_input_limit">L\'SSID supera la lunghezza massima consentita</string>
-  <string name="p2p_device_name_input_limit">Il nome del P2P supera la lunghezza massima consentita</string>
+  <string name="p2p_device_name_input_limit">Il nome P2P supera la lunghezza massima consentita</string>
   <string name="change_crypt_password_title">Cambia password</string>
   <string name="change_crypt_password_summary">Cambia la password utilizzata per la crittografia del dispositivo</string>
   <string name="encryptionpassword_choose_your_password_header">Imposta password crittografia</string>
@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Profilo sconosciuto</string>
   <string name="profile_add_nfc_text">Questo tag NFC si riferisce ad un profilo sconosciuto. Collegare questo tag NFC ad un profilo esistente permetterà di selezionarlo in futuro.</string>
   <string name="profile_select">Seleziona profilo</string>
+  <string name="profile_remove_dialog_message">Rimuovere il profilo %1$s?</string>
+  <string name="profile_populate_profile_from_state">Configurare il profilo utilizzando le impostazioni correnti del dispositivo?</string>
+  <string name="profile_menu_fill_from_state">Importa le impostazioni attuali del dispositivo</string>
   <string name="profile_name_title">Nome</string>
   <string name="profile_profile_name_prompt">Inserisci un nome per il nuovo profilo</string>
   <string name="menu_new_profile">Nuovo profilo</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Disattivato</string>
   <string name="connection_state_enabled">Attivato</string>
   <string name="volume_override_summary">Impostato su %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Non sovrascrivere</string>
+  <string name="profile_volume_override_checkbox_label">Sovrascrivi volume</string>
   <string name="profile_profiles_manage">Profili</string>
   <string name="profile_profile_manage">Gestisci profili</string>
   <string name="profile_appgroups_manage">Gruppi app</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Collega silenziamento suoneria e notifiche</string>
   <string name="volume_keys_control_ring_stream">I tasti volume regolano la suoneria</string>
   <string name="ring_mode_title">Modalità suoneria</string>
-  <string name="ring_mode_normal">Normale</string>
+  <string name="ring_mode_normal">Suona</string>
   <string name="ring_mode_vibrate">Vibrazione</string>
   <string name="ring_mode_mute">Muto</string>
+  <string name="ring_mode_unchanged">Non modificato</string>
   <string name="volume_overlay_title">Stile pannello volume</string>
   <string name="volume_overlay_single">Singolo</string>
   <string name="volume_overlay_expandable">Estendibile</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Massimizza widget</string>
   <string name="lockscreen_maximize_widgets_summary">Espandi i widget quando lo schermo viene acceso</string>
   <string name="lockscreen_enable_camera_title">Widget Fotocamera</string>
-  <string name="lockscreen_enable_application_widget_title">Widget appcast</string>
   <string name="safe_headset_volume_title">Volume sicurezza cuffie</string>
   <string name="safe_headset_volume_restore_title">Riduci il volume delle cuffie alla connessione</string>
   <string name="cyanogenmod_waiver_title">Manleva</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Desktop esteso</string>
   <string name="title_tile_network_adb">ADB attraverso la rete</string>
+  <string name="title_tile_themes">Temi</string>
   <string name="title_dynamic_tiles">Tile dinamici</string>
   <string name="dynamic_tiles_note_title">Nota</string>
   <string name="dynamic_tiles_note_summary">I tile dinamici appariranno solo se un evento di sistema li attiva</string>
@@ -273,7 +279,7 @@
   <string name="title_dynamic_dock_battery">Batteria dock</string>
   <string name="title_dynamic_equalizer">Equalizzatore</string>
   <string name="title_dynamic_ime">Selettore metodo immissione</string>
-  <string name="title_dynamic_usbtether">Thetering USB</string>
+  <string name="title_dynamic_usbtether">Tethering USB</string>
   <string name="title_dynamic_wifi">Screencast</string>
   <string name="title_general">Generale</string>
   <string name="title_quick_pulldown">Impostazioni rapide</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Suoneria</string>
   <string name="cm_sound_mode_soundVibrate">Suoneria+Vibrazione</string>
   <string name="pref_location_mode_title">Modalità geolocalizzazione</string>
+  <string name="pref_location_mode_summary">Disattiva tutte le modalità per il comportamento predefinito</string>
+  <string name="cm_location_mode_off">Localizzazione disattivata</string>
   <string name="cm_location_mode_battery_saving">Basso consumo</string>
   <string name="cm_location_mode_device_only">Solo dispositivo</string>
   <string name="cm_location_mode_high_accuracy">Alta precisione</string>
@@ -368,8 +376,10 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="root_access_apps">Solo app</string>
   <string name="root_access_adb">Solo ADB</string>
   <string name="root_access_all">App e ADB</string>
-  <string name="update_recovery_title">Aggiorna recovery</string>
-  <string name="update_recovery_summary">Aggiorna la recovery durante l\'installazione degli aggiornamenti di sistema</string>
+  <string name="update_recovery_title">Aggiorna recovery Cyanogen</string>
+  <string name="update_recovery_summary">Aggiorna la recovery con gli aggiornamenti di sistema</string>
+  <string name="update_recovery_on_warning">AVVISO: Quando questa funzione è attiva, la recovery installata verrà sostituita da una inclusa nella versione corrente del sistema operativo in esecuzione,\n\nLa recovery sarà aggiornata con gli aggiornamenti di sistema, cercando di assicurare la compatibilità con le versioni future.\n\nVuoi attivare questa funzione?</string>
+  <string name="update_recovery_off_warning">ATTENZIONE: Quando questa funzione è disattivata, la recovery installata non sarà aggiornata con il sistema operativo.\n\nI futuri aggiornamenti di sistema potrebbero non installarsi con una recovery obsoleta.\n\nVuoi veramente disattivare questa funzione?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Periodo di quiete</string>
   <string name="quiet_hours_summary">Configura gli orari in cui il dispositivo dovrebbe essere silenzioso</string>
@@ -449,7 +459,6 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="changelog_error">Impossibile caricare il changelog</string>
   <string name="contributor_cloud_title">Collaboratori</string>
   <string name="cmupdate_settings_title">Aggiornamento CyanogenMod</string>
-  <string name="cmupdate_settings_summary">Controlla, visualizza e installa gli aggiornamenti disponibili</string>
   <string name="development_tools_title">Esegui dev. tools</string>
   <string name="allow_mock_sms">Consenti SMS finti</string>
   <string name="privacy_settings_cyanogenmod_title">Privacy</string>
@@ -599,6 +608,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="lockscreen_buttons_toggle_sound">Suono On/Off</string>
   <string name="lockscreen_buttons_sleep">Sospendi dispositivo</string>
   <string name="lockscreen_enable_modlock_title">Schermata sblocco personalizzata</string>
+  <string name="lockscreen_buttons_disabled_summary">Pulsanti sulla schermata di sblocco disattivati quando la barra di navigazione è attiva</string>
   <string name="navigation_bar_category">Barra di navigazione</string>
   <string name="navigation_bar_title">Pulsanti e disposizione</string>
   <string name="navigation_bar_left_title">Modalità mancino</string>
@@ -800,7 +810,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="app_ops_summaries_keep_awake">tieni sveglio</string>
   <string name="app_ops_summaries_monitor_location">monitoraggio posizione</string>
   <string name="app_ops_summaries_monitor_high_power_location">monitoraggio posizione alta potenza</string>
-  <string name="app_ops_summaries_wifi_change">ON/OFF Wi\u2011Fi</string>
+  <string name="app_ops_summaries_wifi_change">modifica stato Wi\u2011Fi</string>
   <string name="app_ops_summaries_bluetooth_change">modifica stato Bluetooth</string>
   <string name="app_ops_summaries_data_change">modifica stato dati mobili</string>
   <string name="app_ops_summaries_alarm_wakeup">risveglio</string>
@@ -841,7 +851,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="app_ops_labels_notification_volume">Volume notifica</string>
   <string name="app_ops_labels_bluetooth_volume">Volume Bluetooth</string>
   <string name="app_ops_labels_keep_awake">Tieni sveglio</string>
-  <string name="app_ops_labels_wifi_change">modifica stato Wi\u2011Fi</string>
+  <string name="app_ops_labels_wifi_change">ON/OFF Wi\u2011Fi</string>
   <string name="app_ops_labels_bluetooth_change">ON/OFF Bluetooth</string>
   <string name="app_ops_labels_data_change">ON/OFF dati mobili</string>
   <string name="app_ops_labels_alarm_wakeup">Risveglia</string>
@@ -882,7 +892,6 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="voice_wakeup_retrain_title">Calibra la tua voce</string>
   <string name="voice_wakeup_activity_title">Activity da avviare</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Nessuna SIM</string>
   <string name="multi_sim_settings_title">Schede SIM</string>
   <string name="multi_sim_settings_group_summary">Seleziona la SIM predefinita</string>
   <string name="voice_title">Chiamate vocali</string>
@@ -917,23 +926,23 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="block_notifications_title">Filtra notifiche</string>
   <string name="block_notifications_summary">Gestisci le notifiche ignorate e i filtri</string>
   <string name="no_filters_title">Nessun filtro impostato. Per filtrare una notifica, premi a lungo su essa e scegli \'Ignora messaggi simili\'.</string>
-  <string name="usb_sd_eject">Smonta memoria USB</string>
-  <string name="usb_sd_eject_summary">Smonta la memoria USB per poterla rimuovere in sicurezza</string>
-  <string name="usb_sd_insert_summary">Inserisci una memoria USB da montare</string>
-  <string name="usb_sd_mount">Monta memoria USB</string>
-  <string name="usb_sd_format">Formatta memoria USB</string>
-  <string name="usb_sd_format_summary">Elimina tutti i dati sulla memoria USB, come musica e foto</string>
-  <string name="usb_dlg_confirm_unmount_title">Smontare la memoria USB?</string>
-  <string name="usb_dlg_confirm_unmount_text">Se smonti la memoria USB, alcune app che stai usando potrebbero fermarsi e non essere più disponibili fino a quando la memoria USB verrà montata di nuovo.</string>
-  <string name="usb_dlg_error_unmount_text">Impossibile smontare la memoria USB. Riprova più tardi.</string>
-  <string name="usb_unmount_inform_text">La memoria USB verrà smontata.</string>
-  <string name="usb_sd_ejecting_title">Smontaggio memoria USB</string>
-  <string name="usb_sd_ejecting_summary">Smontaggio della memoria USB in corso</string>
-  <string name="usb_media_format_title">Formatta memoria USB</string>
-  <string name="usb_media_format_desc">Formattare la memoria USB? Perderai <b>tutti</b> i dati salvati!</string>
-  <string name="usb_media_format_button_text">Formatta memoria USB</string>
-  <string name="usb_media_format_final_desc">Formattare la memoria USB, eliminando tutti i file presenti su di essa? L\'azione non è reversibile!</string>
-  <string name="usb_media_format_gesture_explanation">Devi tracciare la tua sequenza di sblocco per confermare la formattazione della memoria USB.</string>
+  <string name="usb_sd_eject">Smonta archivio USB</string>
+  <string name="usb_sd_eject_summary">Smonta l\'archivio USB per poterlo rimuovere in sicurezza</string>
+  <string name="usb_sd_insert_summary">Inserisci un archivio USB da montare</string>
+  <string name="usb_sd_mount">Monta archivio USB</string>
+  <string name="usb_sd_format">Formatta archivio USB</string>
+  <string name="usb_sd_format_summary">Elimina tutti i dati sull\'archivio USB, come musica e foto</string>
+  <string name="usb_dlg_confirm_unmount_title">Smontare l\'archivio USB?</string>
+  <string name="usb_dlg_confirm_unmount_text">Se smonti l\'archivio USB, alcune app che stai usando potrebbero fermarsi e non essere più disponibili fino a quando l\'archivio USB verrà montato di nuovo.</string>
+  <string name="usb_dlg_error_unmount_text">Impossibile smontare l\'archivio USB. Riprova più tardi.</string>
+  <string name="usb_unmount_inform_text">L\'archivio USB verrà smontato.</string>
+  <string name="usb_sd_ejecting_title">Smontaggio archivio USB</string>
+  <string name="usb_sd_ejecting_summary">Smontaggio dell\'archivio USB in corso</string>
+  <string name="usb_media_format_title">Formatta archivio USB</string>
+  <string name="usb_media_format_desc">Formattare l\'archivio USB? Perderai <b>tutti</b> i dati salvati!</string>
+  <string name="usb_media_format_button_text">Formatta archivio USB</string>
+  <string name="usb_media_format_final_desc">Formattare l\'archivio USB, eliminando tutti i file presenti su di esso? L\'azione non è reversibile!</string>
+  <string name="usb_media_format_gesture_explanation">Devi tracciare la tua sequenza di sblocco per confermare la formattazione dell\'archivio USB.</string>
   <string name="sd_sd_eject">Smonta scheda SD</string>
   <string name="sd_sd_eject_summary">Smonta la scheda SD così potrai rimuoverla in sicurezza</string>
   <string name="sd_sd_insert_summary">Inserisci una scheda SD da montare</string>
@@ -951,6 +960,11 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="sd_media_format_button_text">Formatta scheda SD</string>
   <string name="sd_media_format_final_desc">Formatta la scheda SD, eliminando tutti i file presenti su di essa? L\'azione non è reversibile!</string>
   <string name="sd_media_format_gesture_explanation">Devi tracciare la tua sequenza di sblocco per confermare la formattazione della scheda SD.</string>
+  <string name="internal_sd_format">Elimina memoria interna</string>
+  <string name="internal_sd_format_summary">Cancella tutti i dati sulla memoria interna, come musica e foto</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPer rimuovere musica, immagini e altri dati dell\'utente la <b>memoria interna</b> deve essere eliminata.</string>
+  <string name="erase_internal_storage">Elimina la memoria interna</string>
+  <string name="erase_internal_storage_description">Elimina tutti i dati nella memoria interna come musica o foto</string>
   <string name="bluetooth_enter_pin_msg_hs">Per accoppiare con:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Digita il PIN richiesto dal dispositivo (16 cifre o più):</string>
   <string name="bluetooth_profile_sap">Accesso SIM</string>
   <string name="bluetooth_profile_dun">Accesso rete remota</string>
@@ -1009,8 +1023,17 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' elimina la riga selezionata.
   <string name="profile_setup_setup_triggers_title_config">Modifica inneschi: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Step 2: configura le azioni</string>
   <string name="profile_setup_actions_title_config">Riconfigura le azioni</string>
-  <string name="no_bluetooth_triggers">Nessun innesco Bluetooth disponibile</string>
-  <string name="no_wifi_triggers">Nessun innesco Wi\u2011Fi disponibile</string>
+  <string name="no_bluetooth_triggers">Nessun dispositivo Bluetooth accoppiato. \nTocca il dispositivo Bluetooth per accoppiarlo prima di configurare gli inneschi.</string>
+  <string name="no_wifi_triggers">Nessun punto d\'accesso Wi\u2011Fi configurato.\nTocca per connetterti al Wi\u2011Fi prima di configurare gli inneschi.</string>
   <string name="profile_setup_setup_triggers_description">Seleziona gli inneschi che attiveranno questo profilo</string>
   <string name="profile_setup_actions_description">Ora configura quello che accade quando il profilo viene attivato</string>
+  <string name="profile_triggers_header">Inneschi che attiveranno questo profilo</string>
+  <string name="no_triggers_configured">Nessun innesco configurato. Tocca per aggiungerne altri.</string>
+  <string name="no_triggers_configured_nfc">Tocca per aggiungere un nuovo innesco NFC.</string>
+  <string name="sound_ringtone_multisim_options">Cambia suonerie predefinite</string>
+  <string name="lock_to_cyanogen_title">Protezione dispositivo</string>
+  <string name="lock_to_cyanogen_summary">Richiedi password dall\'account Cyanogen OS anche dopo il ripristino di fabbrica</string>
+  <string name="lock_to_cyanogen_create_account_msg">Il dispositivo utilizza la password dell\'account Cyanogen OS per proteggerlo anche in caso di un reset di fabbrica. Devi creare un account Cyanogen OS.</string>
+  <string name="lock_to_cyanogen_disable_msg">Disattivando questa funzione gli utenti non autorizzati potranno ripristinare il telefono alle impostazioni di fabbrica, se viene rubato. I dati personali non possono essere protetti. Desideri disattivare questa funzione?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">La protezione del dispositivo è attiva. Disattivala per ripristinare il tuo dispositivo.</string>
 </resources>

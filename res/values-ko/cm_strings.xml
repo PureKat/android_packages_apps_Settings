@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">알 수 없는 프로필</string>
   <string name="profile_add_nfc_text">이 NFC 태그는 알 수 없는 프로필을 가리킵니다. 이 NFC 태그를 기존 프로필에 추가하면 나중에 이 태그로 프로필을 선택할 수 있습니다.</string>
   <string name="profile_select">프로필 선택</string>
+  <string name="profile_remove_dialog_message">프로필 %1$s을(를) 제거하시겠습니까?</string>
+  <string name="profile_populate_profile_from_state">현재 기기 설정으로 프로필을 구성하시겠습니까?</string>
+  <string name="profile_menu_fill_from_state">현재 기기 설정 가져오기</string>
   <string name="profile_name_title">이름</string>
   <string name="profile_profile_name_prompt">새 프로필의 이름을 입력합니다</string>
   <string name="menu_new_profile">새 프로필</string>
@@ -78,10 +81,12 @@
   <string name="settings_search_autocompleteview_hint">검색 설정</string>
   <string name="settings_search_loading_text">검색 데이터 로딩 중\u2026</string>
   <string name="profile_connectionoverrides_title">연결 오버라이드</string>
-  <string name="profile_volumeoverrides_title">볼륨 오버라이드</string>
+  <string name="profile_volumeoverrides_title">볼륨 강제 설정</string>
   <string name="connection_state_disabled">사용 안 함</string>
   <string name="connection_state_enabled">사용함</string>
   <string name="volume_override_summary">%1$s/%2$s(으)로 설정</string>
+  <string name="volume_override_summary_no_override">강제로 설정하지 않음</string>
+  <string name="profile_volume_override_checkbox_label">볼륨 강제 설정</string>
   <string name="profile_profiles_manage">프로필</string>
   <string name="profile_profile_manage">프로필 관리</string>
   <string name="profile_appgroups_manage">앱 그룹</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">음소거 모드는 알림에 영향을 줌</string>
   <string name="volume_keys_control_ring_stream">볼륨 버튼으로 벨소리 볼륨 제어</string>
   <string name="ring_mode_title">벨소리 모드</string>
-  <string name="ring_mode_normal">일반</string>
+  <string name="ring_mode_normal">벨소리</string>
   <string name="ring_mode_vibrate">진동</string>
   <string name="ring_mode_mute">음소거</string>
+  <string name="ring_mode_unchanged">변경 안 함</string>
   <string name="volume_overlay_title">볼륨 패널 스타일</string>
   <string name="volume_overlay_single">단일</string>
   <string name="volume_overlay_expandable">확장 가능</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">위젯 확장</string>
   <string name="lockscreen_maximize_widgets_summary">화면을 켤 때 위젯 확장</string>
   <string name="lockscreen_enable_camera_title">카메라 위젯</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast 위젯</string>
   <string name="safe_headset_volume_title">안전한 헤드셋 볼륨</string>
   <string name="safe_headset_volume_restore_title">연결 시 헤드셋 볼륨 줄이기</string>
   <string name="cyanogenmod_waiver_title">면제</string>
@@ -265,8 +270,9 @@
   <string name="title_tile_volume">볼륨</string>
   <string name="title_tile_expanded_desktop">확장된 데스크탑</string>
   <string name="title_tile_network_adb">네트워크를 통한 ADB</string>
+  <string name="title_tile_themes">테마</string>
   <string name="title_dynamic_tiles">동적 타일</string>
-  <string name="dynamic_tiles_note_title">노트</string>
+  <string name="dynamic_tiles_note_title">참고</string>
   <string name="dynamic_tiles_note_summary">동적 타일은 시스템 이벤트에 의해 발생했을 경우에만 나타납니다</string>
   <string name="title_dynamic_alarm">알람 시계</string>
   <string name="title_dynamic_bugreport">버그 신고</string>
@@ -277,7 +283,7 @@
   <string name="title_dynamic_wifi">화면 캐스트</string>
   <string name="title_general">일반</string>
   <string name="title_quick_pulldown">빠른 내리기</string>
-  <string name="summary_quick_pulldown">상태 바의 %1$s 끝에서는 빠른 설정을 내립니다. </string>
+  <string name="summary_quick_pulldown">상태 표시줄의 %1$s 끝에서는 빠른 설정을 내립니다. </string>
   <string name="quick_pulldown_summary_left">왼쪽</string>
   <string name="quick_pulldown_summary_right">오른쪽</string>
   <string name="quick_pulldown_off">끄기</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">소리</string>
   <string name="cm_sound_mode_soundVibrate">소리 및 진동</string>
   <string name="pref_location_mode_title">위치 모드</string>
+  <string name="pref_location_mode_summary">모두 체크 해제하면 기본 행동 사용</string>
+  <string name="cm_location_mode_off">위치 사용 안함</string>
   <string name="cm_location_mode_battery_saving">배터리 절약</string>
   <string name="cm_location_mode_device_only">기기 전용</string>
   <string name="cm_location_mode_high_accuracy">높은 정확성</string>
@@ -348,7 +356,7 @@
   <string name="display_rotation_180_title">180도</string>
   <string name="display_rotation_270_title">270도</string>
   <string name="advanced_reboot_title">고급 재시작</string>
-  <string name="advanced_reboot_summary">잠금이 해제됐을 때, 전원 메뉴에 복구 모드, 부트로더, 빠른 다시 시작 옵션을 추가</string>
+  <string name="advanced_reboot_summary">화면 잠금이 해제되어 있으면 전원 메뉴에 복구 모드, 부트로더, 빠른 다시 시작 옵션 추가</string>
   <string name="app_security_title">앱 보안</string>
   <string name="root_access">루트 권한</string>
   <string name="root_access_warning_title">루트 권한을 허용합니까?</string>
@@ -357,8 +365,10 @@
   <string name="root_access_apps">애플리케이션만</string>
   <string name="root_access_adb">ADB만</string>
   <string name="root_access_all">애플리케이션과 ADB</string>
-  <string name="update_recovery_title">CM 리커버리 업데이트</string>
-  <string name="update_recovery_summary">시스템 업데이트를 설치할 때 리커버리 업데이트</string>
+  <string name="update_recovery_title">Cyanogen 리커버리 업데이트</string>
+  <string name="update_recovery_summary">시스템 업데이트로 리커버리도 함께 업데이트</string>
+  <string name="update_recovery_on_warning">주의: 이 기능이 활성화되면 기기에 설치된 리커버리가 현재 OS에 포함된 리커버리로 대체됩니다.\n\n기기의 리커버리는 미래의 OS 업데이트와의 호환성을 위해 시스템 업그레이드와 함께 업데이트될 것입니다.\n\n이 기능을 활성화하시겠습니까?</string>
+  <string name="update_recovery_off_warning">경고: 이 기능이 비활성화되면 기기에 설치된 리커버리는 OS 업그레이드와 함께 업데이트되지 않을 것입니다.\n\n미래의 OS 업데이트는 구버전의 리커버리나 커스텀 리커버리로는 설치되지 않을 수도 있습니다.\n\n이 기능을 비활성화하시겠습니까?</string>
   <string name="ok">확인</string>
   <string name="quiet_hours_title">방해 금지 시간</string>
   <string name="quiet_hours_summary">방해 금지 시간 설정</string>
@@ -390,7 +400,7 @@
   <string name="anonymous_statistics_title">CyanogenMod 통계</string>
   <string name="anonymous_statistics_summary">익명의 통계 자료를 보내 CyanogenMod 개선에 도움 주기</string>
   <string name="anonymous_statistics_warning_title">정보</string>
-  <string name="anonymous_statistics_warning">CyanogenMod 통계를 사용하면 장치 고유의 설치 상태를 추적하기 위해 CyanogenMod의 개발자들에게 비 개인적 데이터를 제출하는 것을 허용합니다. 제출되는 정보는 개인정보가 포함되지 않은 고유 식별자를 포함합니다. 데이터는 기기가 부팅될 때마다 전송됩니다.\n\n제출되는 데이터의 예시를 보려면 \'데이터 미리 보기\'를 누르십시오.</string>
+  <string name="anonymous_statistics_warning">CyanogenMod 통계를 사용하면 장치 고유의 설치 상태를 추적하기 위해 CyanogenMod의 개발자들에게 개인 정보가 포함되지 않은 데이터가 제출되는 것을 허용합니다. 제출되는 정보에는 개인정보가 포함되지 않은 고유 식별자가 포함됩니다. 데이터는 기기가 부팅될 때마다 전송됩니다.\n\n제출되는 데이터의 예시를 보려면 \'데이터 미리 보기\'를 누르십시오.</string>
   <string name="enable_reporting_title">보고 활성화</string>
   <string name="preview_data_title">데이터 미리 보기</string>
   <string name="view_stats_title">통계 보기</string>
@@ -438,7 +448,6 @@
   <string name="changelog_error">변경 내역을 불러올 수 없습니다</string>
   <string name="contributor_cloud_title">기여자</string>
   <string name="cmupdate_settings_title">CyanogenMod 업데이트</string>
-  <string name="cmupdate_settings_summary">사용 가능한 업데이트 확인 및 설치</string>
   <string name="development_tools_title">개발자 도구 실행</string>
   <string name="allow_mock_sms">모의 SMS 허용</string>
   <string name="privacy_settings_cyanogenmod_title">프라이버시</string>
@@ -464,22 +473,22 @@
   <string name="blacklist_empty_text">블랙리스트에 등록된 번호가 없습니다. 추가 (+) 버튼을 눌러 항목을 추가하십시오.</string>
   <string name="blacklist_disabled_empty_text">특정 번호에서 오는 전화 또는 메시지를 차단하려면, 블랙리스트를 사용하도록 설정하십시오.</string>
   <string name="blacklist_summary_disabled">사용 안 함</string>
-  <string name="blacklist_summary">블랙리스트로 분류된 전화번호로부터 오는 통화와 메시지는 차단됩니다.</string>
+  <string name="blacklist_summary">블랙리스트에 등록된 전화번호로부터 오는 전화와 메시지가 차단됩니다</string>
   <string name="blacklist_notify">알림 표시</string>
   <string name="blacklist_private_numbers_title">발신번호 표시 제한</string>
   <string name="blacklist_private_numbers_summary_disabled">발신번호 표시 제한된 전화를 차단하지 않음</string>
-  <string name="blacklist_private_numbers_summary">발신번호 표시 제한된 <xliff:g id="type">%s</xliff:g>을(를) 차단</string>
+  <string name="blacklist_private_numbers_summary">발신번호 표시 제한된 <xliff:g id="type">%s</xliff:g>를 차단</string>
   <string name="blacklist_unknown_numbers_title">알 수 없는 번호</string>
   <string name="blacklist_unknown_numbers_summary_disabled">연락처에 없는 번호로부터 오는 전화 또는 메시지를 차단하지 않음</string>
-  <string name="blacklist_unknown_numbers_summary">연락처에 없는 번호로부터 오는 <xliff:g id="type">%s</xliff:g>을(를) 차단합니다</string>
-  <string name="blacklist_summary_type_calls_only">통화</string>
+  <string name="blacklist_unknown_numbers_summary">연락처에 없는 번호로부터 오는 <xliff:g id="type">%s</xliff:g>를 차단</string>
+  <string name="blacklist_summary_type_calls_only">전화</string>
   <string name="blacklist_summary_type_messages_only">메시지</string>
-  <string name="blacklist_summary_type_calls_and_messages">통화 및 메시지</string>
+  <string name="blacklist_summary_type_calls_and_messages">전화 및 메시지</string>
   <string name="blacklist_regex_title">와일드카드 사용</string>
-  <string name="blacklist_regex_summary">.을 와일드카드로, *를 반복으로 사용합니다. 예를 들어, 123.*은 123으로 시작하는 번호를 차단하고, *123.*은 123을 포함한 번호를 차단합니다.</string>
+  <string name="blacklist_regex_summary">.을 와일드카드로, *를 반복으로 사용합니다. 예를 들어, 123.*은 123으로 시작하는 번호를 차단하고 .*123.*은 123을 포함한 번호를 차단합니다</string>
   <string name="blacklist_policy_block_calls">수신 전화 차단</string>
   <string name="blacklist_policy_block_messages">수신 메시지 차단</string>
-  <string name="blacklist_bad_number_add">올바르지 않은 번호를 블랙리스트에 추가할 수 없습니다</string>
+  <string name="blacklist_bad_number_add">올바르지 않은 번호는 블랙리스트에 추가할 수 없습니다</string>
   <string name="add_blacklist_number">번호 추가</string>
   <string name="remove_blacklist_number_title">번호 제거</string>
   <string name="remove_blacklist_entry">이 블랙리스트 항목을 제거하시겠습니까?</string>
@@ -512,7 +521,7 @@
   <string name="collapse_on_dismiss_if_no_clearable_summary">삭제 가능한 마지막 알림 삭제 후 닫기</string>
   <string name="double_tap_to_wake_title">더블 탭으로 화면 켜기</string>
   <string name="double_tap_to_sleep_title">더블 탭하여 화면 끄기</string>
-  <string name="double_tap_to_sleep_summary">상태 바 또는 잠금 슬라이더를 두 번 탭하여 화면 끄기</string>
+  <string name="double_tap_to_sleep_summary">상태 표시줄 또는 잠금 슬라이더를 두 번 탭하여 화면 끄기</string>
   <string name="proximity_wake_title">실수로 화면 켜기 방지</string>
   <string name="proximity_wake_summary">화면을 켜기 전에 근접 센서 확인</string>
   <string name="category_quick_access">빠른 액세스 리본</string>
@@ -528,20 +537,20 @@
   <string name="sms_security_check_limit_none">사용 안 함</string>
   <string name="lockscreen_custom_widgets_title">사용자 정의 위젯</string>
   <string name="lock_clock_title">시계 위젯</string>
-  <string name="lock_clock_summary">잠금 화면과 홈 화면의 기본 위젯을 커스터마이징합니다.</string>
+  <string name="lock_clock_summary">잠금 화면과 홈 화면의 기본 위젯 사용자 정의</string>
   <string name="power_notifications_category_title">충전 소리 알림</string>
   <string name="power_notifications_enable_title">사용함</string>
-  <string name="power_notifications_enable_summary">전원이 연결되거나 분리될 때 소리를 재생합니다</string>
+  <string name="power_notifications_enable_summary">전원이 연결되거나 분리될 때 소리 재생</string>
   <string name="power_notifications_vibrate_title">진동</string>
   <string name="power_notifications_ringtone_title">알림 소리</string>
   <string name="power_notifications_ringtone_silent">무음</string>
   <string name="lockscreen_battery_status_title">배터리 상태</string>
-  <string name="lockscreen_battery_status_charging">충전 중에만</string>
+  <string name="lockscreen_battery_status_charging">충전 중에만 표시</string>
   <string name="lockscreen_battery_status_alwayson">항상 표시</string>
   <string name="lockscreen_battery_status_alwaysoff">항상 표시 안 함</string>
   <string name="lockscreen_target_info">슬라이더를 원하는 위치에 드래그하여 바로가기를 설정합니다</string>
   <string name="lockscreen_target_title">슬라이더 바로 가기</string>
-  <string name="lockscreen_target_summary">잠금 화면 바로가기를 보거나 변경합니다</string>
+  <string name="lockscreen_target_summary">잠금 화면의 바로가기 설정</string>
   <string name="lockscreen_target_reset">잠금 화면 바로가기가 초기화되었습니다</string>
   <string name="lockscreen_target_reset_title">초기화</string>
   <string name="lockscreen_target_reset_message">모든 사용자 정의 잠금 화면 바로가기를 삭제하고 기본값으로 복원하시겠습니까?</string>
@@ -576,7 +585,7 @@
   <string name="icon_picker_sms">메시지</string>
   <string name="icon_picker_twitter">Twitter</string>
   <string name="lockscreen_buttons_title">버튼 동작</string>
-  <string name="lockscreen_buttons_summary">잠금화면 시 하드웨어 버튼 동작 보기/변경</string>
+  <string name="lockscreen_buttons_summary">잠금 화면에서의 하드웨어 버튼 동작 설정</string>
   <string name="lockscreen_long_press_back_title">뒤로 가기 버튼을 길게 누를 때</string>
   <string name="lockscreen_long_press_home_title">홈 버튼을 길게 누를 때</string>
   <string name="lockscreen_long_press_menu_title">메뉴 버튼을 길게 누를 때</string>
@@ -588,6 +597,7 @@
   <string name="lockscreen_buttons_toggle_sound">소리 설정 전환</string>
   <string name="lockscreen_buttons_sleep">화면 잠금</string>
   <string name="lockscreen_enable_modlock_title">사용자 정의 잠금화면</string>
+  <string name="lockscreen_buttons_disabled_summary">내비게이션바 사용 중 잠금화면의 버튼 사용 불가</string>
   <string name="navigation_bar_category">내비게이션 바</string>
   <string name="navigation_bar_title">버튼 및 레이아웃</string>
   <string name="navigation_bar_left_title">왼손잡이 모드</string>
@@ -871,7 +881,6 @@
   <string name="voice_wakeup_retrain_title">목소리 다시 훈련</string>
   <string name="voice_wakeup_activity_title">실행할 동작</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">SIM 없음</string>
   <string name="multi_sim_settings_title">SIM 카드</string>
   <string name="multi_sim_settings_group_summary">기본 SIM 선택</string>
   <string name="voice_title">음성 통화</string>
@@ -939,6 +948,11 @@
   <string name="sd_media_format_button_text">SD 카드 지우기</string>
   <string name="sd_media_format_final_desc">SD 카드를 지우고 저장된 모든 파일을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다!</string>
   <string name="sd_media_format_gesture_explanation">SD 카드를 지우려면 잠금 해제 패턴을 입력하십시오.</string>
+  <string name="internal_sd_format">내부 미디어 저장소 삭제</string>
+  <string name="internal_sd_format_summary">음악이나 사진과 같은 내부 미디어 저장소에 있는 모든 데이터 삭제</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\n음악, 사진 및 다른 사용자 데이터를 지우기 위해 <b>내부 미디어 저장소</b>를 삭제해야 합니다.</string>
+  <string name="erase_internal_storage">내부 미디어 저장소 삭제</string>
+  <string name="erase_internal_storage_description">음악이나 사진 등의 내부 미디어 저장소에 있는 모든 데이터를 삭제</string>
   <string name="bluetooth_enter_pin_msg_hs">장치 <xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>와(과) 연결하려면 장치의 PIN을 입력하십시오(16자 이상):</string>
   <string name="bluetooth_profile_sap">SIM 액세스</string>
   <string name="bluetooth_profile_dun">전화 접속 네트워크 액세스</string>
@@ -997,8 +1011,17 @@
   <string name="profile_setup_setup_triggers_title_config">트리거 변경: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">2단계: 동작 설정</string>
   <string name="profile_setup_actions_title_config">동작 다시 설정</string>
-  <string name="no_bluetooth_triggers">사용 가능한 블루투스 트리거 없음</string>
-  <string name="no_wifi_triggers">사용 가능한 Wi\u2011Fi 트리거 없음</string>
+  <string name="no_bluetooth_triggers">페어링된 블루투스 장치가 없습니다.\n트리거를 구성하기 전에 여기를 탭하여 블루투스 장치와 페어링하십시오.</string>
+  <string name="no_wifi_triggers">Wi\u2011Fi 액세스 포인트가 구성되지 않았습니다.\n트리거를 구성하기 전에 여기를 탭하여 Wi\u2011Fi에 연결하십시오.</string>
   <string name="profile_setup_setup_triggers_description">이 프로필을 활성화할 트리거를 선택해주십시오</string>
   <string name="profile_setup_actions_description">이 프로필이 활성화되면 무엇을 할 것인지 설정해주십시오</string>
+  <string name="profile_triggers_header">이 프로필을 활성화할 트리거</string>
+  <string name="no_triggers_configured">트리거가 설정되지 않았습니다. 탭하여 추가하십시오.</string>
+  <string name="no_triggers_configured_nfc">탭하여 새 NFC 트리거를 설정하십시오.</string>
+  <string name="sound_ringtone_multisim_options">기본 벨소리 변경</string>
+  <string name="lock_to_cyanogen_title">기기 보호</string>
+  <string name="lock_to_cyanogen_summary">공장 초기화 후에도 Cyanogen OS 계정 비밀번호 요구</string>
+  <string name="lock_to_cyanogen_create_account_msg">공장 초기화에서도 기기를 보호하기 위해 Cyanogen OS 계정 비밀번호를 사용합니다. Cyanogen OS 계정을 생성해야 합니다.</string>
+  <string name="lock_to_cyanogen_disable_msg">이 기능의 비활성화는 기기 도난시 권한없는 사용자가 기기를 공장초기화할 수 있도록 합니다. 개인 정보는 보호되지 않습니다. 이 기능을 비활성화하기를 원하십니까?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">기기 보호가 활성화됩니다. 기기를 재설정하려면 비활성화하십시오.</string>
 </resources>

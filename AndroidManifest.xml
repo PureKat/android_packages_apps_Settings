@@ -72,6 +72,7 @@
     <uses-permission android:name="android.permission.CHANGE_PRIVACY_GUARD_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_BLACKLIST" />
     <uses-permission android:name="android.permission.CHANGE_PHONE_BLACKLIST" />
+    <uses-permission android:name="com.cyanogen.permission.REQUEST_KILL_SWITCH_OP" />
 
     <permission
         android:name="android.permission.REQUEST_SUPERUSER"
@@ -796,6 +797,9 @@
         <activity android:name="SettingsLicenseActivity"
                 android:label="@string/settings_license_activity_title"
                 android:theme="@android:style/Theme.Holo.Panel"
+                android:launchMode="singleTask"
+                android:noHistory="true"
+                android:excludeFromRecents="true"
                 android:configChanges="orientation|screenSize"
                 android:parentActivityName="Settings$DeviceInfoSettingsActivity">
             <intent-filter>
@@ -807,7 +811,11 @@
         <activity android:name="SettingsCMLicenseActivity"
                 android:label="@string/settings_cmlicense_activity_title"
                 android:theme="@android:style/Theme.Holo.Panel"
-                android:configChanges="orientation|screenSize">
+                android:launchMode="singleTask"
+                android:noHistory="true"
+                android:excludeFromRecents="true"
+                android:configChanges="orientation|screenSize"
+                android:parentActivityName="Settings$DeviceInfoSettingsActivity">
             <intent-filter>
                 <action android:name="android.settings.CMLICENSE" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -1875,7 +1883,14 @@
 
         <activity android:name=".cyanogenmod.ContributorsCloud" />
 
-        <activity android:name=".cyanogenmod.LockscreenInterface" />
+        <activity android:name="Settings$LockscreenInterfaceActivity">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.cyanogenmod.LockscreenInterface" />
+            <intent-filter>
+                <action android:name="android.settings.LOCKSCREEN_INTERFACE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".notificationlight.NotificationLightSettings" />
 

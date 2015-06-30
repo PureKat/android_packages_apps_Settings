@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Ismeretlen profil</string>
   <string name="profile_add_nfc_text">Ez az NFC tag egy ismeretlen profilra mutat. Az NFC tag csatolása egy már meglévő profilhoz lehetővé teszi a jövőbeli kiválasztását.</string>
   <string name="profile_select">Válasszon profilt</string>
+  <string name="profile_remove_dialog_message">%1$s profil eltávolítása?</string>
+  <string name="profile_populate_profile_from_state">Konfigurálja a profilt a jelenlegi beállításokat használva?</string>
+  <string name="profile_menu_fill_from_state">Jelenlegi beállítások importálása</string>
   <string name="profile_name_title">Név</string>
   <string name="profile_profile_name_prompt">Adja meg az új profil nevét</string>
   <string name="menu_new_profile">Új profil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Letiltva</string>
   <string name="connection_state_enabled">Engedélyezve</string>
   <string name="volume_override_summary">%1$s/%2$s beállítva</string>
+  <string name="volume_override_summary_no_override">Ne írja felül</string>
+  <string name="profile_volume_override_checkbox_label">Hangerő felűlírása</string>
   <string name="profile_profiles_manage">Profilok</string>
   <string name="profile_profile_manage">Profilok kezelése</string>
   <string name="profile_appgroups_manage">Alkalmazáscsoportok</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Csengő és értesítési hangok némításának összekötése</string>
   <string name="volume_keys_control_ring_stream">Csengőhang vezérlése hangerőgombokkal</string>
   <string name="ring_mode_title">Csengetés módja</string>
-  <string name="ring_mode_normal">Normál</string>
+  <string name="ring_mode_normal">Csengés</string>
   <string name="ring_mode_vibrate">Rezgés</string>
   <string name="ring_mode_mute">Néma</string>
+  <string name="ring_mode_unchanged">Változatlan</string>
   <string name="volume_overlay_title">Hangerő panel</string>
   <string name="volume_overlay_single">Egyszerű</string>
   <string name="volume_overlay_expandable">Kiterjeszthető</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Teljes méretű modulok</string>
   <string name="lockscreen_maximize_widgets_summary">Modulok megjelenése maximális méretben a kijelző bekapcsolásakor</string>
   <string name="lockscreen_enable_camera_title">Kamera modul</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast modul</string>
   <string name="safe_headset_volume_title">Biztonságos hangerő</string>
   <string name="safe_headset_volume_restore_title">Hangerő csökkentése fejhallgató csatlakoztatásakor</string>
   <string name="cyanogenmod_waiver_title">Jogi felelősség átvállalása</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Hangerő</string>
   <string name="title_tile_expanded_desktop">Képernyő kiterjesztés</string>
   <string name="title_tile_network_adb">ADB hálózaton keresztül</string>
+  <string name="title_tile_themes">Témák</string>
   <string name="title_dynamic_tiles">Dinamikus csempék</string>
   <string name="dynamic_tiles_note_title">Megjegyzés</string>
   <string name="dynamic_tiles_note_summary">Dinamikus csempék csak akkor jelennek meg, ha egy rendszeresemény azt kiváltja</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Hang</string>
   <string name="cm_sound_mode_soundVibrate">Hang &amp; Rezgés</string>
   <string name="pref_location_mode_title">Helymeghatározási módok</string>
+  <string name="pref_location_mode_summary">Alapértelmezett viselkedéshez kapcsoljon ki minden módot</string>
+  <string name="cm_location_mode_off">Helymeghatározás kikapcsolva</string>
   <string name="cm_location_mode_battery_saving">Energiatakarékos</string>
   <string name="cm_location_mode_device_only">Csak készülék</string>
   <string name="cm_location_mode_high_accuracy">Nagy pontosság</string>
@@ -369,6 +377,8 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="root_access_all">Alkalmazások és ADB</string>
   <string name="update_recovery_title">CM recovery frissítése</string>
   <string name="update_recovery_summary">Rendszerfrissítések telepítése közben frissítse a recovery-t</string>
+  <string name="update_recovery_on_warning">FIGYELEM: Ha ezen funkció aktiválva van, a telepített recovery le lesz cserélve a jelenleg futó operációs rendszerének megfelelően.\n\nA recovery együtt lesz frissítve a rendszerrel, ezáltal biztosítva a kompatibilitást a jövőbeli verziókkal.\n\nBiztosan aktiválja a funkciót?</string>
+  <string name="update_recovery_off_warning">FIGYELEM: Ha ez a funkció ki van kapcsolva, a telepített recovery nem le lesz cserélve a jelenleg futó operációs rendszerének megfelelően.\n\nAz újabb operációs rendszer frissítések lehet, hogy nem támogatják a régi recovery verziókat.\n\nBiztosan inaktiválja a funkciót?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Csendes órák</string>
   <string name="quiet_hours_summary">Csendes órák beállításai</string>
@@ -386,7 +396,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="quiet_hours_haptic_summary">Érintési visszajelzés letiltása</string>
   <string name="quiet_hours_active_period">Aktív innentől: <xliff:g id="start">%1$s</xliff:g> idáig: <xliff:g id="end">%2$s</xliff:g></string>
   <string name="quiet_hours_ringer_allow_all">Összes hívás</string>
-  <string name="quiet_hours_ringer_allow_contacts">Csak kapcsolatok</string>
+  <string name="quiet_hours_ringer_allow_contacts">Csak névjegyek</string>
   <string name="quiet_hours_ringer_allow_starred">Csak kedvencek</string>
   <string name="quiet_hours_ringer_mute_all">Összes hívás némítása</string>
   <string name="start_time_title">Kezdete</string>
@@ -448,7 +458,6 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="changelog_error">Nem lehet betölteni a változásokat</string>
   <string name="contributor_cloud_title">Közreműködők</string>
   <string name="cmupdate_settings_title">CyanogenMod frissítések</string>
-  <string name="cmupdate_settings_summary">Elérhető frissítések keresése, megtekintése, vagy telepítése</string>
   <string name="development_tools_title">Fejlesztői eszközök</string>
   <string name="allow_mock_sms">SMS utánzatok engedélyezése</string>
   <string name="privacy_settings_cyanogenmod_title">Adatvédelem</string>
@@ -598,6 +607,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="lockscreen_buttons_toggle_sound">Hang mód</string>
   <string name="lockscreen_buttons_sleep">Alvó mód</string>
   <string name="lockscreen_enable_modlock_title">Egyéni képernyőzár</string>
+  <string name="lockscreen_buttons_disabled_summary">Zárképernyő hivatkozások nem érhetőek el navigációs sáv használata során</string>
   <string name="navigation_bar_category">Navigációs sáv</string>
   <string name="navigation_bar_title">Gombok és kinézet</string>
   <string name="navigation_bar_left_title">Bal kezes mód</string>
@@ -881,7 +891,6 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="voice_wakeup_retrain_title">Kalibrálja hangját</string>
   <string name="voice_wakeup_activity_title">Tevékenység elindításához</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Nincs SIM</string>
   <string name="multi_sim_settings_title">SIM-kártyák</string>
   <string name="multi_sim_settings_group_summary">Alapértelmezett SIM kiválasztása</string>
   <string name="voice_title">Hanghívások</string>
@@ -950,6 +959,11 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="sd_media_format_button_text">SD kártya törlése</string>
   <string name="sd_media_format_final_desc">SD kártya törlése. Törli az összes ott tárolt fájlt? Ez a művelet nem visszavonható!</string>
   <string name="sd_media_format_gesture_explanation">Az SD kártya törlésének megerősítéséhez meg kell adnia a feloldó mintáját.</string>
+  <string name="internal_sd_format">Belső adattároló törlése</string>
+  <string name="internal_sd_format_summary">Töröl minden adatot a belső tárhelyről, például zenéket és fotókat</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nZenék, képek és egyéb adat törléséhez válassza a <b>belső tárhely</b> törlését.</string>
+  <string name="erase_internal_storage">Belső adattároló törlése</string>
+  <string name="erase_internal_storage_description">Minden adat, például zenék és fotók törlése a belső tárhelyről</string>
   <string name="bluetooth_enter_pin_msg_hs">Társítás a következővel:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Írja be az eszköz által kért PIN kódot (minimum 16 karakter):</string>
   <string name="bluetooth_profile_sap">SIM hozzáférés</string>
   <string name="bluetooth_profile_dun">Telefonos hálózati hozzáférés</string>
@@ -966,7 +980,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="data_usage_tab_slot">SIM  </string>
   <string name="sel_sub_title">SIM-kártyák beállítása</string>
   <string name="sel_sub_summary">SIM-kártyák kiválasztása</string>
-  <string name="no_sim_info">Nem áll rendelkezésre SIM kártya információ.\nA menü nem hozzáférhető</string>
+  <string name="no_sim_info">Nem áll rendelkezésre SIM-kártya információ.\nA menü nem hozzáférhető</string>
   <string name="subs_settings">SIM-kártya állapota</string>
   <string name="set_data_subscription_progress">Adat előfizetés beállítása\u2026</string>
   <string name="set_dds_success">Adat előfizetés sikeresen beállítva</string>
@@ -1008,8 +1022,17 @@ Az \"Eltávolítás\" törli a kiválasztott sort.</string>
   <string name="profile_setup_setup_triggers_title_config">Triggerek módosítása: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">2. lépés: Beállítások elvégzése</string>
   <string name="profile_setup_actions_title_config">Műveletek újrakonfigurálása</string>
-  <string name="no_bluetooth_triggers">Nincs rendelkezésre álló Bluetooth-trigger</string>
-  <string name="no_wifi_triggers">Nincs elérhető Wi\u2011Fi trigger</string>
+  <string name="no_bluetooth_triggers">Nincs párosított Bluetooth eszköz.\nBluetooth eszköz párosításáért érintse meg, mielőtt beállítaná a triggereket.</string>
+  <string name="no_wifi_triggers">Nincs Wi\u2011Fi hozzáférési pont beállítva.\nA Wi\u2011Fi csatlakoztatásához érintse meg, mielőtt beállítaná a triggereket.</string>
   <string name="profile_setup_setup_triggers_description">Kérjük, válassza ki a profilt aktiváló triggert</string>
   <string name="profile_setup_actions_description">Most állítsa be, hogy mi történjen a profil aktiválásakor</string>
+  <string name="profile_triggers_header">Triggerek, amelyek ezt a profilt aktiválni fogják</string>
+  <string name="no_triggers_configured">Nincs trigger beállítva. Új hozzáadásáért érintse meg.</string>
+  <string name="no_triggers_configured_nfc">Érintse meg egy új NFC trigger beállításáért.</string>
+  <string name="sound_ringtone_multisim_options">Alapértelmezett csengőhangok módosítása</string>
+  <string name="lock_to_cyanogen_title">Eszközvédelem</string>
+  <string name="lock_to_cyanogen_summary">Cyanogen OS jelszót igényel még gyári visszaállítás után is</string>
+  <string name="lock_to_cyanogen_create_account_msg">A készüléke Cyanogen OS jelszót használ az eszköz védelme érdekében, még gyári visszaállítás után is. Létre kell hoznia egy Cyanogen OS fiókot.</string>
+  <string name="lock_to_cyanogen_disable_msg">A funkció letiltásával jogosulatlan személyek visszaállíthatják a telefont a gyári beállításokra lopás esetén. Személyes adatai nem lesznek biztonságban. Biztosan letiltja ezt a funkciót?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Eszközvédelem engedélyezve van. Tiltsa le a készülék visszaállításának folytatásához.</string>
 </resources>

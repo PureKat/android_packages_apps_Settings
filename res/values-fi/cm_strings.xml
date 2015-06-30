@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="wifi_setting_countrycode_title">Wi\u2011Fi aluekoodi</string>
+  <string name="wifi_setting_countrycode_title">Wi\u2011Fi\u2011aluekoodi</string>
   <string name="wifi_setting_countrycode_summary">Aseta Wi\u2011Fin aluekoodi</string>
   <string name="wifi_setting_countrycode_error">Ongelma aluekoodia asetettaessa.</string>
   <string name="wifi_setting_priority_title">Wi\u2011Fi\u2011tukiasemien tärkeysjärjestys</string>
@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Tuntematon profiili</string>
   <string name="profile_add_nfc_text">Tämä NFC-tunniste viittaa tuntemattomaan profiiliin. Tämän tunnisteen liittäminen olemassa olevaan profiiliin antaa sinun valita profiilin myöhemmin.</string>
   <string name="profile_select">Valitse profiili</string>
+  <string name="profile_remove_dialog_message">Poista profiili %1$s?</string>
+  <string name="profile_populate_profile_from_state">Määritä profiili käyttämään nykyisiä laitteen asetuksia?</string>
+  <string name="profile_menu_fill_from_state">Tuo nykyiset laitteen asetukset</string>
   <string name="profile_name_title">Nimi</string>
   <string name="profile_profile_name_prompt">Nimeä uusi profiili</string>
   <string name="menu_new_profile">Uusi profiili</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Poista käytöstä</string>
   <string name="connection_state_enabled">Ota käyttöön</string>
   <string name="volume_override_summary">Aseta %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Älä ohita</string>
+  <string name="profile_volume_override_checkbox_label">Ohita äänenvoimakkuus</string>
   <string name="profile_profiles_manage">Profiilit</string>
   <string name="profile_profile_manage">Hallitse profiilia</string>
   <string name="profile_appgroups_manage">Sovellusryhmät</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Äänetön tila vaikuttaa ilmoituksiin</string>
   <string name="volume_keys_control_ring_stream">Soittoäänen voimakkuuden säätö äänenvoimakkuusnäppäimillä</string>
   <string name="ring_mode_title">Äänitila</string>
-  <string name="ring_mode_normal">Normaali</string>
+  <string name="ring_mode_normal">Soi</string>
   <string name="ring_mode_vibrate">Värinä</string>
   <string name="ring_mode_mute">Äänetön</string>
+  <string name="ring_mode_unchanged">Muuttumaton</string>
   <string name="volume_overlay_title">Äänipaneeli</string>
   <string name="volume_overlay_single">Yksittäinen</string>
   <string name="volume_overlay_expandable">Laajennettava</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Suurenna widgetit</string>
   <string name="lockscreen_maximize_widgets_summary">Suurenna widgetit, kun näyttö avataan</string>
   <string name="lockscreen_enable_camera_title">Kamerawidget</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast widget</string>
   <string name="safe_headset_volume_title">Turvallinen kuulokkeiden äänenvoimakkuus</string>
   <string name="safe_headset_volume_restore_title">Pienennä kuulokkeiden äänenvoimakkuutta kytkettäessä</string>
   <string name="cyanogenmod_waiver_title">Vastuuvapautus</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Äänenvoimakkuus</string>
   <string name="title_tile_expanded_desktop">Laajennettu työpöytä</string>
   <string name="title_tile_network_adb">ADB verkon yli</string>
+  <string name="title_tile_themes">Teemat</string>
   <string name="title_dynamic_tiles">Dynaamiset tiilet</string>
   <string name="dynamic_tiles_note_title">Huomautus</string>
   <string name="dynamic_tiles_note_summary">Dynaamiset tiilet näkyvät vain järjestelmän käyttäessä niitä</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Äänet</string>
   <string name="cm_sound_mode_soundVibrate">Äänet &amp; Värinä</string>
   <string name="pref_location_mode_title">Sijaintitilat</string>
+  <string name="pref_location_mode_summary">Poista kaikki käytöstä oletustoimintaan</string>
+  <string name="cm_location_mode_off">Sijainti pois</string>
   <string name="cm_location_mode_battery_saving">Virransäästö</string>
   <string name="cm_location_mode_device_only">Vain laite</string>
   <string name="cm_location_mode_high_accuracy">Korkea tarkkuus</string>
@@ -357,8 +365,10 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="root_access_apps">Vain sovellukset</string>
   <string name="root_access_adb">Vain ADB</string>
   <string name="root_access_all">Sovellukset ja ADB</string>
-  <string name="update_recovery_title">Päivitä CM recovery-tila</string>
-  <string name="update_recovery_summary">Päivitä recovery-tila järjestelmäpäivityksien yhteydessä</string>
+  <string name="update_recovery_title">Päivitä Cyanogen Recovery</string>
+  <string name="update_recovery_summary">Päivitä Recovery-tila järjestelmäpäivityksen aikana</string>
+  <string name="update_recovery_on_warning">HUOMAUTUS: Kun tämä toiminto on käytössä, asennettu Recovery-tila korvataan nykyisen käyttöjärjestelmän versiolla.\n\nRecovery-tilaa päivitetään yhdessä järjestelmäpäivitysten kanssa, varmistaaksemme yhteensopivuuden tulevien versioiden kanssa\n\nHaluatko ottaa toiminnon käyttöön?</string>
+  <string name="update_recovery_off_warning">VAROITUS: Kun toiminto on poistettu käytöstä, asennettua Recovery-tilaa ei päivitetä järjestelmäpäivtysten kanssa.\n\nTulevat järjestelmäpäivitykset ei ehkä asennu vanhentuneissa tai mukautetuissa Recovery-tiloissa.\n\nHaluatko varmasti poistaa tämän toiminnon käytöstä?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Hiljaisuusaika</string>
   <string name="quiet_hours_summary">Määritä aikaväli, jolloin haluat puhelimen olevan äänettömänä</string>
@@ -438,7 +448,6 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="changelog_error">Muutoslokin lataus ei onnistu</string>
   <string name="contributor_cloud_title">Kehittäjät ja avustajat</string>
   <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
-  <string name="cmupdate_settings_summary">Tarkista, näytä tai asenna saatavilla olevat päivitykset</string>
   <string name="development_tools_title">Käynnistä kehitystyökalut</string>
   <string name="allow_mock_sms">Salli valetekstiviestit</string>
   <string name="privacy_settings_cyanogenmod_title">Yksityisyys</string>
@@ -510,7 +519,7 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="collapse_on_dismiss_never_summary">Jätä auki poiston jälkeen</string>
   <string name="collapse_on_dismiss_if_empty_summary">Sulje, kun viimeinen ilmoitus on poistettu</string>
   <string name="collapse_on_dismiss_if_no_clearable_summary">Sulje, kun viimeinen poistettava ilmoitus on poistettu</string>
-  <string name="double_tap_to_wake_title">Herätys tuplanapautuksella</string>
+  <string name="double_tap_to_wake_title">Herätys kaksoisnapautuksella</string>
   <string name="double_tap_to_sleep_title">Lepotila kaksoisnapautuksella</string>
   <string name="double_tap_to_sleep_summary">Tuplanapauta tilapalkkia tai lukitusnäytön liukusäädintä asettaaksesi laitteen lepotilaan</string>
   <string name="proximity_wake_title">Estä herätys vahingossa</string>
@@ -588,6 +597,7 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="lockscreen_buttons_toggle_sound">Äänet</string>
   <string name="lockscreen_buttons_sleep">Lepotila</string>
   <string name="lockscreen_enable_modlock_title">Mukautettu lukitusnäyttö</string>
+  <string name="lockscreen_buttons_disabled_summary">Lukitusnäytön näppäimet eivät ole käytettävissä, kun näytön navigointipalkki on käytössä</string>
   <string name="navigation_bar_category">Navigointipalkki</string>
   <string name="navigation_bar_title">Näppäimet ja sijainti</string>
   <string name="navigation_bar_left_title">Käytä vasemmalla kädellä</string>
@@ -871,7 +881,6 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="voice_wakeup_retrain_title">Opeta äänesi</string>
   <string name="voice_wakeup_activity_title">Avattava toiminto</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Ei SIMiä</string>
   <string name="multi_sim_settings_title">SIM-kortit</string>
   <string name="multi_sim_settings_group_summary">Oletus-SIMin valinta</string>
   <string name="voice_title">Äänipuhelut</string>
@@ -940,6 +949,11 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="sd_media_format_button_text">Tyhjennä SD-kortti</string>
   <string name="sd_media_format_final_desc">Tyhjennetäänkö SD-kortti poistamalla kaikki tallennetut tiedot? Toimintoa ei voi peruuttaa!</string>
   <string name="sd_media_format_gesture_explanation">Sinun tulee piirtää lukituskuviosi vahvistaaksesi että haluat tyhjentää SD-kortin.</string>
+  <string name="internal_sd_format">Tyhjennä sisäinen tallennustila</string>
+  <string name="internal_sd_format_summary">Poistaa kaikki tiedot sisäisestä tallennustilasta, kuten musiikit ja kuvat</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPoistaaksesi musiikit, kuvat, ja muut käyttäjätiedot, <b>sisäinen tallennustila</b> pitää tyhjentää.</string>
+  <string name="erase_internal_storage">Tyhjennä sisäinen tallennustila</string>
+  <string name="erase_internal_storage_description">Tyhjennä kaikki tiedot sisäisestä tallennustilasta, kuten musiikit ja kuvat</string>
   <string name="bluetooth_enter_pin_msg_hs">Parittaaksesi seuraavan laitteen kanssa:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> Syötä laitteen tarvitsema PIN (16 numeroa tai enemmän):</string>
   <string name="bluetooth_profile_sap">SIM-pääsy</string>
   <string name="bluetooth_profile_dun">DUN-pääsy</string>
@@ -998,8 +1012,17 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="profile_setup_setup_triggers_title_config">Muokkaa käynnistimiä: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Vaihe 2: Aseta toiminnot</string>
   <string name="profile_setup_actions_title_config">Määritä toiminnot</string>
-  <string name="no_bluetooth_triggers">Bluetooth-käynnistimiä ei saatavilla</string>
-  <string name="no_wifi_triggers">Wi\u2011Fi\u2011käynnistimiä ei saatavilla</string>
+  <string name="no_bluetooth_triggers">Bluetooth-laitteita ei paritettu.\nPaina parittaaksesi Bluetooth-laitteen ennen käynnistimien määrittämistä.</string>
+  <string name="no_wifi_triggers">Wi\u2011Fi verkkoja ei määritetty.\nPaina yhdistääksesi Wi\u2011Fi-verkkoon ennen käynnistimien määrittämistä.</string>
   <string name="profile_setup_setup_triggers_description">Valitse käynnistimet jotka aktivoivat tämän profiilin</string>
   <string name="profile_setup_actions_description">Määritä nyt mitä tapahtuu kun profiili on aktivoitu</string>
+  <string name="profile_triggers_header">Tämän profiilin aktivoivat käynnistimet</string>
+  <string name="no_triggers_configured">Käynnistimiä ei määritetty. Paina lisätäksesi.</string>
+  <string name="no_triggers_configured_nfc">Paina asettaaksesi uuden NFC-käynnistimen.</string>
+  <string name="sound_ringtone_multisim_options">Vaihda oletussoittoääniä</string>
+  <string name="lock_to_cyanogen_title">Laitteen suojaus</string>
+  <string name="lock_to_cyanogen_summary">Vaadi Cyanogen OS-tilin salasana jopa tehdasasetusten palautuksen jälkeen</string>
+  <string name="lock_to_cyanogen_create_account_msg">Laitteesi käyttää Cyanogen OS-tilin salasanaa suojatakseen laitetta jopa tehdasasetusten palautuksen jälkeen. Sinun täytyy luoda Cyanogen OS-tili.</string>
+  <string name="lock_to_cyanogen_disable_msg">Tämän ominaisuuden käytöstä poistaminen sallii muiden käyttäjien palauttaa tehdasasetukset jos laite varastetaan. Henkilökohtaisia tietojasi ei välttämättä ole suojattu. Haluatko poistaa tämän ominaisuuden käytöstä?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Laitteen suojaus on käytössä. Poista suojaus käytöstä palauttaaksesi laitteen tehdasasetukset.</string>
 </resources>

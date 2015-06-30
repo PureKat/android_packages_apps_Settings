@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Perfil Desconhecido</string>
   <string name="profile_add_nfc_text">Esta etiqueta NFC se refere a um perfil desconhecido. Ao anexar esta etiqueta NFC à um perfil existente, irá permitir selecionar o perfil no futuro.</string>
   <string name="profile_select">Selecione o perfil</string>
+  <string name="profile_remove_dialog_message">Apagar perfil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Configurar perfil usando as configurações atuais do dispositivo?</string>
+  <string name="profile_menu_fill_from_state">Importar as configurações atuais do dispositivo</string>
   <string name="profile_name_title">Nome do perfil</string>
   <string name="profile_profile_name_prompt">Entre um nome para o novo perfil</string>
   <string name="menu_new_profile">Novo perfil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Desabilitar</string>
   <string name="connection_state_enabled">Habilitar</string>
   <string name="volume_override_summary">Definir para %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Não substituir</string>
+  <string name="profile_volume_override_checkbox_label">Substituir volume</string>
   <string name="profile_profiles_manage">Perfis</string>
   <string name="profile_profile_manage">Gerenciar perfil</string>
   <string name="profile_appgroups_manage">Grupos de aplicações</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Modo silencioso afeta as notificações</string>
   <string name="volume_keys_control_ring_stream">Botões de volume controlam o volume da campainha</string>
   <string name="ring_mode_title">Modo de toque</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Toque</string>
   <string name="ring_mode_vibrate">Vibrar</string>
   <string name="ring_mode_mute">Mudo</string>
+  <string name="ring_mode_unchanged">Sem alterações</string>
   <string name="volume_overlay_title">Estilo do painel de volume</string>
   <string name="volume_overlay_single">Simples</string>
   <string name="volume_overlay_expandable">Expandível</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maximizar widgets</string>
   <string name="lockscreen_maximize_widgets_summary">Mostrar widgets maximizados e o destravamento minimizado quando a tela é ligada</string>
   <string name="lockscreen_enable_camera_title">Widget da câmera</string>
-  <string name="lockscreen_enable_application_widget_title">AppCast widget</string>
   <string name="safe_headset_volume_title">Volume seguro do fone de ouvido</string>
   <string name="safe_headset_volume_restore_title">Reduzir o volume do fone de ouvido ao conectar</string>
   <string name="cyanogenmod_waiver_title">Garantia</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Área de trabalho expandida</string>
   <string name="title_tile_network_adb">ADB pela rede</string>
+  <string name="title_tile_themes">Temas</string>
   <string name="title_dynamic_tiles">Botões dinâmicos</string>
   <string name="dynamic_tiles_note_title">Nota</string>
   <string name="dynamic_tiles_note_summary">Os botões dinâmicos só serão mostrados se iniciados por um evento de sistema</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Som</string>
   <string name="cm_sound_mode_soundVibrate">Som &amp; Vibrar</string>
   <string name="pref_location_mode_title">Modos de localização</string>
+  <string name="pref_location_mode_summary">Desmarcar tudo para o comportamento padrão</string>
+  <string name="cm_location_mode_off">Localização desligada</string>
   <string name="cm_location_mode_battery_saving">Economia de bateria</string>
   <string name="cm_location_mode_device_only">Somente dispositivo</string>
   <string name="cm_location_mode_high_accuracy">Alta precisão</string>
@@ -356,8 +364,10 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="root_access_apps">Somente aplicativos</string>
   <string name="root_access_adb">Somente ADB</string>
   <string name="root_access_all">Aplicativos e ADB</string>
-  <string name="update_recovery_title">Atualizar recuperação CM</string>
-  <string name="update_recovery_summary">Atualizar recuperação quando instalando atualizações de sistema</string>
+  <string name="update_recovery_title">Atualizar o recovery do Cyanogen</string>
+  <string name="update_recovery_summary">Atualizar o recovery com atualizações de sistema</string>
+  <string name="update_recovery_on_warning">AVISO: Quando este recurso é ativado, seu recovery será substituído pelo o que é incluído no sistema operacional em execução.\n\nSeu recovery será atualizado junto com o sistema, ajudando a garantir a compatibilidade com versões futuras.\n\nVocê deseja ativar este recurso?</string>
+  <string name="update_recovery_off_warning">AVISO: Quando este recurso estiver desativado, seu recovery não será atualizado junto com o sistema.\n\nVersões mais atuais podem não instalar com um recovery antigo ou customizado.\n\nVocê realmente quer desativar este recurso?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Horas de silêncio</string>
   <string name="quiet_hours_summary">Ver ou alterar o horário que o dispositivo deve ficar em silêncio</string>
@@ -437,7 +447,6 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="changelog_error">Não foi possível carregar as mudanças</string>
   <string name="contributor_cloud_title">Colaboradores</string>
   <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
-  <string name="cmupdate_settings_summary">Verificar, visualizar ou instalar atualizações disponíveis</string>
   <string name="development_tools_title">Abrir ferramentas</string>
   <string name="allow_mock_sms">Permitir a simulação SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Privacidade</string>
@@ -587,6 +596,7 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="lockscreen_buttons_toggle_sound">Alternar som</string>
   <string name="lockscreen_buttons_sleep">Suspender</string>
   <string name="lockscreen_enable_modlock_title">Tela de bloqueio personalizada</string>
+  <string name="lockscreen_buttons_disabled_summary">Os botões da tela de bloqueio não estão disponíveis enquanto estiver usando os botões da barra de navegação</string>
   <string name="navigation_bar_category">Barra de navegação</string>
   <string name="navigation_bar_title">Barra de Navegação</string>
   <string name="navigation_bar_left_title">Modo canhoto</string>
@@ -870,7 +880,6 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="voice_wakeup_retrain_title">Re-treinar sua voz</string>
   <string name="voice_wakeup_activity_title">Atividade para iniciar</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Sem SIM</string>
   <string name="multi_sim_settings_title">Cartões SIM</string>
   <string name="multi_sim_settings_group_summary">Selecionar o SIM padrão</string>
   <string name="voice_title">Chamadas de voz</string>
@@ -939,6 +948,11 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="sd_media_format_button_text">Apagar o cartão SD</string>
   <string name="sd_media_format_final_desc">Apagar o cartão SD, eliminando todos os arquivos armazenados? Não é possível reverter esta ação!</string>
   <string name="sd_media_format_gesture_explanation">Você precisa inserir seu padrão de desbloqueio para confirmar que você deseja apagar o cartão SD.</string>
+  <string name="internal_sd_format">Apagar o armazenamento interno</string>
+  <string name="internal_sd_format_summary">Apaga todos os dados do armazenamento interno, tal como músicas e fotos</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPara limpar as músicas, fotografias e outros dados, o <b>armazenamento interno</b> tem que ser apagado.</string>
+  <string name="erase_internal_storage">Apagar armazenamento interno</string>
+  <string name="erase_internal_storage_description">Apaga todos os dados do armazenamento interno, tal como músicas e fotos</string>
   <string name="bluetooth_enter_pin_msg_hs">Para parear com:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Digite o PIN requerido (16 dígitos ou mais):</string>
   <string name="bluetooth_profile_sap">Acesso ao SIM</string>
   <string name="bluetooth_profile_dun">Acesso a rede discada</string>
@@ -997,8 +1011,17 @@ Opções adicionais estão disponíveis ao pressionar continuamente uma linha. A
   <string name="profile_setup_setup_triggers_title_config">Modificar gatilhos: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Etapa 2: Ações de instalação</string>
   <string name="profile_setup_actions_title_config">Reconfigurar as ações</string>
-  <string name="no_bluetooth_triggers">Nenhum gatilho de Bluetooth disponível</string>
-  <string name="no_wifi_triggers">Sem gatilhos Wi\u2011Fi disponíveis</string>
+  <string name="no_bluetooth_triggers">Não há dispositivos Bluetooth pareados.\nToque para parear um dispositivo Bluetooth antes de configurar gatilhos.</string>
+  <string name="no_wifi_triggers">Nenhum ponto de acesso Wi-Fi configurado.\nToque para conectar a um Wi-Fi antes de configurar gatilhos.</string>
   <string name="profile_setup_setup_triggers_description">Por favor selecione os gatilhos que ativarão este perfil</string>
   <string name="profile_setup_actions_description">Agora configure o que acontece quando o perfil é ativado</string>
+  <string name="profile_triggers_header">Gatilhos que ativarão este perfil</string>
+  <string name="no_triggers_configured">Nenhum gatilho configurado. Toque para adicionar mais.</string>
+  <string name="no_triggers_configured_nfc">Toque para configurar um novo gatilho NFC.</string>
+  <string name="sound_ringtone_multisim_options">Alterar toques padrões</string>
+  <string name="lock_to_cyanogen_title">Proteção do Dispositivo</string>
+  <string name="lock_to_cyanogen_summary">Exigir a senha da sua conta Cyanogen mesmo depois de restaurar as configurações de fábrica</string>
+  <string name="lock_to_cyanogen_create_account_msg">O seu dispositivo usa uma senha de conta Cyanogen para proteger seu dispositivo mesmo no evento das configurações de fábrica serem restauradas. Você precisará criar uma conta Cyanogen.</string>
+  <string name="lock_to_cyanogen_disable_msg">Desativando esta funcionalidade permitirá que um usuário não autorizado restaure seu dispositivo para as configurações de fábrica se ele for roubado. Seus dados pessoais podem não ser protegidos. Você deseja desativar esta função?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">A Proteção do Dispositivo está ativada. Por favor, desative para continuar a restaurar o seu dispositivo.</string>
 </resources>

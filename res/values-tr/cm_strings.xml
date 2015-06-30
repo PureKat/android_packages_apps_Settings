@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Bilinmeyen profil</string>
   <string name="profile_add_nfc_text">Bu NFC etiketi bilinmeyen bir profile denk geliyor. Bu NFC etiketini bilinen bir profile atamak gelecekte o profilin seçilmesini sağlayabilir.</string>
   <string name="profile_select">Profil seç</string>
+  <string name="profile_remove_dialog_message">%1$s profili kaldırılsın mı?</string>
+  <string name="profile_populate_profile_from_state">Geçerli cihaz ayarları kullanılarak profil yapılandırılsın mı?</string>
+  <string name="profile_menu_fill_from_state">Geçerli cihaz ayarlarını al</string>
   <string name="profile_name_title">İsim</string>
   <string name="profile_profile_name_prompt">Yeni profil için bir isim girin</string>
   <string name="menu_new_profile">Yeni profil</string>
@@ -65,7 +68,7 @@
   <string name="rename_dialog_title">Yeniden adlandır</string>
   <string name="rename_dialog_message">Yeni isim girin</string>
   <string name="duplicate_profile_name">Tekrarlayan profil ismi!</string>
-  <string name="duplicate_appgroup_name">Tekralayan uygulama grup ismi!</string>
+  <string name="duplicate_appgroup_name">Tekrarlayan uygulama grup ismi!</string>
   <string name="profile_reset_title">Sıfırla</string>
   <string name="profile_reset_message">Kullanıcı tarafından oluşturulan tüm profil ve gruplar silinip varsayılana dönülsün mü?</string>
   <string name="profile_delete_confirm">Bu profili sil?</string>
@@ -78,10 +81,12 @@
   <string name="settings_search_autocompleteview_hint">Arama ayarları</string>
   <string name="settings_search_loading_text">Arama verisi yükleniyor\u2026</string>
   <string name="profile_connectionoverrides_title">Bağlantı zorlamaları</string>
-  <string name="profile_volumeoverrides_title">Ses düzeyi zorlamaları</string>
+  <string name="profile_volumeoverrides_title">Ses düzeyi değişimleri</string>
   <string name="connection_state_disabled">Devre dışı bırak</string>
   <string name="connection_state_enabled">Etkinleştir</string>
-  <string name="volume_override_summary">%1$s/%2$s ayarla</string>
+  <string name="volume_override_summary">%1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Değiştirme</string>
+  <string name="profile_volume_override_checkbox_label">Ses düzeyini değiştir</string>
   <string name="profile_profiles_manage">Profiller</string>
   <string name="profile_profile_manage">Profili yönet</string>
   <string name="profile_appgroups_manage">Uygulama grupları</string>
@@ -96,7 +101,7 @@
   <string name="ringer_mode">Zil modu</string>
   <string name="lights_mode">Işık modu</string>
   <string name="vibrate_mode">Titreşim modu</string>
-  <string name="soundtone_title">Bildirim tonu</string>
+  <string name="soundtone_title">Bildirim sesi</string>
   <string name="profile_appgroups_title">Uygulama grupları</string>
   <string name="profile_applist_title">Uygulamalar</string>
   <string name="profile_new_appgroup">Yeni uygulama grubu</string>
@@ -123,13 +128,14 @@
   <string name="toggleWimax">WiMAX</string>
   <string name="toggleNfc">NFC</string>
   <string name="volume_ring_only_description">Zil sesi</string>
-  <string name="link_volume_ringtones">Zilsesi ve bildirim ses düzeyini bağla</string>
+  <string name="link_volume_ringtones">Zil sesi ile Bildirim ses düzeyini bağla</string>
   <string name="link_volume_mutes">Sessiz mod bildirimleri etkiler</string>
   <string name="volume_keys_control_ring_stream">Ses tuşları zil sesini kontrol eder</string>
   <string name="ring_mode_title">Zil modu</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Çal</string>
   <string name="ring_mode_vibrate">Titreşim</string>
   <string name="ring_mode_mute">Sessiz</string>
+  <string name="ring_mode_unchanged">Değişmemiş</string>
   <string name="volume_overlay_title">Ses paneli stili</string>
   <string name="volume_overlay_single">Tek</string>
   <string name="volume_overlay_expandable">Genişletilebilir</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Widgetları büyült</string>
   <string name="lockscreen_maximize_widgets_summary">Ekran açıkken widgetleri genişlet</string>
   <string name="lockscreen_enable_camera_title">Kamera widgeti</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast widgetı</string>
   <string name="safe_headset_volume_title">Güvenli kulaklık ses düzeyi</string>
   <string name="safe_headset_volume_restore_title">Bağlantıda kulaklık sesini azalt</string>
   <string name="cyanogenmod_waiver_title">Feragat</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Ses</string>
   <string name="title_tile_expanded_desktop">Genişletilmiş Masaüstü</string>
   <string name="title_tile_network_adb">Ağ üzerinden ADB</string>
+  <string name="title_tile_themes">Temalar</string>
   <string name="title_dynamic_tiles">Dinamik kareler</string>
   <string name="dynamic_tiles_note_title">Not</string>
   <string name="dynamic_tiles_note_summary">Dinamik kareler sadece sistem tarafından tetiklendiğinde çalışacaktır</string>
@@ -290,10 +296,12 @@
   <string name="pref_ring_mode_title">Ses modları</string>
   <string name="pref_ring_mode_summary">Ses tuşu modlarını görün ya da değiştirin</string>
   <string name="cm_sound_mode_silent">Sessiz</string>
-  <string name="cm_sound_mode_vibrate">Titreş</string>
+  <string name="cm_sound_mode_vibrate">Titre</string>
   <string name="cm_sound_mode_sound">Ses</string>
   <string name="cm_sound_mode_soundVibrate">Ses &amp; Titreşim</string>
   <string name="pref_location_mode_title">Konum modları</string>
+  <string name="pref_location_mode_summary">Varsayılan davranış için tüm modları devre dışı bırakın</string>
+  <string name="cm_location_mode_off">Konum kapalı</string>
   <string name="cm_location_mode_battery_saving">Pil tasarrufu</string>
   <string name="cm_location_mode_device_only">Sadece cihaz</string>
   <string name="cm_location_mode_high_accuracy">Yüksek doğruluk</string>
@@ -371,8 +379,10 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="root_access_apps">Sadece uygulamalar</string>
   <string name="root_access_adb">Sadece ADB</string>
   <string name="root_access_all">Uygulamalar ve ADB</string>
-  <string name="update_recovery_title">CM kurtarma modunu güncelle</string>
-  <string name="update_recovery_summary">Sistem güncellemeleri yüklenirken kurtarma modunu güncelle</string>
+  <string name="update_recovery_title">Cyanogen kurtarma modunu güncelle</string>
+  <string name="update_recovery_summary">Sistem güncellemesi ile kurtarma modunu güncelle</string>
+  <string name="update_recovery_on_warning">DİKKAT: Bu özellik etkinken, yüklü kurtarma modunuz mevcut İS sürümündeki mod ile değiştirilecektir. \n\nKurtarma modunuz sistem güncellemeleri ile birlikte güncellenecektir, böylelikle gelecek sürümler ile uyumluluk sağlanacaktır.\n\nBu özelliği etkinleştirmek ister misiniz?</string>
+  <string name="update_recovery_off_warning">UYARI: Bu özellik devre dışı bırakıldığında, yüklü kurtarma modunuz İS güncellemeleri ile güncellenmeyecektir.\n\nGelecek İS güncellemeleri eskimiş ya da özel kurtarma sürümleri ile yüklenemeyebilir.\n\nBu özelliği gerçekten devre dışı bırakmak istiyor musunuz?</string>
   <string name="ok">Tamam</string>
   <string name="quiet_hours_title">Sessiz saatler</string>
   <string name="quiet_hours_summary">Cihazın sessiz olacağı saatleri ayarlayın</string>
@@ -452,7 +462,6 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="changelog_error">Değişiklik kaydı yüklenemedi</string>
   <string name="contributor_cloud_title">Katkıda bulunanlar</string>
   <string name="cmupdate_settings_title">CyanogenMod güncellemeleri</string>
-  <string name="cmupdate_settings_summary">Güncellemeleri denetleyin, görüntüleyin ve yükleyin</string>
   <string name="development_tools_title">Araçları başlat</string>
   <string name="allow_mock_sms">Sahte SMSlere izin ver</string>
   <string name="privacy_settings_cyanogenmod_title">Gizlilik</string>
@@ -546,7 +555,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="power_notifications_category_title">Güç sesleri</string>
   <string name="power_notifications_enable_title">Etkinleştir</string>
   <string name="power_notifications_enable_summary">Bir güç kaynağına bağlanırken ya da bağlantısını keserken bir ses çal</string>
-  <string name="power_notifications_vibrate_title">Titreş</string>
+  <string name="power_notifications_vibrate_title">Titre</string>
   <string name="power_notifications_ringtone_title">Bildirim sesi</string>
   <string name="power_notifications_ringtone_silent">Sessiz</string>
   <string name="lockscreen_battery_status_title">Pil durumu</string>
@@ -602,6 +611,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="lockscreen_buttons_toggle_sound">Ses modunu değiştir</string>
   <string name="lockscreen_buttons_sleep">Uyku moduna geç</string>
   <string name="lockscreen_enable_modlock_title">Özel kilit ekranı</string>
+  <string name="lockscreen_buttons_disabled_summary">Ekran üstü dolaşım çubuğu kullanılırken Kilit ekranı tuşları kullanılamaz</string>
   <string name="navigation_bar_category">Dolaşım çubuğu</string>
   <string name="navigation_bar_title">Tuşlar ve düzen</string>
   <string name="navigation_bar_left_title">Solak modu</string>
@@ -665,7 +675,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="hardware_keys_action_launch_camera">Kamerayı başlat</string>
   <string name="hardware_keys_action_last_app">Son uygulama</string>
   <string name="hardware_keys_action_sleep">Ekranı kapat</string>
-  <string name="power_end_call_title">Çağrıyı Sonlandır</string>
+  <string name="power_end_call_title">Çağrıyı sonlandır</string>
   <string name="power_end_call_summary">Güç tuşuna basmak mevcut çağrıyı sonlandıracak</string>
   <string name="button_wake_title">Uyan</string>
   <string name="home_wake_summary">Ana ekran tuşuna basmak cihazı uyandırır</string>
@@ -723,7 +733,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="storage_rescan_media">Depolama birimi için ortamları yeniden ara</string>
   <string name="storage_rescan_media_complete">Tarama tamamlandı</string>
   <string name="whisperpush_title">WhisperPush</string>
-  <string name="whisperpush_summary">Güvenli SMS ayarlarını yönet</string>
+  <string name="whisperpush_summary">Şifreli SMS ayarlarını yönet</string>
   <string name="logger_title">İsimsiz hata kaydı</string>
   <string name="logger_summary">Hata kayıt ayarlarını yönet</string>
   <string name="custom_runtime_warning_title">Uyarı</string>
@@ -885,7 +895,6 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="voice_wakeup_retrain_title">Sesinizi ayarlayın</string>
   <string name="voice_wakeup_activity_title">Başlatılacak aktivite</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">SIM yok</string>
   <string name="multi_sim_settings_title">SIM kartlar</string>
   <string name="multi_sim_settings_group_summary">Varsayılan SIM seçimi</string>
   <string name="voice_title">Sesli aramalar</string>
@@ -908,6 +917,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="pa_login_incorrect_login">Hatalı giriş</string>
   <string name="keep_screen_on_summary_cm">Telefon şarjda iken ekran hiç kapanmayacak</string>
   <plurals name="show_dev_countdown_cm">
+    <item quantity="one">Geliştirici seçeneklerinin etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
     <item quantity="other">Geliştirici seçeneklerinin etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
   </plurals>
   <string name="show_dev_on_cm">Geliştirici seçeneklerini etkinleştirdiniz!</string>
@@ -916,7 +926,7 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="enable_adb_summary_cm">Android Hata Ayıklama (adb) arayüzünü etkinleştir</string>
   <string name="spam_added_title">Eklendi <xliff:g id="time_since" example="5 minutes ago">%1$s</xliff:g></string>
   <string name="spam_last_blocked_title">En son <xliff:g id="time_since" example="5 minutes ago">%1$s</xliff:g> engellendi (toplam: <xliff:g id="count" example="2 times">%2$s</xliff:g>)</string>
-  <string name="block_notifications_title">Filtre bildirimleri</string>
+  <string name="block_notifications_title">Bildirimleri filtrele</string>
   <string name="block_notifications_summary">Yoksayılan bildirimleri ve filtreleri yönet</string>
   <string name="no_filters_title">Hiçbir filtre ayarlanmadı. Bir bildirimi filtrelemek için, ona uzun dokunun ve \'Bunun gibi mesajları yok say\' ı seçin.</string>
   <string name="usb_sd_eject">USB belleği çıkar</string>
@@ -953,6 +963,11 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="sd_media_format_button_text">SD kartı sil</string>
   <string name="sd_media_format_final_desc">SD kart silinsin mi? Depolanan tüm veriler silinecektir. Bu eylemi geri alamazsınız!</string>
   <string name="sd_media_format_gesture_explanation">SD kart birimini silmek istediğinizi onaylamak için kilit açma şeklini çizmeniz gerekir.</string>
+  <string name="internal_sd_format">Dahili ortam belleğini sil</string>
+  <string name="internal_sd_format_summary">Dahili ortam belleğindeki müzik ve fotoğraf gibi tüm verileri siler</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nMüzik, resim ve diğer kullanıcı verilerini temizlemek için <b>dahili ortam belleği</b> silinmeli.</string>
+  <string name="erase_internal_storage">Dahili ortam belleğini sil</string>
+  <string name="erase_internal_storage_description">Dahili ortam belleğindeki müzik ve fotoğraf gibi tüm verileri sil</string>
   <string name="bluetooth_enter_pin_msg_hs"><xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>ile eşleştirmek için cihazın gerekli PIN\'ini (16+ karakter) girin:</string>
   <string name="bluetooth_profile_sap">SIM Erişimi</string>
   <string name="bluetooth_profile_dun">Çevirmeli Ağ Erişimi</string>
@@ -1011,8 +1026,17 @@ parlaklık seviyesini ayarlayabilir hem de istediğiniz parlaklık düzeyini ell
   <string name="profile_setup_setup_triggers_title_config">Tetikleyicileri değiştir: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Adım 2: Eylemleri kurun</string>
   <string name="profile_setup_actions_title_config">Eylemleri tekrar ayarla</string>
-  <string name="no_bluetooth_triggers">Bluetooth tetikleyicisi yok</string>
-  <string name="no_wifi_triggers">Wi\u2011Fi tetikleyicisi yok</string>
+  <string name="no_bluetooth_triggers">Eşleştirilmiş bluetooth aygıtı yok.\nTetikleyicileri yapılandırmadan önce Bluetooth cihazı ile eşleştirmek için dokunun.</string>
+  <string name="no_wifi_triggers">Hiç  Wi\u2011Fi erişim noktası yapılandırılmadı.\nTetikleyicileri yapılandırmadan önce  Wi\u2011Fi ağına bağlanmak için dokunun.</string>
   <string name="profile_setup_setup_triggers_description">Lütfen  bu profili etkinleştirecek tetikleyicileri seçin</string>
   <string name="profile_setup_actions_description">Şimdi profil etkinleştirildiğinde ne olacağını yapılandırın</string>
+  <string name="profile_triggers_header">Bu profili etkinleştirecek tetikleyiciler</string>
+  <string name="no_triggers_configured">Hiç tetikleyici ayarlanmadı. Eklemek için dokunun.</string>
+  <string name="no_triggers_configured_nfc">Yeni bir NFC tetikleyicisi kurmak için dokunun.</string>
+  <string name="sound_ringtone_multisim_options">Varsayılan zil sesleri değiştir</string>
+  <string name="lock_to_cyanogen_title">Cihaz Koruması</string>
+  <string name="lock_to_cyanogen_summary">Fabrika sıfırlamasından sonra bile Cyanogen İS hesap şifresini gerektirir</string>
+  <string name="lock_to_cyanogen_create_account_msg">Cihazınız bir fabrika sıfırlamasından sonra bile cihazı korumak için Cyanogen İS hesap şifresini kullanır. Bir Cyanogen İS hesabı oluşturmanız gerekecek.</string>
+  <string name="lock_to_cyanogen_disable_msg">Bu özelliği kapatmak telefonunuz çalındığında yetkilendirilmemiş kullanıcıların telefonunuzu fabrika ayarlarına sıfırlamasına izin verecektir. Kişisel verileriniz korunamayabilir. Bu özelliği kapatmak istiyor musunuz?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Cihaz Koruması etkin. Cihazınızı sıfırlamaya devam etmek için lütfen korumayı kapatın.</string>
 </resources>

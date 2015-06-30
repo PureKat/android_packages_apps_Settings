@@ -118,7 +118,6 @@
   <string name="link_volume_mutes">الوضع الصامت يؤثر على الإعلام</string>
   <string name="volume_keys_control_ring_stream">أزرار الصوت تتحكم في مستوى صوت النغمات</string>
   <string name="ring_mode_title">وضع الرنين</string>
-  <string name="ring_mode_normal">طبيعي</string>
   <string name="ring_mode_vibrate">هزاز</string>
   <string name="ring_mode_mute">كتم الصوت</string>
   <string name="volume_overlay_title">نمط صوت اللوحة</string>
@@ -326,8 +325,6 @@
   <string name="root_access_apps">تطبيقات فقط</string>
   <string name="root_access_adb">ADB فقط</string>
   <string name="root_access_all">تطبيقات و ADB</string>
-  <string name="update_recovery_title">تحديث recovery CM</string>
-  <string name="update_recovery_summary">تحديث عند تثبيت تحديثات النظام</string>
   <string name="ok">موافق</string>
   <string name="quiet_hours_title">ساعات هادئة</string>
   <string name="quiet_hours_summary">تكوين ساعات الجهاز يجب أن تكون هادئة</string>
@@ -408,7 +405,6 @@
   <string name="changelog_error">غير قادر على تحميل التغيير</string>
   <string name="contributor_cloud_title">المساهمون</string>
   <string name="cmupdate_settings_title">تحديثات CyanogenMod</string>
-  <string name="cmupdate_settings_summary">التحقق من وجود أو عرض أو تثبيت التحديثات المتوفرة</string>
   <string name="development_tools_title">بدء تشغيل أدوات</string>
   <string name="allow_mock_sms">السماح بالرسائل القصيرة صورية</string>
   <string name="privacy_settings_cyanogenmod_title">الخصوصية</string>
@@ -831,7 +827,6 @@ href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing A
   <string name="voice_wakeup_retrain_title">إعادة تدريب صوتك</string>
   <string name="voice_wakeup_activity_title">نشاط الإطلاق</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">لا SIM</string>
   <string name="multi_sim_settings_group_summary">تحديد SIM الإفتراضي</string>
   <string name="voice_title">المكالمات الصوتية</string>
   <string name="sms_title">إرسال الرسائل القصيرة</string>

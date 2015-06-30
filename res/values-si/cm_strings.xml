@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">නාඳුනන පැතිකඩක්</string>
   <string name="profile_add_nfc_text">මෙම NFC ටැගය නාඳුනන පැතිකඩකට සම්බන්ධ වුවකි. මෙම NFC ටැගය පවත්නා පැතිකඩකට සම්බන්ධ කිරීමෙන්, ඉදිරියේදී එම පැතිකඩ තෝරාගැනීමට ඉඩ ලැබෙනු ඇත.</string>
   <string name="profile_select">පැතිකඩ තෝරන්න</string>
+  <string name="profile_remove_dialog_message">%1$s පැතිකඩ ඉවත්කරන්නද?</string>
+  <string name="profile_populate_profile_from_state">පවත්නා උපාංග සැකසීම් භාවිතයෙන් පැතිකඩ වින්‍යාස කරන්නද?</string>
+  <string name="profile_menu_fill_from_state">පවත්නා උපාංග සැකසීම් ආයාත කරන්න</string>
   <string name="profile_name_title">නම</string>
   <string name="profile_profile_name_prompt">අලුත් පැතිකඩ සඳහා නමක් ඇතුල් කරන්න</string>
   <string name="menu_new_profile">අලුත් පැතිකඩක්</string>
@@ -76,12 +79,14 @@
   <string name="profile_networkmode_2g3g">2G හෝ 3G ස්වයංක්‍රීයව</string>
   <string name="settings_search_action_bar_button">සොයන්න</string>
   <string name="settings_search_autocompleteview_hint">සෙවීම් සැකසීම්</string>
-  <string name="settings_search_loading_text">සෙවීම් දත්ත පූරණයවෙමින්\u2026</string>
+  <string name="settings_search_loading_text">සෙවීම් දත්ත පූරණය වෙමින්\u2026</string>
   <string name="profile_connectionoverrides_title">සම්බන්ධතා අතික්‍රමණ</string>
   <string name="profile_volumeoverrides_title">හඬ පරිමා අතික්‍රමණ</string>
   <string name="connection_state_disabled">අබලයි</string>
   <string name="connection_state_enabled">සබලයි</string>
   <string name="volume_override_summary">%1$s/%2$s පිහිටුවන්න</string>
+  <string name="volume_override_summary_no_override">අතික්‍රමණය නොකරන්න</string>
+  <string name="profile_volume_override_checkbox_label">හඬ ත්‍රීවතාවය 	අතික්‍රමණය කරන්න</string>
   <string name="profile_profiles_manage">පැතිකඩයන්</string>
   <string name="profile_profile_manage">පැතිකඩ කලමනාකරණය</string>
   <string name="profile_appgroups_manage">යෙදුම් කාණ්ඩ</string>
@@ -110,7 +115,7 @@
   <string name="profile_lockmode_insecure">අනාරක්ෂිත</string>
   <string name="profile_lockmode_disabled">අබලයි</string>
   <string name="profile_lockmode_default_summary">පද්ධති පෙරනිමි භාවිතාකරන්න</string>
-  <string name="profile_lockmode_insecure_summary">අනාරක්ෂිත අගුළු තිරය භාවිතාකරන්න</string>
+  <string name="profile_lockmode_insecure_summary">අනාරක්ෂිත අගුළු තිරය භාවිතා කරන්න</string>
   <string name="profile_lockmode_disabled_summary">අගුළු තිරය අබලය</string>
   <string name="profile_airplanemode_title">අහස්යානා ප්‍රකාරය</string>
   <string name="toggleWifi">Wi\u2011Fi</string>
@@ -122,14 +127,15 @@
   <string name="toggle2g3g">ජාල ප්‍රකාරය</string>
   <string name="toggleWimax">WiMAX</string>
   <string name="toggleNfc">NFC</string>
-  <string name="volume_ring_only_description">රින්ග්ටෝනය</string>
-  <string name="link_volume_ringtones">රින්ග්ටෝන සහ දැනුම්දීම් ශබ්ද ප්‍රමාණ සබැඳි කරන්න</string>
+  <string name="volume_ring_only_description">රිංටෝනය</string>
+  <string name="link_volume_ringtones">රිංටෝන සහ දැනුම්දීම් ශබ්ද ප්‍රමාණ සබැඳි කරන්න</string>
   <string name="link_volume_mutes">නිශ්ශබ්ද ප්‍රකාරය දැනුම්දීම් වෙත බලපානු ඇත</string>
   <string name="volume_keys_control_ring_stream">ශබ්ද බොත්තම් රින්ග්ටෝනයේ ශබ්දය පාලනය කරයි</string>
   <string name="ring_mode_title">නාද වීමේ ප්‍රකාරය</string>
-  <string name="ring_mode_normal">සාමාන්‍ය</string>
+  <string name="ring_mode_normal">නාද කරන්න</string>
   <string name="ring_mode_vibrate">කම්පනය</string>
   <string name="ring_mode_mute">නිශ්ශබ්ද</string>
+  <string name="ring_mode_unchanged">නොවෙනස්</string>
   <string name="volume_overlay_title">ශබ්ද පුවරුවේ විලාසය</string>
   <string name="volume_overlay_single">තනිකඩ</string>
   <string name="volume_overlay_expandable">විහිදිය හැකි</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">විජට විහිදන්න</string>
   <string name="lockscreen_maximize_widgets_summary">තිරය ඇහැරුනුවිට විජට විහිදන්න</string>
   <string name="lockscreen_enable_camera_title">කැමරා විජටය</string>
-  <string name="lockscreen_enable_application_widget_title">යෙදුම් යොමු විජටය</string>
   <string name="safe_headset_volume_title">සුරක්ෂිත කන්යොමු ශබ්දය</string>
   <string name="safe_headset_volume_restore_title">සම්බන්ධ කිරීමේදී කන්යොමු ශබ්දය අඩුකරන්න</string>
   <string name="cyanogenmod_waiver_title">අත් හැරීමේ ලියවිල්ල</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">ශබ්දය</string>
   <string name="title_tile_expanded_desktop">විහිදුණු වැඩතලය</string>
   <string name="title_tile_network_adb">ජාලය හරහා ADB</string>
+  <string name="title_tile_themes">තේමා</string>
   <string name="title_dynamic_tiles">ක්‍රියාශීලී උළු</string>
   <string name="dynamic_tiles_note_title">සටහන</string>
   <string name="dynamic_tiles_note_summary">පද්ධති සිදුවීමක් මගින් ක්‍රියාරම්භ වුවහොත් පමණක් ක්‍රියාශීලී උළු දෘශ්‍යමාන වනු ඇත</string>
@@ -293,7 +299,9 @@
   <string name="cm_sound_mode_vibrate">කම්පනය</string>
   <string name="cm_sound_mode_sound">ශබ්දය</string>
   <string name="cm_sound_mode_soundVibrate">ශබ්දය සහ කම්පනය</string>
-  <string name="pref_location_mode_title">ස්ථාන ප්‍රකාර</string>
+  <string name="pref_location_mode_title">පිහිටීම් ප්‍රකාර</string>
+  <string name="pref_location_mode_summary">පෙරනිමි හැසිරීම සඳහා ප්‍රකාර සියල්ල අන්වෙක්ෂණය කරන්න</string>
+  <string name="cm_location_mode_off">ස්ථානය අක්‍රීයයි</string>
   <string name="cm_location_mode_battery_saving">බැටරි සුරැකීම</string>
   <string name="cm_location_mode_device_only">සංවේදක පමණි</string>
   <string name="cm_location_mode_high_accuracy">ඉහළ නිරවද්‍යතාව</string>
@@ -357,8 +365,8 @@
   <string name="root_access_apps">යෙදුම් පමණි</string>
   <string name="root_access_adb">ADB පමණි</string>
   <string name="root_access_all">යෙදුම් සහ ADB</string>
-  <string name="update_recovery_title">CM ප්‍රතිසාධකය යාවත්කාල කරන්න</string>
-  <string name="update_recovery_summary">පද්ධති යාවත්කාලීනයන් ස්ථාපනයේදී ප්‍රතිසාධකය යාවත්කාල කරන්න</string>
+  <string name="update_recovery_title">Cyanogen ප්‍රතිසාධකය යාවත්කාල කරන්න</string>
+  <string name="update_recovery_summary">පද්ධති යාවත්කාලීනයන් සමඟ ප්‍රතිසාධකය යාවත්කාල කරන්න</string>
   <string name="ok">හරි</string>
   <string name="quiet_hours_title">නිශ්ශබ්ද පැය</string>
   <string name="quiet_hours_summary">උපාංගය නිශ්ශබ්ද විය යුතු පැය ගණන වින්‍යාස කිරීම</string>
@@ -438,7 +446,6 @@
   <string name="changelog_error">වෙනස්කම් ලොගය පූරණය කළනොහැක</string>
   <string name="contributor_cloud_title">ආධාරකරුවන්</string>
   <string name="cmupdate_settings_title">CyanogenMod යාවත්කාලීනයන්</string>
-  <string name="cmupdate_settings_summary">ලබාගතහැකි යාවත්කාලීනයන් බැලීමට හෝ ස්ථාපනයට සලකුණු කරන්න</string>
   <string name="development_tools_title">වර්ධක මෙවලම් දියත්කරන්න</string>
   <string name="allow_mock_sms">විහිළු කෙටි පනිවිඩ අනුමත කරන්න</string>
   <string name="privacy_settings_cyanogenmod_title">පෞද්ගලිකත්වය</string>
@@ -871,7 +878,6 @@
   <string name="voice_wakeup_retrain_title">ඔබගේ කටහඬ යලි පුහුණු කරන්න</string>
   <string name="voice_wakeup_activity_title">දියත් කලයුතු ක්‍රියාව</string>
   <string name="voice_wakeup_default_activity">ගූගල් දැන්</string>
-  <string name="sub_no_sim">SIM කාඩ්පතක් නැත</string>
   <string name="multi_sim_settings_title">සිම් කාඩ්පත්</string>
   <string name="multi_sim_settings_group_summary">පෙරනිමි SIM තේරීම</string>
   <string name="voice_title">හඬ ඇමතුම්</string>
@@ -998,8 +1004,12 @@
   <string name="profile_setup_setup_triggers_title_config">ක්‍රියාරම්භක වෙනස් කරන්න: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">පියවර 2: ක්‍රියා පිහිටුවන්න</string>
   <string name="profile_setup_actions_title_config">ක්‍රියා යළි වින්‍යාස කරන්න</string>
-  <string name="no_bluetooth_triggers">බ්ලූටූත් ක්‍රියාරම්භක කිසිවක් ලද නොහැක</string>
-  <string name="no_wifi_triggers">Wi\u2011Fi ක්‍රියාරම්භක කිසිවක් ලද නොහැක</string>
+  <string name="no_bluetooth_triggers">කිසිඳු බ්ලූටූත් උපාංගයක් යුගල කර නැත.\nක්‍රියාරම්භක වින්‍යාස කිරීමට පෙර බ්ලූටූත් උපාංගය යුගල කිරීමට තට්ටු කරන්න.</string>
+  <string name="no_wifi_triggers">කිසිඳු Wi\u2011Fi ප්‍රවේශ ස්ථානයක් වින්‍යාස කර නැත.\nක්‍රියාරම්භක වින්‍යාස කිරීමට පෙර Wi\u2011Fi සම්බන්ධ කිරීමට තට්ටු කරන්න.</string>
   <string name="profile_setup_setup_triggers_description">කරුණාකර මෙම පැතිකඩ සක්‍රීය කරවන ක්‍රියාරම්භක තෝරන්න</string>
   <string name="profile_setup_actions_description">දැන් පැතිකඩ සක්‍රීය වූ විට සිදුවන්නේ කුමක්දැයි වින්‍යාස කරන්න</string>
+  <string name="profile_triggers_header">මෙම පැතිකඩ සක්‍රීය කරවන ක්‍රියාරම්භක</string>
+  <string name="no_triggers_configured">කිසිඳු ක්‍රියාරම්භකයක් වින්‍යාස කර නැත. තව එක්කිරීමට තට්ටු කරන්න.</string>
+  <string name="no_triggers_configured_nfc">නව NFC ක්‍රියාරම්භකයක් පිහිටුවීමට තට්ටු කරන්න.</string>
+  <string name="sound_ringtone_multisim_options">පෙරනිමි රින්ග්ටෝන වෙනස් කරන්න</string>
 </resources>

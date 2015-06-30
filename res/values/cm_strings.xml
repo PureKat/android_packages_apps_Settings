@@ -76,6 +76,9 @@
     <string name="profile_unknown_nfc_tag">Unknown profile</string>
     <string name="profile_add_nfc_text">This NFC tag refers to an unknown profile. Attaching this NFC tag to an existing profile will allow for selecting the profile in the future.</string>
     <string name="profile_select">Select profile</string>
+    <string name="profile_remove_dialog_message">Remove profile %1$s?</string>
+    <string name="profile_populate_profile_from_state">Configure profile using current device settings?</string>
+    <string name="profile_menu_fill_from_state">Import current device settings</string>
 
     <!-- Add Profile -->
     <string name="profile_name_title">Name</string>
@@ -316,9 +319,6 @@
     <string name="lockscreen_maximize_widgets_title">Maximize widgets</string>
     <string name="lockscreen_maximize_widgets_summary">Expand widgets when the screen is turned on</string>
     <string name="lockscreen_enable_camera_title">Camera widget</string>
-    <!-- "Pass" is a proper noun and should not be translated -->
-    <string name="lockscreen_enable_application_widget_title">Pass widget</string>
-    <string name="lockscreen_application_widget_summary">Baton feature: Quick launch cloudified apps running on other devices</string>
 
     <!-- Safe headset volume checkboxes -->
     <string name="safe_headset_volume_title">Safe headset volume</string>
@@ -377,6 +377,7 @@
     <string name="title_tile_volume">Volume</string>
     <string name="title_tile_expanded_desktop">Expanded desktop</string>
     <string name="title_tile_network_adb">ADB over network</string>
+    <string name="title_tile_themes">Themes</string>
 
     <string name="title_dynamic_tiles">Dynamic tiles</string>
     <string name="dynamic_tiles_note_title">Note</string>
@@ -409,6 +410,8 @@
     <string name="cm_sound_mode_sound">Sound</string>
     <string name="cm_sound_mode_soundVibrate">Sound &amp; Vibrate</string>
     <string name="pref_location_mode_title">Location modes</string>
+    <string name="pref_location_mode_summary">Uncheck all modes for default behavior</string>
+    <string name="cm_location_mode_off">Location off</string>
     <string name="cm_location_mode_battery_saving">Battery saving</string>
     <string name="cm_location_mode_device_only">Device only</string>
     <string name="cm_location_mode_high_accuracy">High accuracy</string>
@@ -499,9 +502,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
-    <!-- Settings checkbox for updating CM recovery on boot -->
-    <string name="update_recovery_title">Update CM recovery</string>
-    <string name="update_recovery_summary">Update recovery when installing system updates</string>
+    <!-- Settings checkbox for updating Cyanogen recovery -->
+    <string name="update_recovery_title">Update Cyanogen recovery</string>
+    <string name="update_recovery_summary">Update recovery with system updates</string>
+    <string name="update_recovery_on_warning">NOTICE: When this feature is enabled, your installed recovery will be replaced by one included with the current version of the running OS.\n\nYour recovery will be updated along with upgrades to your system, helping to ensure compatibility with future versions.\n\nWould you like to enable this feature?</string>
+    <string name="update_recovery_off_warning">WARNING: When this feature is disabled, your installed recovery will not be updated with OS upgrades.\n\nFuture OS updates may not install with outdated or custom recovery versions.\n\nDo you really want to disable this feature?</string>
 
     <string name="ok">OK</string>
 
@@ -646,7 +651,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- CM Updater -->
     <string name="cmupdate_settings_title">CyanogenMod updates</string>
-    <string name="cmupdate_settings_summary">Check for, view or install available updates</string>
 
     <!-- Launches Dev Tools -->
     <string name="development_tools_title">Launch Tools</string>
@@ -858,6 +862,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
     <string name="lockscreen_buttons_sleep">Go to sleep</string>
     <string name="lockscreen_enable_modlock_title">Custom lock screen</string>
+    <string name="lockscreen_buttons_disabled_summary">Lock screen buttons unavailable while using on-screen Navigation bar</string>
 
     <!-- Navigation Bar -->
     <string name="navigation_bar_category">Navigation bar</string>
@@ -1331,6 +1336,15 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sd_media_format_final_desc">Erase the SD card, deleting all files stored there? You can\'t reverse this action!</string>
     <string name="sd_media_format_gesture_explanation">You need to draw your unlock pattern to confirm that you want to erase the SD card.</string>
 
+    <!-- Storage menu, label for internal media storage -->
+    <string name="internal_sd_format">Erase internal media storage</string>
+    <string name="internal_sd_format_summary">Erases all data on the internal media storage, such as music and photos</string>
+
+    <!-- Media & phone storage settings screen, label for check box to erase media storage [CHAR LIMIT=30] -->
+    <string name="master_clear_desc_erase_internal_storage">\n\nTo clear music, pictures, and other user data, the <b>internal media storage</b> needs to be erased.</string>
+    <string name="erase_internal_storage">Erase internal media storage</string>
+    <string name="erase_internal_storage_description">Erase all the data on internal media storage, such as music or photos</string>
+
     <!-- Message when bluetooth dialog for pin entry is showing  when HIGH security enabled-->
     <string name="bluetooth_enter_pin_msg_hs">To pair with:<xliff:g id="bold">&lt;br>&lt;b></xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b>&lt;br>&lt;br></xliff:g>Type the device\'s required PIN (16 digits or more):</string>
 
@@ -1444,10 +1458,22 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="profile_setup_actions_title">Step 2: Setup actions</string>
     <string name="profile_setup_actions_title_config">Reconfigure actions</string>
 
-    <string name="no_bluetooth_triggers">No Bluetooth triggers available</string>
-    <string name="no_wifi_triggers">No Wi\u2011Fi triggers available</string>
+    <string name="no_bluetooth_triggers">No Bluetooth devices paired.\nTap to pair Bluetooth device before configuring triggers.</string>
+    <string name="no_wifi_triggers">No Wi\u2011Fi access points configured.\nTap to connect Wi\u2011Fi before configuring triggers.</string>
 
     <string name="profile_setup_setup_triggers_description">Please select triggers which will activate this profile</string>
     <string name="profile_setup_actions_description">Now configure what happens when the profile is activated</string>
+
+    <string name="profile_triggers_header">Triggers which will activate this profile</string>
+    <string name="no_triggers_configured">No triggers configured. Tap to add more.</string>
+    <string name="no_triggers_configured_nfc">Tap to setup a new NFC trigger.</string>
+
+    <string name="sound_ringtone_multisim_options">Change default ringtones</string>
+
+    <string name="lock_to_cyanogen_title">Device Protection</string>
+    <string name="lock_to_cyanogen_summary">Require your Cyanogen OS account password even after a factory reset</string>
+    <string name="lock_to_cyanogen_create_account_msg">Your device uses the Cyanogen OS account password to protect your device even in the event of a factory reset. You will need to create a Cyanogen OS account.</string>
+    <string name="lock_to_cyanogen_disable_msg">Disabling this feature will allow unauthorized users to reset your phone to factory defaults if it is stolen. Your personal data may not be protected. Do you want to disable this feature?</string>
+    <string name="lock_to_cyanogen_master_clear_warning">Device Protection is enabled. Please disable to continue resetting your device.</string>
 
 </resources>

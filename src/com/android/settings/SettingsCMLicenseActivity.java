@@ -16,7 +16,9 @@
 
 package com.android.settings;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -27,24 +29,31 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.android.internal.app.AlertActivity;
-import com.android.internal.app.AlertController;
 import android.content.DialogInterface;
 
 /**
  * The "dialog" that shows from "CyanogenMod Legal" in the Settings app.
  */
-public class SettingsCMLicenseActivity extends AlertActivity
+public class SettingsCMLicenseActivity extends Activity
         implements DialogInterface.OnCancelListener, DialogInterface.OnClickListener {
     private static final String PROPERTY_CMLICENSE_URL = "ro.cmlegal.url";
 
     private WebView mWebView;
 
     private AlertDialog mErrorDialog = null;
+    private AlertDialog mDialog;
+    private ProgressDialog mSpinnerDlg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        CharSequence title = getText(R.string.settings_cmlicense_activity_title);
+        CharSequence msg = getText(R.string.settings_license_activity_loading);
+
+        ProgressDialog pd = ProgressDialog.show(this, title, msg, true, false);
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mSpinnerDlg = pd;
 
         String userCMLicenseUrl = SystemProperties.get(PROPERTY_CMLICENSE_URL);
 
@@ -58,8 +67,13 @@ public class SettingsCMLicenseActivity extends AlertActivity
 
         mWebView = new WebView(this);
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.settings_cmlicense_activity_title);
+        builder.setView(mWebView);
+        builder.setOnCancelListener(this);
+        mDialog = builder.create();
+
         // Begin accessing
-        mWebView.getSettings().setJavaScriptEnabled(true);
         if (savedInstanceState == null) {
             mWebView.loadUrl(userCMLicenseUrl);
         } else {
@@ -68,8 +82,8 @@ public class SettingsCMLicenseActivity extends AlertActivity
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                // Change from 'Loading...' to the real title
-                mAlert.setTitle(getString(R.string.settings_cmlicense_activity_title));
+                mSpinnerDlg.dismiss();
+                mDialog.show();
             }
 
             @Override
@@ -77,16 +91,21 @@ public class SettingsCMLicenseActivity extends AlertActivity
                     String description, String failingUrl) {
                 showErrorAndFinish(failingUrl);
             }
-        });
 
-        final AlertController.AlertParams p = mAlertParams;
-        p.mTitle = getString(R.string.settings_license_activity_loading);
-        p.mView = mWebView;
-        p.mForceInverseBackground = true;
-        setupAlert();
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return true;
+            }
+        });
     }
 
     private void showErrorAndFinish(String url) {
+        if (mDialog != null) {
+            mDialog.dismiss();
+        }
+        if (mSpinnerDlg != null) {
+            mSpinnerDlg.dismiss();
+        }
         if (mErrorDialog == null) {
             mErrorDialog = new AlertDialog.Builder(this)
                     .setTitle(R.string.settings_cmlicense_activity_title)

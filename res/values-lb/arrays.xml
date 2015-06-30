@@ -41,7 +41,7 @@
     <item>Ni</item>
     <item>15 Sekonnen</item>
     <item>30 Sekonnen</item>
-    <item>1 minute</item>
+    <item>1 Minutt</item>
     <item>2 Minutten</item>
     <item>5 Minutten</item>
     <item>10 Minutten</item>
@@ -52,7 +52,7 @@
     <item>5 Sekonnen</item>
     <item>15 Sekonnen</item>
     <item>30 Sekonnen</item>
-    <item>1 minute</item>
+    <item>1 Minutt</item>
     <item>2 Minutten</item>
     <item>5 Minutten</item>
     <item>10 Minutten</item>
@@ -75,30 +75,12 @@
     <item>Ganz rapid</item>
     <item>Am séiersten</item>
   </string-array>
-  <string-array name="tts_rate_values">
-    <item>60</item>
-    <item>80</item>
-    <item>100</item>
-    <item>150</item>
-    <item>200</item>
-    <item>250</item>
-    <item>300</item>
-    <item>350</item>
-    <item>400</item>
-  </string-array>
   <string-array name="tts_pitch_entries">
     <item>Ganz niddreg</item>
     <item>Niddreg</item>
     <item>Normal</item>
     <item>Héich</item>
     <item>Ganz héich</item>
-  </string-array>
-  <string-array name="tts_pitch_values">
-    <item>50</item>
-    <item>80</item>
-    <item>100</item>
-    <item>120</item>
-    <item>150</item>
   </string-array>
   <string-array name="wifi_status">
     <item/>
@@ -128,12 +110,6 @@
     <item>Blockéiert</item>
     <item>Schlecht Internetconnectioun gëtt temporär ignoréiert</item>
   </string-array>
-  <string-array name="wifi_security">
-    <item>@string/wifi_security_none</item>
-    <item>@string/wifi_security_wep</item>
-    <item>@string/wifi_security_psk_generic</item>
-    <item>@string/wifi_security_eap</item>
-  </string-array>
   <string-array name="wifi_security_no_eap">
     <item>@string/wifi_security_none</item>
     <item>@string/wifi_security_wep</item>
@@ -143,12 +119,6 @@
     <item>@string/wifi_security_none</item>
     <item>@string/wifi_security_wpa</item>
     <item>@string/wifi_security_wpa2</item>
-  </string-array>
-  <string-array name="wifi_eap_method">
-    <item>PEAP</item>
-    <item>TLS</item>
-    <item>TTLS</item>
-    <item>PWD</item>
   </string-array>
   <string-array name="wifi_p2p_wps_setup">
     <item>Push-Knäppchen</item>
@@ -165,7 +135,7 @@
   <string-array name="bluetooth_visibility_timeout_entries">
     <item>2 Minutten</item>
     <item>5 Minutten</item>
-    <item>1 hour</item>
+    <item>1 Stonn</item>
     <item>Keen Timeout</item>
   </string-array>
   <string-array name="wifi_signal">
@@ -200,7 +170,7 @@
     <item>2</item>
   </string-array>
   <string-array name="usage_stats_display_order_types">
-    <item>Notzungszäit</item>
+    <item>Benotzungszäit</item>
     <item>Startunzuel</item>
     <item>App-Numm</item>
   </string-array>
@@ -299,15 +269,15 @@
     <item>ICC-SMS liesen</item>
     <item>ICC-SMS schreiwen</item>
     <item>Astellungen änneren</item>
-    <item>virun aneren Appen ablenden</item>
-    <item>op Notifikatiounen zougräifen</item>
+    <item>Virun aneren Appen ablenden</item>
+    <item>Op Notifikatiounen zougräifen</item>
     <item>Kamera</item>
     <item>Audio ophuelen</item>
     <item>Toun ofspillen</item>
     <item>Tëschenoflag liesen</item>
     <item>Tëschenoflag änneren</item>
-    <item>Medie-Knäppercher</item>
-    <item>Toun-Fokus</item>
+    <item>Medieknäppercher</item>
+    <item>Tounfokus</item>
     <item>Gesamtlautstäerkt</item>
     <item>Sproochlautstäerkt</item>
     <item>Schelltounlautstäerkt</item>
@@ -337,7 +307,7 @@
     <item>SMS/MMS liesen</item>
     <item>SMS/MMS schreiwen</item>
     <item>SMS/MMS empfänken</item>
-    <item>SMS/MMS empfänkenSMS/MMS empfänken</item>
+    <item>SMS/MMS empfänken</item>
     <item>SMS/MMS empfänken</item>
     <item>SMS/MMS empfänken</item>
     <item>SMS/MMS schécken</item>
@@ -345,8 +315,8 @@
     <item>SMS/MMS schreiwen</item>
     <item>Astellungen änneren</item>
     <item>Virun aneren Appen ablenden</item>
-    <item>op Notifikatiounen zougräifen</item>
-    <item>Fotoapparat</item>
+    <item>Op Notifikatiounen zougräifen</item>
+    <item>Kamera</item>
     <item>Toun ophuelen</item>
     <item>Audio ofspillen</item>
     <item>Tëschenoflag liesen</item>
@@ -386,13 +356,13 @@
   <string-array name="captioning_edge_type_selector_titles">
     <item>Ouni</item>
     <item>Kontur</item>
-    <item>Drop shadow</item>
+    <item>Schiet</item>
   </string-array>
   <string-array name="captioning_opacity_selector_titles">
     <item>25%</item>
-    <item>50%</item>
-    <item>75%</item>
-    <item>100%</item>
+    <item>50 %</item>
+    <item>75 %</item>
+    <item>100 %</item>
   </string-array>
   <string-array name="captioning_preset_selector_titles">
     <item>Wäiss op Schwaarz</item>
@@ -461,13 +431,13 @@
   <string-array name="enable_opengl_traces_entries">
     <item>Keen</item>
     <item>Logcat</item>
-    <item>Systrace (Graphics)</item>
+    <item>Systrace (Graphik)</item>
     <item>Oprufflëscht fir glGetError</item>
   </string-array>
   <string-array name="show_non_rect_clip_entries">
     <item>Aus</item>
-    <item>Draw non-rectangular clip region in blue</item>
-    <item>Highlight tested drawing commands in green</item>
+    <item>Net-rechteckege Clipberäich blo zeechnen</item>
+    <item>Getest Zeechebefeeler gréng ervirhiewen</item>
   </string-array>
   <string-array name="track_frame_time_entries">
     <item>Aus</item>

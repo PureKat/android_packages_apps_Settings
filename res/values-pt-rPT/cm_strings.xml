@@ -23,9 +23,9 @@
   <string name="wifi_setting_priority_summary">Especificar a prioridade das redes Wi\u2011Fi</string>
   <string name="wifi_ssid_input_limit">SSID excede o comprimento máximo</string>
   <string name="p2p_device_name_input_limit">Nome P2P excede o comprimento máximo</string>
-  <string name="change_crypt_password_title">Alterar senha</string>
-  <string name="change_crypt_password_summary">Alterar a senha usada para encriptar o dispositivo</string>
-  <string name="encryptionpassword_choose_your_password_header">Colocar a senha de encriptação</string>
+  <string name="change_crypt_password_title">Alterar palavra-passe</string>
+  <string name="change_crypt_password_summary">Altere a palavra-passe utilizada para encriptar o dispositivo</string>
+  <string name="encryptionpassword_choose_your_password_header">Palavra-passe de encriptação</string>
   <string name="lock_screen_title">Ecrã de bloqueio</string>
   <string name="increasing_ring_title">Toque crescente</string>
   <string name="checkbox_increasing_ring">Ativar</string>
@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Perfil desconhecido</string>
   <string name="profile_add_nfc_text">Esta etiqueta NFC refere-se a um perfil desconhecido. Anexar esta etiqueta NFC num perfil existente permitirá selecionar o perfil no futuro.</string>
   <string name="profile_select">Selecionar perfil</string>
+  <string name="profile_remove_dialog_message">Eliminar perfil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Configurar o perfil utilizando as definições atuais do dispositivo?</string>
+  <string name="profile_menu_fill_from_state">Importar as definições atuais do dispositivo</string>
   <string name="profile_name_title">Nome</string>
   <string name="profile_profile_name_prompt">Introduza um nome para o novo perfil</string>
   <string name="menu_new_profile">Novo perfil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Desativar</string>
   <string name="connection_state_enabled">Ativar</string>
   <string name="volume_override_summary">Definir para %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Não substituir</string>
+  <string name="profile_volume_override_checkbox_label">Substituir volume</string>
   <string name="profile_profiles_manage">Perfis</string>
   <string name="profile_profile_manage">Gerir perfil</string>
   <string name="profile_appgroups_manage">Grupos de aplicações</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">O modo de silêncio afeta as notificações</string>
   <string name="volume_keys_control_ring_stream">Botões de volume controlam o volume do toque</string>
   <string name="ring_mode_title">Modo de toque</string>
-  <string name="ring_mode_normal">Normal</string>
+  <string name="ring_mode_normal">Toque</string>
   <string name="ring_mode_vibrate">Vibrar</string>
   <string name="ring_mode_mute">Mudo</string>
+  <string name="ring_mode_unchanged">Inalterado</string>
   <string name="volume_overlay_title">Estilo do painel de volume</string>
   <string name="volume_overlay_single">Simples</string>
   <string name="volume_overlay_expandable">Expansível</string>
@@ -195,7 +201,7 @@
   <string name="battery_light_medium_color_title">A carregar</string>
   <string name="battery_light_full_color_title">Completamente carregada</string>
   <string name="lockpattern_reset_button">Repor o padrão</string>
-  <string name="lockpattern_settings_reset_summary">Introduza a conta de e-mail principal e a senha associada para repor o bloqueio padrão</string>
+  <string name="lockpattern_settings_reset_summary">Introduza a conta de e-mail principal e a palavra-passe associada para repor o bloqueio padrão</string>
   <string name="lockpattern_settings_enable_error_path_title">Mostrar erro padrão</string>
   <string name="lockpattern_settings_enable_dots_title">Mostrar pontos padrão</string>
   <string name="screen_security_category">Segurança de ecrã</string>
@@ -209,13 +215,12 @@
   <string name="unlock_camera_unlock_title">Desbloquear com Câmara</string>
   <string name="unlock_camera_unlock_summary">Pressionar o botão da câmara desbloqueia o dispositivo</string>
   <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
-  <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando o PIN/senha correto é inserido</string>
+  <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando o PIN/palavra-passe correto é inserido</string>
   <string name="unlock_buttons_disabled_by_security">Ecrã de bloqueio com segurança</string>
   <string name="lockscreen_widgets_category_title">Widgets</string>
   <string name="lockscreen_maximize_widgets_title">Maximizar widgets</string>
   <string name="lockscreen_maximize_widgets_summary">Expandir os widgets quando o ecrã ligar</string>
   <string name="lockscreen_enable_camera_title">Widget da câmara</string>
-  <string name="lockscreen_enable_application_widget_title">Appcast widget</string>
   <string name="safe_headset_volume_title">Proteção de volume nos auriculares</string>
   <string name="safe_headset_volume_restore_title">Reduzir o volume do auricular ao ligar</string>
   <string name="cyanogenmod_waiver_title">Aviso</string>
@@ -246,7 +251,7 @@
   <string name="title_tile_sleep">Suspender</string>
   <string name="title_tile_gps">Localização</string>
   <string name="title_tile_torch">Lanterna</string>
-  <string name="title_tile_lockscreen">Tela de bloqueio</string>
+  <string name="title_tile_lockscreen">Ecrã de bloqueio</string>
   <string name="title_tile_lte">LTE</string>
   <string name="title_tile_mobiledata">Dados móveis</string>
   <string name="title_tile_profile">Perfil</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Ecrã expandido</string>
   <string name="title_tile_network_adb">ADB através da rede</string>
+  <string name="title_tile_themes">Temas</string>
   <string name="title_dynamic_tiles">Botões dinâmicos</string>
   <string name="dynamic_tiles_note_title">Nota</string>
   <string name="dynamic_tiles_note_summary">Os botões dinâmicos só serão mostrados se um evento de sistema o justificar</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Som</string>
   <string name="cm_sound_mode_soundVibrate">Som + Vibrar</string>
   <string name="pref_location_mode_title">Modos de localização</string>
+  <string name="pref_location_mode_summary">Desmarcar tudo para o comportamento padrão</string>
+  <string name="cm_location_mode_off">Desligada</string>
   <string name="cm_location_mode_battery_saving">Poupança de bateria</string>
   <string name="cm_location_mode_device_only">Apenas no dispositivo</string>
   <string name="cm_location_mode_high_accuracy">Alta precisão</string>
@@ -348,8 +356,10 @@
   <string name="root_access_apps">Só aplicações</string>
   <string name="root_access_adb">Só ADB</string>
   <string name="root_access_all">Aplicações e ADB</string>
-  <string name="update_recovery_title">Atualização da recuperação CM</string>
-  <string name="update_recovery_summary">Atualizar a recuperação CM quando instalar as atualizaçoes de sistema</string>
+  <string name="update_recovery_title">Atualizar a recuperação Cyanogen</string>
+  <string name="update_recovery_summary">Atualizar a recuperação Cyanogen quando instalar as atualizações de sistema</string>
+  <string name="update_recovery_on_warning">Aviso: Quando este recurso estiver ativado, a sua recuperação instalada será substituída por uma incluída na versão atual do SO.\n\nA sua recuperação será atualizada juntamente com as atualizações do seu sistema, ajudando a garantir a compatibilidade com futuras versões.\n\nQuer ativar este recurso?</string>
+  <string name="update_recovery_off_warning">Aviso: Quando este recurso está desativado, a sua recuperação instalada não será atualizada com o SO.\n\nFuturas atualizações do SO poderão não se instalar com uma versão da recuperação desatualizada ou personalizada.\n\nQuer desativar este recurso?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Horas de silêncio</string>
   <string name="quiet_hours_summary">Configurar as horas em que o dispositivo se deve manter em silêncio</string>
@@ -429,7 +439,6 @@
   <string name="changelog_error">Ocorreu um problema a carregar a lista de alterações</string>
   <string name="contributor_cloud_title">Colaboradores</string>
   <string name="cmupdate_settings_title">Atualizações</string>
-  <string name="cmupdate_settings_summary">Verificar, ver ou instalar atualizações disponíveis</string>
   <string name="development_tools_title">Ferramentas avançadas</string>
   <string name="allow_mock_sms">Permitir a simulação SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Privacidade</string>
@@ -579,6 +588,7 @@
   <string name="lockscreen_buttons_toggle_sound">Ativar/desativar som</string>
   <string name="lockscreen_buttons_sleep">Suspender</string>
   <string name="lockscreen_enable_modlock_title">Ecrã de bloqueio personalizado</string>
+  <string name="lockscreen_buttons_disabled_summary">Os botões do ecrã de bloqueio não estão disponíveis enquanto estiver a usar os botões da barra de navegação</string>
   <string name="navigation_bar_category">Barra de navegação</string>
   <string name="navigation_bar_title">Botões e sua disposição</string>
   <string name="navigation_bar_left_title">Modo de mão esquerda</string>
@@ -862,7 +872,6 @@
   <string name="voice_wakeup_retrain_title">Treinar a sua voz</string>
   <string name="voice_wakeup_activity_title">Atividade a executar</string>
   <string name="voice_wakeup_default_activity">Google Now</string>
-  <string name="sub_no_sim">Sem SIM</string>
   <string name="multi_sim_settings_title">Cartões SIM</string>
   <string name="multi_sim_settings_group_summary">Selecionar o SIM padrão</string>
   <string name="voice_title">Chamadas de voz</string>
@@ -879,7 +888,7 @@
   <string name="saving_protected_components">A guardar o estado dos componentes\u2026</string>
   <string name="launch_app">Iniciar aplicação</string>
   <string name="pa_login_username_hint">Nome de utilizador (e-mail)</string>
-  <string name="pa_login_password_hint">Senha</string>
+  <string name="pa_login_password_hint">Palavra-passe</string>
   <string name="pa_login_submit_button">Iniciar sessão</string>
   <string name="pa_login_checking_password">A verificar a conta\u2026</string>
   <string name="pa_login_incorrect_login">Login incorreto</string>
@@ -931,6 +940,11 @@
   <string name="sd_media_format_button_text">Apagar o cartão SD</string>
   <string name="sd_media_format_final_desc">Apagar o cartão SD, apagando desta maneira todos os arquivos armazenados ? Não pode reverter esta ação!</string>
   <string name="sd_media_format_gesture_explanation">Precisa desenhar o padrão de desbloqueio para confirmar que deseja apagar o cartão SD.</string>
+  <string name="internal_sd_format">Apagar armazenamento interno</string>
+  <string name="internal_sd_format_summary">Apaga todos os dados do armazenamento interno, tal como músicas e fotos</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPara limpar as músicas, fotografias e outros dados, o <b>armazenamento interno</b> tem que ser apagado.</string>
+  <string name="erase_internal_storage">Apagar armazenamento interno</string>
+  <string name="erase_internal_storage_description">Apaga todos os dados do armazenamento interno, tal como músicas e fotos</string>
   <string name="bluetooth_enter_pin_msg_hs">Para emparelhar com:<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Introduza o código PIN (16 dígitos ou mais):</string>
   <string name="bluetooth_profile_sap">Acesso ao SIM</string>
   <string name="bluetooth_profile_dun">Ligação de acesso à rede</string>
@@ -947,7 +961,7 @@
   <string name="data_usage_tab_slot">SIM </string>
   <string name="sel_sub_title">Configurar cartões SIM</string>
   <string name="sel_sub_summary">Selecione os seus cartões SIM</string>
-  <string name="no_sim_info">Informação do cartão SIM não está disponível.\nO Menu não pode ser acedido</string>
+  <string name="no_sim_info">Informação do cartão SIM não está disponível.\nO menu não pode ser acedido</string>
   <string name="subs_settings">Estado dos cartões SIM</string>
   <string name="set_data_subscription_progress">A configurar assinatura\u2026</string>
   <string name="set_dds_success">Assinatura de dados foi definida com êxito</string>
@@ -989,8 +1003,17 @@
   <string name="profile_setup_setup_triggers_title_config">Modificar atuadores: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Passo 2: Definir ações</string>
   <string name="profile_setup_actions_title_config">Redefinir ações</string>
-  <string name="no_bluetooth_triggers">Sem atuadores bluetooth disponíveis</string>
-  <string name="no_wifi_triggers">Sem atuadores Wi\u2011Fi disponíveis</string>
+  <string name="no_bluetooth_triggers">Não há dispositivos bluetooth emparelhados. \nToque para emparelhar um dispositivo bluetooth antes de configurar os atuadores.</string>
+  <string name="no_wifi_triggers">Não há pontos de acesso wi\u2011fi configurados.\nToque para conectar o wi\u2011fi antes de configurar os atuadores.</string>
   <string name="profile_setup_setup_triggers_description">Por favor selecione os atuadores que ativarão este perfil</string>
   <string name="profile_setup_actions_description">Agora configure o que acontece quando o perfil é ativado</string>
+  <string name="profile_triggers_header">Atuadores que ativarão este perfil</string>
+  <string name="no_triggers_configured">Não há atuadores configurados. Toque para adicionar.</string>
+  <string name="no_triggers_configured_nfc">Toque para establecer um novo atuador NFC.</string>
+  <string name="sound_ringtone_multisim_options">Alterar os toques padrão</string>
+  <string name="lock_to_cyanogen_title">Proteção do dispositivo</string>
+  <string name="lock_to_cyanogen_summary">Exigir a palavra-passe da conta Cyanogen OS mesmo depois de uma reposição dos dados de fábrica</string>
+  <string name="lock_to_cyanogen_create_account_msg">O dispositivo usa a palavra-passe da conta Cyanogen OS para proteger o seu dispositivo no caso de uma reposição dos dados de fábrica. Precisará criar uma conta Cyanogen OS.</string>
+  <string name="lock_to_cyanogen_disable_msg">Desativar este recurso permitirá que utilizadores não autorizados restaurem o telefone para os padrões de fábrica se ele for roubado. Os seus dados pessoais não podem ser protegidos. Quer desativar este recurso?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">A proteção do dispositivo está ativada. Por favor, desative para continuar a repor o seu dispositivo.</string>
 </resources>

@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Neznámý profil</string>
   <string name="profile_add_nfc_text">Tento NFC tag odkazuje na neznámý profil. Připojení tohoto NFC tagu k existujícího profilu umožní výběr profilu v budoucnosti.</string>
   <string name="profile_select">Vyberte profil</string>
+  <string name="profile_remove_dialog_message">Odstranit profil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Nastavit profil použitím aktuálního nastavení zařízení?</string>
+  <string name="profile_menu_fill_from_state">Importovat aktuální nastavení zařízení</string>
   <string name="profile_name_title">Název</string>
   <string name="profile_profile_name_prompt">Vložte název nového profilu</string>
   <string name="menu_new_profile">Nový profil</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Zakázat</string>
   <string name="connection_state_enabled">Povolit</string>
   <string name="volume_override_summary">Nastavit na %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Neměnit</string>
+  <string name="profile_volume_override_checkbox_label">Měnit hlasitost</string>
   <string name="profile_profiles_manage">Profily</string>
   <string name="profile_profile_manage">Upravit profil</string>
   <string name="profile_appgroups_manage">Skupiny aplikací</string>
@@ -127,9 +132,10 @@
   <string name="link_volume_mutes">Tichý režim ovlivňuje oznamování</string>
   <string name="volume_keys_control_ring_stream">Tlačítka pro hlasitost ovládají hlasitost vyzvánění</string>
   <string name="ring_mode_title">Režim vyzvánění</string>
-  <string name="ring_mode_normal">Normální</string>
+  <string name="ring_mode_normal">Vyzvánění</string>
   <string name="ring_mode_vibrate">Vibrace</string>
   <string name="ring_mode_mute">Ztlumit</string>
+  <string name="ring_mode_unchanged">Beze změny</string>
   <string name="volume_overlay_title">Vzhled panelu hlasitosti</string>
   <string name="volume_overlay_single">Jediný</string>
   <string name="volume_overlay_expandable">Rozšiřitelný</string>
@@ -215,7 +221,6 @@
   <string name="lockscreen_maximize_widgets_title">Maximalizovat widgety</string>
   <string name="lockscreen_maximize_widgets_summary">Na obrazovce zámku zobrazit widgety maximalizované a ovládání zámku minimalizované</string>
   <string name="lockscreen_enable_camera_title">Widget fotoaparátu</string>
-  <string name="lockscreen_enable_application_widget_title">Wodget appcast</string>
   <string name="safe_headset_volume_title">Bezpečná hlasitost sluchátek</string>
   <string name="safe_headset_volume_restore_title">Snížení hlasitosti při připojení sluchátek</string>
   <string name="cyanogenmod_waiver_title">Zřeknutí se</string>
@@ -265,6 +270,7 @@
   <string name="title_tile_volume">Hlasitost</string>
   <string name="title_tile_expanded_desktop">Rozšířená plocha</string>
   <string name="title_tile_network_adb">ADB po síti</string>
+  <string name="title_tile_themes">Motivy</string>
   <string name="title_dynamic_tiles">Dynamické dlaždice</string>
   <string name="dynamic_tiles_note_title">Poznámka</string>
   <string name="dynamic_tiles_note_summary">Dynamické dlaždice jsou zobrazeny při určitých systémových událostech</string>
@@ -294,6 +300,8 @@
   <string name="cm_sound_mode_sound">Zvuk</string>
   <string name="cm_sound_mode_soundVibrate">Zvuk a vibrace</string>
   <string name="pref_location_mode_title">Poloha</string>
+  <string name="pref_location_mode_summary">Zrušit volbu všech režimů pro výchozí chování</string>
+  <string name="cm_location_mode_off">Poloha VYP</string>
   <string name="cm_location_mode_battery_saving">Úspora baterie</string>
   <string name="cm_location_mode_device_only">Pouze zařízení</string>
   <string name="cm_location_mode_high_accuracy">Vysoká přesnost</string>
@@ -365,8 +373,10 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. „Odstranit“ s
   <string name="root_access_apps">Pouze aplikace</string>
   <string name="root_access_adb">Pouze ADB</string>
   <string name="root_access_all">Aplikace a ADB</string>
-  <string name="update_recovery_title">Aktualizovat CM recovery</string>
-  <string name="update_recovery_summary">Aktualizovat recovery při instalaci aktualizace systému</string>
+  <string name="update_recovery_title">Aktualizovat Cyanogen recovery</string>
+  <string name="update_recovery_summary">Aktualizovat recovery pomocí aktualizace systému</string>
+  <string name="update_recovery_on_warning">UPOZORNĚNÍ: Pokud je tato funkce zapnutá, instalovaný oddíl recovery bude nahrazen aktuální verzí z právě nainstalovaného systému.\n\nOddíl recovery bude aktualizován současně s aktualizací systému, čímž bude zajištěna kompatibilita s budoucími verzemi.\n\nChcete povolit tuto funkci?</string>
+  <string name="update_recovery_off_warning">VAROVÁNÍ: Pokud je tato funkce vypnutá, oddíl recovery nebude aktualizován s aktualizacemi systému.\n\nBudoucí aktualizace systému se s vlastní nebo starou verzí recovery nemusí správně nainstalovat.\n\nOpravdu chcete tuto funkci vypnout?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Režim klidu</string>
   <string name="quiet_hours_summary">Nastavení hodin, kdy má být zařízení v režimu klidu</string>
@@ -446,7 +456,6 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. „Odstranit“ s
   <string name="changelog_error">Chyba při načítání seznamu změn</string>
   <string name="contributor_cloud_title">Přispěvatelé</string>
   <string name="cmupdate_settings_title">Aktualizace CyanogenMod</string>
-  <string name="cmupdate_settings_summary">Zjištění dostupnosti nové aktualizace</string>
   <string name="development_tools_title">Spustit vývojové nástroje</string>
   <string name="allow_mock_sms">Povolit falešné SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Soukromí</string>
@@ -596,6 +605,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. „Odstranit“ s
   <string name="lockscreen_buttons_toggle_sound">Přepnout zvukový režim</string>
   <string name="lockscreen_buttons_sleep">Uspat zařízení</string>
   <string name="lockscreen_enable_modlock_title">Vlastní zámek obrazovky</string>
+  <string name="lockscreen_buttons_disabled_summary">Tlačítka zámku obrazovky nejsou přístupna při použití navigační lišty</string>
   <string name="navigation_bar_category">Navigační lišta</string>
   <string name="navigation_bar_title">Tlačítka a rozmístění</string>
   <string name="navigation_bar_left_title">Režim ovládání levou rukou</string>
@@ -884,7 +894,6 @@ z <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> na <xliff:g id="new" exam
   <string name="voice_wakeup_retrain_title">Naučit se rozpoznání hlasu</string>
   <string name="voice_wakeup_activity_title">Aktivita ke spuštění</string>
   <string name="voice_wakeup_default_activity">Chytré karty Google</string>
-  <string name="sub_no_sim">Není SIM karta</string>
   <string name="multi_sim_settings_title">SIM karty</string>
   <string name="multi_sim_settings_group_summary">Výběr výchozí SIM</string>
   <string name="voice_title">Hlasová volání</string>
@@ -954,6 +963,11 @@ z <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> na <xliff:g id="new" exam
   <string name="sd_media_format_button_text">Vymazat kartu SD</string>
   <string name="sd_media_format_final_desc">Vymazat celou SD kartu smazáním všech souborů? Tato operace nelze vrátit zpět!</string>
   <string name="sd_media_format_gesture_explanation">Pro potvrzení vymazání SD karty je potřeba gesto pro odemčení.</string>
+  <string name="internal_sd_format">Vymazat interní úložiště zařízení</string>
+  <string name="internal_sd_format_summary">Vymaže všechna data v interním úložišti, jako například hudbu a fotografie</string>
+  <string name="master_clear_desc_erase_internal_storage">\n\nPro odstranění hudby, obrázků a dalších uživatelských dat je potřeba vymazat <b>interní úložiště</b>.</string>
+  <string name="erase_internal_storage">Vymazat interní úložiště zařízení</string>
+  <string name="erase_internal_storage_description">Vymaže všechna data v interním úložišti, jako například hudbu a fotografie</string>
   <string name="bluetooth_enter_pin_msg_hs">Pro spárování s „<xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>“ vložte vyžadovaný PIN (16 nebo více čísel):</string>
   <string name="bluetooth_profile_sap">Přístup k SIM</string>
   <string name="bluetooth_profile_dun">Přístup k vytáčené síti</string>
@@ -1012,8 +1026,17 @@ z <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> na <xliff:g id="new" exam
   <string name="profile_setup_setup_triggers_title_config">Úprava vynucené změny: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Krok 2: nastavit akce</string>
   <string name="profile_setup_actions_title_config">Přenastavit akce</string>
-  <string name="no_bluetooth_triggers">Pro Bluetooth nejsou dostupné aktivační změny</string>
-  <string name="no_wifi_triggers">Žádné Wi\u2011Fi aktivační události</string>
+  <string name="no_bluetooth_triggers">Nejsou spárovaná žádná Bluetooth zařízení.\nPřed nastavením spouštěčů nejprve dotykem spárujte Bluetooth zařízení.</string>
+  <string name="no_wifi_triggers">Nejsou nastavený žádné přístupové body Wi-Fi.\nPřed nastaveném spouštěčů se nejprve dotykem připojte k Wi-Fi.</string>
   <string name="profile_setup_setup_triggers_description">Vyberte události, které aktivují tento profil</string>
   <string name="profile_setup_actions_description">Nyní proveďte nastavení toho, co se má stát, při aktivaci profilu</string>
+  <string name="profile_triggers_header">Události, které aktivují tento profil</string>
+  <string name="no_triggers_configured">Žádné aktivační události nenastaveny. Dotykem přidejte nové.</string>
+  <string name="no_triggers_configured_nfc">Dotykem nastavte spouštěč NFC.</string>
+  <string name="sound_ringtone_multisim_options">Změnit výchozí vyzvánění</string>
+  <string name="lock_to_cyanogen_title">Ochrana zařízení</string>
+  <string name="lock_to_cyanogen_summary">Požadovat heslo Cyanogen OS účtu i poté, co byl provedeno obnovení do továrního nastavení</string>
+  <string name="lock_to_cyanogen_create_account_msg">Zařízení používá heslo účtu Cyanogen OS k zabezpečení i v případě obnovení do továrního nastavení. Proto je potřeba vytvořit účet Cyanogen OS.</string>
+  <string name="lock_to_cyanogen_disable_msg">Zakázáním této funkce umožňuje neoprávněným uživatelům v případě krádeže provést obnovu do továrního nastavení. Soukromá data nemusí být chráněna. Opravdu chcete tuto funkci vypnout?</string>
+  <string name="lock_to_cyanogen_master_clear_warning">Ochrana zařízení je povolena. Prosím zakažte ji pro pokračování v obnově vašeho zařízení.</string>
 </resources>
